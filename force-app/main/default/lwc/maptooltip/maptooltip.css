@@ -1,0 +1,97 @@
+.map-container {
+    position: relative;
+    width:870px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.map-image {
+    width: 600px;
+    height: auto;
+	display: block;
+}
+
+.location-marker {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+	font-size:30px;
+}
+
+.tooltip {
+	width: 270px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+	font-size:14px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.locationOne {      margin-top: -54px;
+    position: absolute;
+    z-index: 999;
+    right: 355px; }
+
+.locationSnd {      margin-top: -133px;
+    position: absolute;
+    z-index: 999;
+    right: 386px; }
+
+.locationSth {      margin-top: -192px;
+    position: absolute;
+    z-index: 999;
+    right: 308px; }
+
+.locationFrth {      
+	margin-top: -132px;
+    position: absolute;
+    z-index: 99;
+    right: 408px; }
+
+.locationSFifth{      margin-top: -216px;
+    position: absolute;
+    z-index: 99;
+    right: 289px; }
+
+.locationSSix{      margin-top: -297px;
+    position: absolute;
+    z-index: 99;
+    right: 289px; }	
+
+.locationSeven{      margin-top: -318px;
+    position: absolute;
+    z-index: 99;
+    right: 325px; }	
+.locationSeven img { margin-top:20px;}
+		
+
+
+
+/* Move the tooltip to the left */
+ .tooltip {
+    left: calc(0% + 180px); /* Move to the left by 120px */
+}
+
+.locationFrth  .tooltip {
+   	margin-top: -48px;
+	left: calc(0% +   -130px); /* Move to the left by 120px */
+}
+
+
+
+.locationSeven  .tooltip {
+   	margin-top: -28px;
+	left: calc(0% +   -130px); /* Move to the left by 120px */
+}
+
+.locationSth  .tooltip {
+   	margin-top: -28px;
+	left: calc(0% +   -130px); /* Move to the left by 120px */
+}

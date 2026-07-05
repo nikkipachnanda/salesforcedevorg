@@ -1,0 +1,227 @@
+<template>
+   <div class="articleSelectioncont">
+   <!--progress indicator cont-->
+    <div class="progessOuterCont">
+        <h2>Price Change Submission</h2>
+        <div class="progressInnerCont">
+            <lightning-progress-indicator current-step="1" type="base" variant="base">
+                <lightning-progress-step label="Step 1" value="1"></lightning-progress-step>
+                <lightning-progress-step label="Step 2" value="2"></lightning-progress-step>
+                <lightning-progress-step label="Step 3" value="3"></lightning-progress-step>
+                <lightning-progress-step label="Step 4" value="4"></lightning-progress-step>
+                <lightning-progress-step label="Step 5" value="5"></lightning-progress-step>
+            </lightning-progress-indicator>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-5 slds-text-align_center proIndTxt">
+                    <span class="actTxt">ARTICLE SELECTION</span>
+                </div>
+                <div class="slds-col slds-size_1-of-5 slds-text-align_center proIndTxt">
+                    <span>PROPOSED COST PRICE</span>
+                </div>
+                <div class="slds-col slds-size_1-of-5 slds-text-align_center proIndTxt">
+                    <span>COMMODITY COST DRIVERS <br/>
+                        (Optional)</span>
+                </div>
+                <div class="slds-col slds-size_1-of-5 slds-text-align_center proIndTxt">
+                    <span>PROPOSED PROMOTIONAL PLAN <br/>
+                        (Optional)</span>
+                </div>
+                <div class="slds-col slds-size_1-of-5 slds-text-align_center proIndTxt">
+                    <span>SUMMARY</span>
+                </div>
+
+            </div>
+        </div>
+    </div> 
+    <!--progress indicator cont end -->
+    
+    <!-- article search start here-->
+    <div class="articleSelectonCont">
+        <h2>Article Selection</h2>
+        <div class="articleInnerBoxCont">
+            <div class="slds-grid slds-wrap slds-gutters">
+               <div class="slds-col slds-size_1-of-1 slds-size_1-of-5">
+                <lightning-combobox
+                    name="Business"
+                    label="Business"
+                    value={value}
+                    placeholder="Woolworths  - Supermarkets"
+                    options={options}
+                    onchange={handleChange} ></lightning-combobox>
+               </div>
+
+               <div class="slds-col slds-size_1-of-1 slds-size_1-of-5">
+                <lightning-combobox
+                    name="Trading Department"
+                    label="Trading Department"
+                    value={value}
+                    placeholder="Trading Department 1"
+                    options={options}
+                 ></lightning-combobox>
+               </div>
+
+               <div class="slds-col slds-size_1-of-1 slds-size_1-of-5">
+                <lightning-combobox
+                    name="Category"
+                    label="Category"
+                    value={value}
+                    placeholder="2 Option Selected"
+                    options={options}
+                 ></lightning-combobox>
+               </div>
+               <div class="slds-col slds-size_1-of-1 slds-size_1-of-5">
+                <lightning-combobox
+                    name="Sub Category"
+                    label="Sub Category"
+                    value={value}
+                    placeholder="3 Option Selected"
+                    options={options}
+                 ></lightning-combobox>
+               </div>
+               <div class="slds-col slds-size_1-of-1 slds-size_1-of-5">
+                <lightning-combobox
+                    name="Brand"
+                    label="Brand"
+                    value={value}
+                    placeholder="2 Option Selected"
+                    options={options}
+                 ></lightning-combobox>
+               </div>
+
+               <div class="slds-col slds-size_1-of-1 slds-size_1-of-1 actionDesBtn slds-m-top_large ">
+                <lightning-button variant="destructive" label="Search Articles" title="Search Articles"  class="slds-align_absolute-center"></lightning-button>
+               </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- article search end here-->
+    <!-- article table start here-->
+        <div class="tableDataCont slds-m-top_large">
+            <table class="slds-table slds-table_bordered">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col" width="3%">
+                            
+                        </th>
+                        <th scope="col" width="15%">
+                            <div class="slds-truncate " title="Select All"><lightning-checkbox-group name="Checkbox Group"
+                                label=""
+                                options={selectalloptions}
+                                value={value}
+                                onchange={handleChange}></lightning-checkbox-group></div>
+                        </th>
+                        <th scope="col" width="15%">
+                            <div class="slds-truncate " title="Sub Category"> Cateogry</div>
+                        </th>
+                        <th scope="col" width="15%">
+                            <div class="slds-truncate " title="Sub Category"> Sub Cateogry</div>
+                        </th>
+                  
+                        <th width="15%">
+                            <div class="slds-truncate " title="# Of Articles"># Of Articles</div>
+                        </th>
+
+                        <th width="15%">
+                            <div class="slds-truncate " title="# Of Articles">Own Brand</div>
+                        </th>
+                        <th width="15%">
+                            <div class="slds-truncate " title="# Of Articles"> <lightning-input type="toggle" name="input1" label="Expland All" dir="rtl"></lightning-input></div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td scope="row" data-label="Product">
+                        <div title="" class="accrArw"><lightning-button-icon icon-name="utility:chevrondown"   alternative-text="" class="slds-m-left_xx-small" title=""></lightning-button-icon></div>
+                      </td>
+                      <td scope="row" data-label="Order Multiple">
+                        <div class="slds-truncate priceFamily" title="" ><lightning-checkbox-group name="Checkbox Group"
+                            label=""
+                            options={pricefamily}
+                            value={value}
+                            onchange={handleChange}></lightning-checkbox-group></div>
+                      </td>
+                      <td scope="row" data-label="">
+                        <div class="slds-truncate" title="">Category 1</div>
+                      </td>
+                      <td>
+                        <div class="slds-truncate" title="">Sub Category 1 </div>
+                      </td>
+
+                      <td>
+                        <div class="slds-truncate" title="">5 </div>
+                      </td>
+
+                      <td>
+                        <div class="slds-truncate" title=""> <lightning-icon icon-name="action:approval" alternative-text="Approved" title="Approved" size="xx-small"></lightning-icon></div>
+                      </td>
+
+                      <td>
+                        <div class="slds-truncate" title=""><span class="counter">5</span></div>
+                      </td>
+                     </tr>
+
+                     <tr>
+                         <td colspan="7">
+                            <table class="slds-table articleInfoCont">
+                                <thead>
+                                    <tr class="slds-text-title_caps">
+                                        <th scope="col" width="7%">
+                                            
+                                        </th>
+                                        <th scope="col" width="80%">
+                                            <div class="slds-truncate " title="Select All">Article</div>
+                                        </th>
+                                
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                      <td scope="row" data-label="" class="slds-text-align_right">
+                                        <lightning-checkbox-group name="Checkbox Group"
+                                                label=""
+                                                options={checkoptions}
+                                                value={value}
+                                                onchange={handleChange}></lightning-checkbox-group>
+                                      </td>
+                                      <td scope="row" data-label="Order Multiple">
+                                        <div class="slds-truncate" title="">10000 - Article 1</div>
+                                      </td>
+                                   </tr>
+
+                                   <tr>
+                                    <td scope="row" data-label="" class="slds-text-align_right">
+                                      <lightning-checkbox-group name="Checkbox Group"
+                                              label=""
+                                              options={checkoptions}
+                                              value={value}
+                                              onchange={handleChange}></lightning-checkbox-group>
+                                    </td>
+                                    <td scope="row" data-label="Order Multiple">
+                                      <div class="slds-truncate" title="">10000 - Article 1</div>
+                                    </td>
+                                 </tr>
+                                  
+                                   
+                                 </tbody>
+                                 </table>  
+                         </td>
+                     </tr>
+                   
+                 </tbody>
+                 </table>   
+        </div>
+    <!-- article table end here-->
+    </div>
+
+    <!-- bottom start footer-->
+        <div class="slds-clearfix bottomFooter">
+            <div class="slds-float_left slds-m-left_x-small"> <div class="actionNutBtn "> <lightning-button variant="base" label="Previous" title="Previous" ></lightning-button></div></div>
+            <div> 
+               <div class="actionDesBtn slds-float_right "> <lightning-button variant="base" label="Base" title="Looks like a link" onclick={handleClick} class="slds-m-left_x-small"></lightning-button></div>
+               <div class="actionBaseBtn slds-float_right slds-m-right_x-small">  <lightning-button variant="destructive" label="Search Articles" title="Search Articles"  class="slds-m-left_x-small"></lightning-button></div>
+            </div>
+        </div>
+    <!-- bottom footer end here-->
+</template>

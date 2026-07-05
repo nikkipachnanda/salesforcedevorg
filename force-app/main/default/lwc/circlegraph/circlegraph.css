@@ -1,0 +1,22 @@
+.progress-ring__background {
+    fill: none;
+    stroke: #e6e6e6;
+    stroke-width: 2;
+}
+
+.progress-ring__circle {
+    fill: none;
+    stroke: #00aaff;
+    stroke-width: 2;
+    stroke-dasharray: 56.52; /* Circumference of the circle (2 * Math.PI * 9) */
+    stroke-dashoffset: 56.52;
+    transition: stroke-dashoffset 0.5s ease;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.progress-circle {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}

@@ -1,0 +1,10 @@
+<template>
+
+<div class={containerClass}>
+<div class="item-class slds-clearfix slds-m-top_medium slds-m-bottom_medium" > 
+        <span class="slds-text-heading_label slds-float_left">   {todoName}  </span>
+          <lightning-button-icon icon-name={iconName}   alternative-text="Add user" class="slds-float_left slds-m-left_small" title="Add user" onclick={updateHandler} ></lightning-button-icon>
+           <lightning-button-icon icon-name="utility:delete"    alternative-text="Add user" class="slds-float_left slds-m-left_small" title="Add user" onclick={deleteHandler} ></lightning-button-icon>  
+        </div> 
+</div>
+</template>

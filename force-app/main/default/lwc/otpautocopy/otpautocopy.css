@@ -1,0 +1,17 @@
+.otp-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.otp-input {
+    width: 40px;
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+    margin-top: 10px;
+    text-align: center;
+}

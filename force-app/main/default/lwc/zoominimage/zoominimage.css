@@ -1,0 +1,9 @@
+.zoomable-image {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.zoomable-image:grab {
+    cursor: grabbing;
+}

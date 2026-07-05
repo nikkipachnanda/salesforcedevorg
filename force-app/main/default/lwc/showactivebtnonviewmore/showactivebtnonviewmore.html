@@ -1,0 +1,46 @@
+<template>
+    <div class="progressIndicator alignHorizontal alignMiddle progressIndicatorMStage">
+        <template for:each={visibleStages} for:item="stage">
+            <div key={stage.id} class={stage.class}>
+                <template if:true={stage.completed}>
+                    <lightning-icon icon-name="utility:check" size="xx-small" alternative-text="Completed" class="slds-m-right_small"></lightning-icon>
+                </template>
+                {stage.label}
+            </div>
+        </template>
+
+        <template if:true={showAll}>
+            <template for:each={remainingStages} for:item="stage">
+                <div key={stage.id} class={stage.class}>
+                    <template if:true={stage.completed}>
+                        <lightning-icon icon-name="utility:check" size="xx-small" alternative-text="Completed" class="slds-m-right_small"></lightning-icon>
+                    </template>
+                    {stage.label}
+                </div>
+            </template>
+        </template>
+    </div>
+
+    <div class="footer">
+        <div class="active-count">
+            {totalCompletedCount} completed out of {allStages.length}
+        </div>
+        <template if:true={showTooltip}>
+            <div class="tooltip">
+                {remainingCompletedCount} completed out of {remainingStages.length}
+            </div>
+        </template>
+        <div>
+      <button class="view-all-btn"  onclick={toggleView}>
+    {viewAllLabel}
+</button>
+
+<!-- Info Icon with Tooltip -->
+<lightning-icon icon-name="utility:info" size="x-small" alternative-text="Info" 
+    class="info-icon"
+    onmouseover={handleHover} 
+    onmouseout={handleMouseOut}>
+</lightning-icon>
+        </div>
+    </div>
+</template>

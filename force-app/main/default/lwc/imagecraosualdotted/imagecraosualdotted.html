@@ -1,0 +1,53 @@
+<template>
+    <div class="carousel-container">
+        <div class="carousel">
+            <ul class="image-list" style={transformStyle}>
+                <!-- <template for:each={images} for:item="image">
+                    <li key={image.id}>
+                        <img src={image.url} alt={image.alt} />
+                    </li>
+                </template> -->
+
+                 <li>
+                        a
+                    </li>
+
+                 <li>
+                      b
+                    </li>
+
+                       <li>
+                       c
+                    </li>
+
+                       <li>
+                        d
+                    </li>
+
+                    
+                       <li>
+                        e
+                    </li>
+
+                    
+            </ul>
+        </div>
+        <div class="dots-container">
+            <ul class="dots">
+                <template for:each={images} for:item="image" for:index="index">
+                    <li key={index.id} onclick={handleDotClick} data-index={index} ></li>
+                </template>
+            </ul>
+        </div>
+
+         <div class="controls">
+            <button onclick={previousSlide}>Previous</button>
+            <button onclick={nextSlide}>Next</button>
+        </div>
+
+         <!-- <div class="controls">
+            <button onclick={previousSlide} disabled={currentIndex === 0}>Previous</button>
+            <button onclick={nextSlide} disabled={currentIndex === images.length - 1}>Next</button>
+        </div> -->
+    </div>
+</template>

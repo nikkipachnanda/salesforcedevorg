@@ -1,0 +1,11 @@
+.whatsNewCont {background:#fff; padding:20px; border-radius:5px; border:1px #D4D4D4 solid; width:100%;}
+.whatsNewCont h2 {font-weight:bold; font-size:22px; padding-bottom: 10px; border-bottom: 1px #D4D4D4 solid; margin-bottom: 20px;}
+.newsArtCont {background:#fff; padding:10px; border:1px #D4D4D4 solid; position:relative;}
+.newsArtCont h3 {font-size:16px; color:#000; font-weight: bold;}
+.newsArtCont .innerTxt {padding-left:80px;}
+.newsArtCont  .imgNewsArt img {height:60px!important;}
+.newsArtCont .subTxt {color:#464646; font-size:14px; margin-top:12px;}
+.newsArtCont .cirSep { background:#D4D4D4; border-radius: 50px; width:6px; height:6px; margin-left:10px; margin-right:10px;}
+.newsArtCont .imgNewsArt { position:absolute; left:15px;}
+.whatsNewCont .viewMore {padding-left:10px; color:#D31145; font-weight: bold;}
+.whatsNewCont .brdNone {border:none!important;}

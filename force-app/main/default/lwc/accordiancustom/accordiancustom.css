@@ -1,0 +1,22 @@
+.cstm_table tr{
+	cursor: pointer;
+}
+.RecordRow 
+{
+		background:#eee; 
+}
+
+.cstm_table tr:not(.RecordRow) {
+	display: none;
+	height: 100px;
+}
+.cstm_table tr.activeRow{
+
+}
+.cstm_table tr.activeRow .slds-icon_container{
+	transform: rotate(180deg);
+}
+.cstm_table tr.activeRow + tr{
+	display: table-row;
+
+}

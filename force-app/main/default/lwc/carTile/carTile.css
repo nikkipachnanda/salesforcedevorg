@@ -1,0 +1,7 @@
+.dummy{
+	color : black;
+}
+
+.carImage { height:120px; max-width: initial;}
+.title { font-weight: bold;}
+.content { padding:8px; border-radius: 5px; background-color: #fff;}

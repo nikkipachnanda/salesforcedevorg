@@ -1,0 +1,15 @@
+<template>
+    <lightning-combobox
+        name="myCombo"
+        label="Select Values"
+        placeholder="Select"
+        options={options}
+        multiple
+        value={selectedValues}
+        onchange={handleDropdownChange}
+    ></lightning-combobox>
+
+    <template for:each={buttonValues} for:item="button">
+        <lightning-button key={button.label} label={button.label} variant={button.variant} disabled={button.disabled}></lightning-button>
+    </template>
+</template>

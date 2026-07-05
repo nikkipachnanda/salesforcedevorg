@@ -1,0 +1,15 @@
+.custom-container{
+	color : black;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/resource/arlofonts/Din-Condensed.ttf') format('truetype'),
+}
+
+
+div {
+	font-family: 'MyCustomFont'!important;
+	color: red!important;
+	font-size: 40px;
+}

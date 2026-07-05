@@ -1,0 +1,44 @@
+<!-- <template>
+    <div class="accordion">
+        <template for:each={sections} for:item="section">
+            <div key={section.id} class="accordion-section">
+                
+                <div class="dspFlex">
+                <button class="accordion-header" data-id={section.id} onclick={handleToggle}>
+                              <lightning-icon icon-name={section.iconName} alternative-text="Toggle Section" class="accordion-icon"></lightning-icon>
+                    <span class="accordion-title">{section.title}</span>
+          
+                </button>
+                <div>
+                    <c-buttonmenu></c-buttonmenu>
+                </div>
+                    
+                </div>
+
+                <div class="accordion-content" if:true={section.isOpen}>
+                    {section.content}
+                </div>
+            </div>
+        </template>
+    </div>
+</template> -->
+<template>
+    <div class="accordion">
+        <template for:each={sections} for:item="section">
+            <div key={section.id} class="accordion-section">
+                <div class="dspFlex">
+                    <div class="accordion-header" data-id={section.id} onclick={handleToggle}>
+                        <lightning-icon icon-name={section.iconName} alternative-text="Toggle Section" class="accordion-icon"></lightning-icon>
+                        <span class="accordion-title">{section.title}</span>
+                    </div>
+                    <div>
+                        <c-buttonmenu data-id={section.id} ></c-buttonmenu>
+                    </div>
+                </div>
+                <div class="accordion-content" if:true={section.isOpen}>
+                    {section.content}
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

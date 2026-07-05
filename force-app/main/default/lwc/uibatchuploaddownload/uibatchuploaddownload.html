@@ -1,0 +1,207 @@
+<template>
+   <!-- batch product submsison content -->
+   <div class="boxWrapperCont bgNone batchDownloadCont">
+      <nav role="navigation" aria-label="Breadcrumbs">
+         <ol class="slds-breadcrumb slds-list_horizontal slds-wrap bredcum">
+            <li class="slds-breadcrumb__item">
+               <a href="#" class="bredcumInact">Home</a>
+            </li>
+            <li class="slds-breadcrumb__item">
+               <a href="#" class="bredcumInact">Batch Product Submission</a>
+            </li>
+            <li class="slds-breadcrumb__item" >
+               <a href="#" class="bredcumAct">Parent Record Name</a>
+            </li>
+         </ol>
+      </nav>
+      <div class="slds-m-top_large">
+         <lightning-button variant="success" label="Back" title="Back" icon-name="utility:back" icon-position="left" class=" btnIcnBack"></lightning-button>
+      </div>
+      <div class="slds-m-top_large">
+         <h2>
+            Vendor and Range selection
+         </h2>
+      </div>
+      <div class="slds-grid slds-gutters slds-wrap">
+         <div class="slds-col slds-size_1-of-2 posRel  slds-m-top_large">
+            <h4>
+               Vendor Number Account
+            </h4>
+            <div class="slds-m-top_medium">
+               <lightning-combobox
+                  name="progress"
+                  label=" Which Vendor Account would you like your product submitted for?"
+                  value={value}
+                  placeholder="Select Progress"												 
+                  options={options}
+                  onchange={handleChange}
+                  class="cstmSlt"														 
+                  ></lightning-combobox>
+            </div>
+         </div>
+         <div class="slds-col slds-size_1-of-2 posRel  slds-m-top_large">
+            <div class="tooltipCont">
+               <h2>
+									 <span><img src={icnques}/></span>
+                  Select your vendor and range
+               </h2>
+               Please carefully select your vendor number and the range you wish to upload your products into.
+            </div>
+         </div>
+      </div>
+      <div class="slds-m-top_medium slds-m-bottom_medium">
+         <span class="sepLine"></span>
+      </div>
+      <div class="slds-grid slds-gutters slds-wrap">
+         <div class="slds-col slds-size_1-of-2 posRel  slds-m-top_large">
+            <h4>
+               Third party data sources
+            </h4>
+            <div class="slds-m-top_medium">
+               <lightning-combobox
+                  name="progress"
+                  label=" Will you be using a third party provided as a source for any categories?"
+                  value={value}
+                  placeholder="Select Progress"												 
+                  options={options}
+                  onchange={handleChange}
+                  class="cstmSlt"														 
+                  ></lightning-combobox>
+            </div>
+         </div>
+					<div class="slds-m-top_large slds-col">
+							Available third party provider data sources are GSI Australia, SKUvantage or Supplier Provided in Partner Hub. 
+					</div>
+					<div class="slds-m-top_large slds-col">
+							Please note: The data source selection can be changed during Enrichment stage later in the process and set your default preferences at your account level.
+					</div>
+      </div>
+			 
+			       <div class="slds-grid slds-gutters slds-wrap">
+         				<div class="slds-col slds-size_3-of-12 posRel  slds-m-top_large">
+										 <lightning-combobox
+											name="images"
+											label=" images"
+											value={value}
+											placeholder="GSI Australia"												 
+											options={options}
+											onchange={handleChange}
+																			 
+							    ></lightning-combobox>
+								 </div>
+								 	<div class="slds-col slds-size_8-of-12 posRel  slds-m-top_large">
+										 <lightning-combobox
+											name="GLN Number"
+											label=" GLN Number"
+											value={value}
+											placeholder="Placeholder"												 
+											options={options}
+											onchange={handleChange}
+											class="cstmSltSnd"									 
+							    ></lightning-combobox>
+											 	<div class="slds-m-top_large">
+										 			<lightning-button label="Validate GLN Number" title=""  class="secondryBtn  gtnBtn"></lightning-button>
+													<span><img src={icnno} class="icnGtn" /></span>
+      					  		</div>
+								 </div>
+								 
+								
+						 </div>
+			 
+			 <div class="slds-m-top_x-large slds-m-bottom_medium">
+         <span class="sepLine"></span>
+      </div>
+      <div class="slds-grid slds-gutters slds-wrap">
+         <div class="slds-col slds-size_12-of-2 posRel  slds-m-top_large">
+            <h4>
+               Product Range Selection
+            </h4>
+            <div class="slds-m-top_medium">
+               Which Product Range would you like your product submitted into?
+            </div>
+         </div>
+      </div>
+      <div class="slds-grid slds-gutters slds-wrap">
+         <div class="slds-col slds-size_1-of-4 posRel  slds-m-top_large">
+               <lightning-combobox
+                  name="progress"
+                  label=" What division do you want your product ranged in?"
+                  value={value}
+                  placeholder="Select Progress"												 
+                  options={options}
+                  onchange={handleChange}
+              												 
+                  ></lightning-combobox>
+         </div>
+         <div class="slds-col slds-size_1-of-4 posRel  slds-m-top_large">
+               <lightning-combobox
+                  name="progress"
+                  label="What is the Trading Department would you like your product ranged in?"
+                  value={value}
+                  placeholder="Select Progress"												 
+                  options={options}
+                  onchange={handleChange}
+            													 
+                  ></lightning-combobox>
+         </div>
+         <div class="slds-col slds-size_1-of-4 posRel  slds-m-top_large">
+               <lightning-combobox
+                  name="progress"
+                  label=" What is the Sub Category that your product belongs in?"
+                  value={value}
+                  placeholder="Select Progress"												 
+                  options={options}
+                  onchange={handleChange}
+             													 
+                  ></lightning-combobox>
+         </div>
+         <div class="slds-col slds-size_1-of-4 posRel  slds-m-top_large">
+                   <lightning-button label="Search" title=""  class="slds-m-left_x-small primaryBtn searchBtn"></lightning-button>
+         </div>
+      </div>
+			 <div class="slds-m-top_large batchUploadtabCont">
+					  <table class="slds-table slds-table_cell-buffer " aria-labelledby="element-with-table-label other-element-with-table-label">
+         <thead>
+            <tr class="slds-line-height_reset">
+               <th class="" scope="col">
+                  <div class="slds-truncate" title="Division">Division</div>
+               </th>
+               <th class="" scope="col">
+                  <div class="slds-truncate" title="Subcategory">Subcategory</div>
+               </th>
+               <th class="" scope="col">
+                  <div class="slds-truncate" title="Submission dates">Submission dates</div>
+               </th>
+								
+								 <th class="" scope="col">
+                  <div class="slds-truncate" title=""></div>
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+       <tr class="slds-hint-parent">
+               <td data-label="">
+                  <div class="slds-truncate" title="">
+											Woolworths - Supermarkets
+                  </div>
+               </td>
+               <td data-label="Account Name">
+                  <div class="slds-truncate" title="">
+									 Promotional Apparel
+									 </div>
+               </td>
+               <td data-label="Close Date">
+                 <span class="tabDate">31 Dec 22</span>
+               </td>
+					 
+					 <td data-label="">
+                      <img src={icnfrd} class="icnarw" />
+               </td>
+            </tr>
+            
+         </tbody>
+      </table>
+				
+			 </div>
+   </div>
+</template>

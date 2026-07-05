@@ -1,0 +1,121 @@
+<template>
+  <div class="cPrefixDel boxCont">
+    <lightning-tabset>
+      <lightning-tab label="C prefix deletion nomination">
+        
+        <!-- Legend -->
+        <div class="legendBox alignHorizontal slds-m-bottom_medium slds-m-top_x-large">
+          <div class="alignHorizontal slds-m-right_large">
+            <span class="legendValidBox slds-m-right_xx-small"></span>
+            <span class="infoTxt">Valid pickslot</span>
+          </div>
+          <div class="alignHorizontal slds-m-right_large">
+            <span class="legendWarnBox slds-m-right_xx-small"></span>
+            <span class="infoTxt">Valid pickslot with warning</span>
+          </div>
+          <div class="alignHorizontal slds-m-right_large">
+            <span class="legendInValidBox slds-m-right_xx-small"></span>
+            <span class="infoTxt">Invalid pickslot with warning</span>
+          </div>
+          <div class="alignHorizontal slds-m-right_large">
+            <span class="legendDeclineBox slds-m-right_xx-small"></span>
+            <span class="infoTxt">Pickslot declined by DCRP team</span>
+          </div>
+        </div>
+
+        <!-- Expand/Collapse all -->
+        <div class="slds-text-align_right slds-m-bottom_small">
+          <img src={expandIcon} alt="Expand / Collapse All" class="expandImg" onclick={toggleAll}/>
+        </div>
+
+        <!-- Accordion 1 (default open) -->
+        <div class="blueAccordion" data-id="a1">
+          <div class="accordHead alignHorizontal"
+               onclick={toggle}
+               onkeydown={toggle}
+               role="button"
+               tabindex="0"
+               aria-expanded="true">
+            <lightning-icon icon-name="utility:chevronright" 
+                            size="x-small" 
+                            class="accArrow slds-m-right_small">
+            </lightning-icon>
+            <span class="bodyFnt semiBold slds-m-right_x-small">672356</span>
+            <span class="bodyFnt">Bio Fermented Turmeric 500ml</span>
+          </div>
+
+          <!-- Expandable section -->
+          <div class="expandedSec">
+            <!-- Example Table -->
+            <div class="tableInfo taskTabInfo">
+              <table class="slds-table slds-table_fixed-layout slds-table_cell-buffer slds-no-row-hover slds-max-medium-table_stacked-horizontal"
+                     aria-label="Distribution Centers">
+                <thead>
+                  <tr class="slds-line-height_reset">
+                    <th scope="col"><div class="slds-truncate" title="DC">DC</div></th>
+                    <th scope="col"><div class="slds-truncate" title="1988">1988</div></th>
+                    <th scope="col"><div class="slds-truncate" title="2010">2010</div></th>
+                    <th scope="col"><div class="slds-truncate" title="3937">3937</div></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><div class="taskTextHead" title="DC name">DC name</div></td>
+                    <td><div class="txtWrap">Sydney RDC - Meat</div></td>
+                    <td><div class="txtWrap">Heathwood Chilled</div></td>
+                    <td><div class="txtWrap">Wodonga RDC - Chilled</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion 2 -->
+        <div class="blueAccordion" data-id="a2">
+          <div class="accordHead alignHorizontal"
+               onclick={toggle}
+               onkeydown={toggle}
+               role="button"
+               tabindex="0"
+               aria-expanded="false">
+            <lightning-icon icon-name="utility:chevronright" 
+                            size="x-small" 
+                            class="accArrow slds-m-right_small">
+            </lightning-icon>
+            <span class="bodyFnt semiBold slds-m-right_x-small">672357</span>
+            <span class="bodyFnt">Bio Fermented Turmeric 250ml</span>
+          </div>
+          <div class="expandedSec" hidden>
+            <p>Accordion 2 content goes here</p>
+          </div>
+        </div>
+
+        <!-- Accordion 3 -->
+        <div class="blueAccordion" data-id="a3">
+          <div class="accordHead alignHorizontal"
+               onclick={toggle}
+               onkeydown={toggle}
+               role="button"
+               tabindex="0"
+               aria-expanded="false">
+            <lightning-icon icon-name="utility:chevrondown" 
+                            size="x-small" 
+                            class="accArrow slds-m-right_small">
+            </lightning-icon>
+            <span class="bodyFnt semiBold slds-m-right_x-small">672358</span>
+            <span class="bodyFnt">Henry Blooms VitaQIK Turmeric 50ml</span>
+          </div>
+          <div class="expandedSec" hidden>
+            <p>Accordion 3 content goes here</p>
+          </div>
+        </div>
+
+        <p class="slds-m-top_large infoTxt">
+          All data is sourced from Ranger. Please refer to Ranger to progress further.
+        </p>
+
+      </lightning-tab>
+    </lightning-tabset>
+  </div>
+</template>

@@ -1,0 +1,17 @@
+<template>
+
+
+<template if:true={openModal}>
+        <section aria-modal="true" class="slds-modal slds-fade-in-open">
+			<div class="slds-modal__container sldsModalCont">
+				 <c-sliderlwczoomimg slides-data={sliderData} custom-height="500px" custom-width="100%" auto-scroll={autoScroll}
+        hide-slide-text hide-slide-number></c-sliderlwczoomimg>
+			
+				<!-- <button onclick={closeModal}>Close </button> -->
+			</div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+
+</template>

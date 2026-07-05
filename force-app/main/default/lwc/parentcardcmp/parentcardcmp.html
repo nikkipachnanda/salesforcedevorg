@@ -1,0 +1,16 @@
+<template>
+    <template for:each={cards} for:item="card">
+        <c-resuablecard
+            key={card.id}
+            title={card.title}
+            subtitle={card.subtitle}
+            button-label={card.buttonLabel}
+            show-button={card.showButton}
+            background-color={card.backgroundColor}
+            text-color={card.textColor}
+            oncardbuttonclick={handleCardClick}
+        >
+            <p slot="content">Custom content for {card.title}</p>
+        </c-resuablecard>
+    </template>
+</template>

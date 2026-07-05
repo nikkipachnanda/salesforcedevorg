@@ -1,0 +1,61 @@
+<template>
+	<div class="slds-card slds-p-around_medium"> 
+        <div class="slds-text-align_right">
+            <lightning-input class="toggleBtn" type="toggle" label="" onchange={toggleCollapse} name="input1" message-toggle-active="Collapse All" message-toggle-inactive="Expand All"></lightning-input>
+        </div>
+		<table class="slds-table slds-table_cell-buffer slds-table_bordered cstm_table">
+            <tr class="RecordRow" id="test5" onclick={toggleRow}>
+                <td width="20px">
+                    <lightning-icon icon-name="utility:chevrondown" alternative-text="Doc image" size="xx-small" ></lightning-icon>
+										    <lightning-radio-group name="radioGroup"
+                          label="Radio Group"
+                          options={options}  
+                          value={value}
+                          type="radio"></lightning-radio-group>    
+                </td>
+                <td>Row 11</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Row 1 Data</td>
+            </tr>
+            
+            <tr class="RecordRow" onclick={toggleRow}>
+                <td>
+                    <lightning-icon icon-name="utility:chevrondown" alternative-text="Doc image" size="xx-small" ></lightning-icon>
+              		
+											    <lightning-radio-group name="radioGroup"
+                          label="Radio Group"
+                          options={optionssnd}
+                          value={value}
+                          type="radio"></lightning-radio-group>
+								</td>
+                <td>Row 2</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Row 2 Data 2222</td>
+            </tr>
+
+            <tr class="RecordRow" onclick={toggleRow}>
+                <td>
+                    <lightning-icon icon-name="utility:chevrondown" alternative-text="Doc image" size="xx-small" ></lightning-icon>
+               	
+											    <lightning-radio-group name="radioGroup"
+                          label="Radio Group"
+                          options={optionsth}
+                          value={value}
+                          type="radio"></lightning-radio-group>
+								</td>
+                <td>Row 3</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Row 3 Data</td>
+            </tr>
+
+          
+            
+        </table>
+	</div>
+</template>

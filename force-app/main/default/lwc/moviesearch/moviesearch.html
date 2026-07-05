@@ -1,0 +1,49 @@
+<template>
+    <!--Filter Section -->
+    <div class="filterstyle">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+                large-device-size="3">
+                <div class="custom-box">
+                    <lightning-combobox name="type" label="Type" value={selectedType} placeholder="Select Type"
+                        options={options} onchange={handleChange}></lightning-combobox>
+
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+                large-device-size="7">
+                <div class="custom-box">
+                <lightning-input type="search" variant="standard" name="search" label="Enter Search Item" 
+                placeholder="Search For Movies/Series" is-loading={loading} onchange={handleChange} ></lightning-input>   
+                </div>
+            </lightning-layout-item>
+
+            <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+                large-device-size="5">
+                <div class="custom-box">
+                    <lightning-input type="number"  name="pageno" label="Page" onchange={handleChange} 
+                    field-level-help="Range 1-100" 
+                    min="1"
+                    max="100"
+                    step="1"
+                    message-when-range-underflow="Minimum value is 1"
+                    message-when-range-overflow="Minium value is 1"
+                    ></lightning-input>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>    
+
+
+        <div class="slds-m-top_large slds-scrollable_y displayStyle slds-box">
+            <lightning-layout horizontal-align="center" multiple-rows="true">
+                <template for:each={searchResult} for:item="searchItem">
+                       <lightning-layout-item size="3" padding="around_small" key={searchItem.imdbID}> 
+                           <c-movietiles movie={searchItem} selected-movie-id={selectedMovie} onselectedmovie={moveSelectedHandler}> </c-movietiles>
+                        </lightning-layout-item> 
+                </template>     
+            </lightning-layout>
+
+        </div>    
+    
+    </div>
+</template>

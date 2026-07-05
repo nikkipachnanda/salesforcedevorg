@@ -1,0 +1,288 @@
+<template>
+  <div class="disputeCont slds-m-top_xx-large">
+    <h2 class="alignCenter"> Got a dispute? </h2>
+    <h3 class="alignCenter"> Choose a category to start </h3>
+    <div>
+
+      <lightning-combobox name="progress" label="Status" value={value} placeholder="Select " options={options}
+        onchange={handleChange}>
+      </lightning-combobox>
+
+    </div>
+
+
+    <div class="slds-m-top_large">
+
+      <lightning-combobox name="progress" label="Select Item" value={value} placeholder="Select" options={options}
+        onchange={handleChange}>
+      </lightning-combobox>
+
+    </div>
+
+    <!-- information cont -->
+    <div class="infBoxCont">
+      <h2 class="slds-m-top_xx-large">
+
+        <lightning-button-icon class="large-button" variant="base" icon-name="utility:info_alt" alternative-text="open">
+        </lightning-button-icon>
+        Information
+      </h2>
+
+      <div class="disFlex">
+        <div class="box">
+          <h2> Missing Item </h2>
+          <p>
+            The missing category is the item missing like key, logbook, vehicle user manual and
+            general/other.
+          </p>
+        </div>
+        <div class="box">
+          <h2> Missing Item </h2>
+          <p>
+            The missing category is the item missing like key, logbook, vehicle user manual and
+            general/other.
+          </p>
+        </div>
+        <div class="box">
+          <h2> Missing Item </h2>
+          <p>
+            The missing category is the item missing like key, logbook, vehicle user manual and
+            general/other.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- thanks box cont -->
+    <div class="thanksBoxCont  slds-m-top_xx-large">
+
+      <div class="disFlex spBetween">
+        <h2>
+          Thanks for reaching out!
+
+        </h2>
+        <h6>10 Oct 24, 14:22 PM </h6>
+      </div>
+
+      <p>
+        Your Account Manager will connect with you shortly to chat about your inquiry.
+      </p>
+
+    </div>
+
+    <!-- table box cont -->
+    <div class="tableCont slds-m-top_large">
+      <table class="slds-table slds-table_cell-buffer  "
+        aria-label="Example table of Opportunities with vertical borders">
+
+        <tbody>
+          <tr class="slds-hint-parent">
+
+            <td data-label="">
+              <lightning-checkbox-group name="Checkbox Group" label="Checkbox Group" options={optionscheck}
+                value={value}>
+              </lightning-checkbox-group>
+            </td>
+            <td data-label="Close Date">
+              <div class="slds-truncate" title="">
+                Repair Door
+              </div>
+            </td>
+            <td data-label="Prospecting">
+              <div class="slds-truncate" title="">
+                <lightning-input type="toggle" label="" checked class="slds-m-top_medium">
+                </lightning-input>
+              </div>
+            </td>
+
+            <td data-label="Prospecting">
+              <div class="slds-truncate" title="">
+                <strong> 2 </strong>
+              </div>
+            </td>
+            <td data-label="Confidence">
+              <div class="slds-truncate" title="">
+                This is the sample text to...
+              </div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate" title="">
+                $430.00
+              </div>
+            </td>
+
+          </tr>
+
+          <tr class="slds-hint-parent">
+
+            <td data-label="">
+              <lightning-checkbox-group name="Checkbox Group" label="Checkbox Group" options={optionscheck}
+                value={value}>
+              </lightning-checkbox-group>
+            </td>
+            <td data-label="Close Date">
+              <div class="slds-truncate" title="">
+                Repair Door
+              </div>
+            </td>
+            <td data-label="Prospecting">
+              <div class="slds-truncate" title="">
+                <lightning-input type="toggle" label="" checked class="slds-m-top_medium">
+                </lightning-input>
+              </div>
+            </td>
+
+            <td data-label="Prospecting">
+              <div class="slds-truncate" title="">
+                <strong> 2 </strong>
+              </div>
+            </td>
+            <td data-label="Confidence">
+              <div class="slds-truncate" title="">
+                This is the sample text to...
+              </div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate" title="">
+                $430.00
+              </div>
+            </td>
+
+          </tr>
+
+
+
+        </tbody>
+      </table>
+
+    </div>
+
+    <!-- richtext box cont -->
+    <div class="slds-m-top_large richTextCont">
+      <div class="slds-form-element__label">Comments </div>
+      <lightning-input-rich-text value={richtext} onchange={handleChangeRT}></lightning-input-rich-text>
+    </div>
+
+
+    <!-- disclaimer box cont -->
+    <div class="disclaimBoxCont  slds-m-top_xx-large">
+
+      <div class="disFlex spBetween">
+        <h2>
+          Disclaimer
+
+        </h2>
+        <h6>10 Oct 24, 14:22 PM </h6>
+      </div>
+
+      <p>
+        The item must be returned in the working condition as when its provided, free from additional damage or wear.
+        Auction house reserves the right to inspect the returned item to assess any damages that may have occurred while
+        in the customer’s possession.
+        Hereby I confirm, I have read and understood the policy above.
+      </p>
+
+    </div>
+
+
+    <div class="buttonInfoCont slds-text-align_right slds-m-top_medium">
+      <lightning-button variant="base" label="I Decline" title="" class="base slds-m-right_small" onclick={handleClick}>
+      </lightning-button>
+      <lightning-button variant="brand" label="Accept" title="" class="brand" onclick={handleClick}></lightning-button>
+    </div>
+
+    <div class="buttonInfoCont slds-text-align_right slds-m-top_medium">
+      <lightning-button variant="base" label="Accepted" title="" class="accepted slds-m-right_small"
+        onclick={handleClick}></lightning-button>
+    </div>
+
+
+    <!-- location box cont -->
+    <div class="locationBoxCont  slds-m-top_xx-large">
+
+      <div class="disFlex spBetween">
+        <h2>
+          Location to Drop-off
+
+        </h2>
+        <h6>10 Oct 24, 14:22 PM </h6>
+      </div>
+
+      <p>
+        Custom Fleet Australia ,Custom Service Leasing Pty <br/> Ltd Trading as Custom Fleet, ABN: 60 073 245 084
+      </p>
+
+    </div>
+
+    <!-- view upload document -->
+    <div class="viewUploadCont slds-m-top_xx-large">
+      <div class="disFlex spBetween viewUploadContTopInfo">
+        <h2>
+          View/Upload Documents
+
+        </h2>
+        <div>
+          <div class="disFlex">
+          <lightning-button variant="base" label="Add files" title="titleName" class="base slds-m-right_small" onclick={handleClick}>
+          </lightning-button>
+               <lightning-button-menu alternative-text="Show menu">
+                <lightning-menu-item value="MenuItemOne" label="Menu Item One"></lightning-menu-item>
+                <lightning-menu-item value="MenuItemTwo" label="Menu Item Two"></lightning-menu-item>
+
+            </lightning-button-menu>
+          </div>
+        </div>
+      </div>
+
+      <div class="txtInfo slds-m-top_large">
+        <div class="slds-grid slds-gutters">
+          <div class="slds-col">
+            File name:
+          </div>
+          <div class="slds-col ">
+            Receipt_post_123456.pdf 
+            <lightning-button-icon variant="base" size="xx-small" icon-name="utility:delete" alternative-text="opne" class="delete slds-m-right_small"></lightning-button-icon>
+          </div>
+        </div>
+
+        <div class="slds-grid slds-gutters">
+          <div class="slds-col">
+            File url:
+          </div>
+          <div class="slds-col ">
+            <a href="#">click here </a>
+          </div>
+        </div>
+
+        <div class="slds-grid slds-gutters">
+          <div class="slds-col">
+            Uploaded by:
+          </div>
+          <div class="slds-col ">
+            Customer
+          </div>
+        </div>
+
+        <div class="slds-grid slds-gutters">
+          <div class="slds-col">
+            Uploaded date:
+          </div>
+          <div class="slds-col ">
+            10/10/2024 14:22 PM
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="alignCenter slds-m-top_large">
+      <lightning-button variant="brand" label="Save" title="" onclick={handleClick}></lightning-button>
+    </div>
+
+
+  </div>
+</template>

@@ -1,0 +1,532 @@
+<template>
+    <div class="phHorizonCont">
+
+		<!-- Header Content -->
+		<div class="alignH floatR alignC slds-m-bottom_medium splitViewSec slds-p-bottom_x-small">
+			<span class="slds-m-right_small">Split View:</span>
+			<lightning-combobox
+				name="progress"
+				value={value}
+				placeholder="Select Split View"
+				options={options}
+				onchange={handleChange} ></lightning-combobox>
+		</div>
+
+		<div class="alignH alignR  slds-m-bottom_small">
+			<div class="caseNo alignH alignC">
+				<span class="slds-m-right_x-small">Case Number:</span>
+				<span class="boldTxt">00090234203011</span>
+                
+				<div class="alignH inptLblN alignC slds-m-left_x-large effectiveDate">
+					<span class="slds-m-right_small">Effective Date</span>
+					<lightning-input type="date" value="2023/12/08" name="name" placeholder=""></lightning-input>
+				</div>
+
+			</div>
+			
+
+			<div class="">
+				<lightning-input type="toggle" label="Show All" name="input2" checked></lightning-input>
+			</div>
+		</div>
+
+		<div class="actBtn alignH alignC floatR slds-m-bottom_x-small">
+			<lightning-button variant="success" label="Approve All" class="WtClr slds-m-right_xx-small" title="titleName"
+				onclick={handleClick}>
+			</lightning-button>
+			<lightning-button variant="destructive" label="Send All for Rework" class="WtClr slds-m-right_xx-small"
+				title="titleName" onclick={handleClick}>
+			</lightning-button>
+			<lightning-button variant="brand" label="Clear All" class="WtClr slds-m-right_xx-small" title="titleName"
+				onclick={handleClick} disabled>
+			</lightning-button>
+		
+		</div>
+		<!-- Header Content Close -->
+
+		<!-- Display on Pack Table -->
+
+		<!-- Parent Acccordion -->
+		<div class="parentAcc box slds-m-bottom_small">
+			<div class="alignH alignC">
+				<lightning-icon variant="base" size="xx-small" icon-name="utility:chevrondown" class="slds-m-right_small"
+					alternative-text="opne"></lightning-icon>
+				<h2 class="txtSz16 boldTxt">Review Required</h2>
+			</div>
+
+			<!-- Child Accordion -->
+			<div class="groupAcc slds-m-left_large slds-m-top_small">
+				<div class="accordion box bdrNone">
+					<div class="sectionExp">
+						<lightning-icon variant="base" size="xx-small" icon-name="utility:chevrondown" class="slds-m-right_small"
+							alternative-text="opne"></lightning-icon>
+						<span class="txtSz16">Allergen Statements (Mandatory Warning)</span>
+					</div>
+					<div class="displayPackTable slds-m-top_small slds-m-bottom_medium tableCont tdBdr">
+						<table class="slds-table slds-table_cell-buffer "
+							aria-labelledby="element-with-table-label other-element-with-table-label">
+							<thead>
+								<tr class="slds-line-height_reset">
+			
+									<th class="" scope="col" width="35%">
+										<div class="" title="">
+			
+										</div>
+									</th>
+									<th class="" scope="col" width="20%">
+										<div class="" title="">
+			
+										</div>
+									</th>
+									<th class="" scope="col" width="40%">
+										<div class="slds-truncate" title="">
+			
+										</div>
+									</th>
+									<th class="" scope="col" width="100%">
+										<div class="slds-truncate" title="">
+										</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="slds-hint-parent">
+			
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp alignV" title="">
+											<span class="boldTxt">Effective Date</span>
+											<span>17/8/2023</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+												onchange={handleChange}>
+											</lightning-combobox>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<lightning-input type="text" name="name" placeholder="Write your comment...">
+											</lightning-input>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+										</div>
+									</td>
+								</tr>
+								<tr class="slds-hint-parent">
+			
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp alignV" title="">
+											<span class="boldTxt">Submission effective date</span>
+											<span>17/8/2023</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Change request message</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Comment will go here</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+										</div>
+									</td>
+								</tr>
+			
+							</tbody>
+						</table>
+					</div>
+				</div>
+			
+				<div class="accordion box bdrNone">
+					<div class="sectionExp">
+						<lightning-icon variant="base" size="xx-small" icon-name="utility:chevrondown" class="slds-m-right_small"
+							alternative-text="opne"></lightning-icon>
+						<span class="txtSz16">Nutrition Details</span>
+					</div>
+					<div class="displayPackTable slds-m-top_small slds-m-bottom_medium tableCont tdBdr">
+						<table class="slds-table slds-table_cell-buffer tdBdr"
+							aria-labelledby="element-with-table-label other-element-with-table-label">
+							<thead>
+								<tr class="slds-line-height_reset">
+			
+									<th class="" scope="col" width="35%">
+										<div class="" title="">
+			
+										</div>
+									</th>
+									<th class="" scope="col" width="20%">
+										<div class="" title="">
+			
+										</div>
+									</th>
+									<th class="" scope="col" width="40%">
+										<div class="slds-truncate" title="">
+			
+										</div>
+									</th>
+									<th class="" scope="col" width="100%">
+										<div class="slds-truncate" title="">
+										</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="slds-hint-parent">
+			
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp alignV" title="">
+											<span class="boldTxt">Does you product contain allergins</span>
+											<span><lightning-input type="checkbox" name="name"></lightning-input></span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Change request message</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Comment will go here</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+										</div>
+									</td>
+								</tr>
+								<tr class="slds-hint-parent">
+			
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp alignV" title="">
+											<span class="boldTxt">Does you product contain allergins</span>
+											<span><lightning-input type="checkbox" name="name"></lightning-input></span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Change request message</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Comment will go here</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+										</div>
+									</td>
+								</tr>
+								<tr class="slds-hint-parent">
+			
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp alignV" title="">
+											<span class="boldTxt">Does you product contain allergins</span>
+											<span><lightning-input type="checkbox" name="name"></lightning-input></span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Change request message</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Comment will go here</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+										</div>
+									</td>
+								</tr>
+								<tr class="slds-hint-parent">
+			
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp alignV" title="">
+											<span class="boldTxt">Does you product contain allergins</span>
+											<span><lightning-input type="checkbox" name="name"></lightning-input></span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+												onchange={handleChange}>
+											</lightning-combobox>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<lightning-input type="text" name="name" placeholder="Write your comment...">
+											</lightning-input>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+										</div>
+									</td>
+								</tr>
+			
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Child Accordion End-->
+
+		</div>
+		<!-- Parent Acccordion End -->
+
+		<!-- Parent Accordion 2 -->
+		<div class="parentAcc box slds-m-bottom_small">
+			<div class="alignH alignC">
+				<lightning-icon variant="base" size="xx-small" icon-name="utility:chevronright" class="slds-m-right_small"
+					alternative-text="opne"></lightning-icon>
+				<h2 class="txtSz16 boldTxt">Review Required</h2>
+			</div>
+
+			<!-- Child Accordion -->
+			<div class="slds-hide groupAcc slds-m-left_large slds-m-top_small">
+				<div class="accordion box bdrNone">
+					<div class="sectionExp">
+						<lightning-icon variant="base" size="xx-small" icon-name="utility:chevrondown" class="slds-m-right_small"
+							alternative-text="opne"></lightning-icon>
+						<span class="txtSz16">Allergen Statements (Mandatory Warning)</span>
+					</div>
+					<div class="displayPackTable slds-m-top_small slds-m-bottom_medium tableCont tdBdr">
+						<table class="slds-table slds-table_cell-buffer "
+							aria-labelledby="element-with-table-label other-element-with-table-label">
+							<thead>
+								<tr class="slds-line-height_reset">
+			
+									<th class="" scope="col" width="35%">
+										<div class="" title="">
+			
+										</div>
+									</th>
+									<th class="" scope="col" width="20%">
+										<div class="" title="">
+			
+										</div>
+									</th>
+									<th class="" scope="col" width="40%">
+										<div class="slds-truncate" title="">
+			
+										</div>
+									</th>
+									<th class="" scope="col" width="100%">
+										<div class="slds-truncate" title="">
+										</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="slds-hint-parent">
+			
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp alignV" title="">
+											<span class="boldTxt">Effective Date</span>
+											<span>17/8/2023</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+												onchange={handleChange}>
+											</lightning-combobox>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<lightning-input type="text" name="name" placeholder="Write your comment...">
+											</lightning-input>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+										</div>
+									</td>
+								</tr>
+								<tr class="slds-hint-parent">
+			
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp alignV" title="">
+											<span class="boldTxt">Submission effective date</span>
+											<span>17/8/2023</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Change request message</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Comment will go here</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+										</div>
+									</td>
+								</tr>
+			
+							</tbody>
+						</table>
+					</div>
+				</div>
+			
+				<div class="accordion box bdrNone">
+					<div class="sectionExp">
+						<lightning-icon variant="base" size="xx-small" icon-name="utility:chevrondown" class="slds-m-right_small"
+							alternative-text="opne"></lightning-icon>
+						<span class="txtSz16">Nutrition Details</span>
+					</div>
+					<div class="displayPackTable slds-m-top_small slds-m-bottom_medium tableCont tdBdr">
+						<table class="slds-table slds-table_cell-buffer tdBdr"
+							aria-labelledby="element-with-table-label other-element-with-table-label">
+							<thead>
+								<tr class="slds-line-height_reset">
+			
+									<th class="" scope="col" width="35%">
+										<div class="" title="">
+			
+										</div>
+									</th>
+									<th class="" scope="col" width="20%">
+										<div class="" title="">
+			
+										</div>
+									</th>
+									<th class="" scope="col" width="40%">
+										<div class="slds-truncate" title="">
+			
+										</div>
+									</th>
+									<th class="" scope="col" width="100%">
+										<div class="slds-truncate" title="">
+										</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="slds-hint-parent">
+			
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp alignV" title="">
+											<span class="boldTxt">Does you product contain allergins</span>
+											<span><lightning-input type="checkbox" name="name"></lightning-input></span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Change request message</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Comment will go here</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+										</div>
+									</td>
+								</tr>
+								<tr class="slds-hint-parent">
+			
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp alignV" title="">
+											<span class="boldTxt">Does you product contain allergins</span>
+											<span><lightning-input type="checkbox" name="name"></lightning-input></span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Change request message</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Comment will go here</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+										</div>
+									</td>
+								</tr>
+								<tr class="slds-hint-parent">
+			
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp alignV" title="">
+											<span class="boldTxt">Does you product contain allergins</span>
+											<span><lightning-input type="checkbox" name="name"></lightning-input></span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Change request message</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<span>Comment will go here</span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+										</div>
+									</td>
+								</tr>
+								<tr class="slds-hint-parent">
+			
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp alignV" title="">
+											<span class="boldTxt">Does you product contain allergins</span>
+											<span><lightning-input type="checkbox" name="name"></lightning-input></span>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+												onchange={handleChange}>
+											</lightning-combobox>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+											<lightning-input type="text" name="name" placeholder="Write your comment...">
+											</lightning-input>
+										</div>
+									</td>
+									<td data-label="" class="slds-cell-wrap" width="">
+										<div class="slds-line-clamp" title="">
+										</div>
+									</td>
+								</tr>
+			
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- Child Accordion End-->
+
+		</div>
+		<!-- Parent Accordion 2 End -->
+        
+		<!-- Display On Pack Table Close-->
+
+
+	</div>
+</template>

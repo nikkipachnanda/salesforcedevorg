@@ -1,0 +1,134 @@
+<template>
+   <!-- batch product submsison content -->
+   <div class="boxWrapperCont">
+      <nav role="navigation" aria-label="Breadcrumbs">
+         <ol class="slds-breadcrumb slds-list_horizontal slds-wrap bredcum">
+            <li class="slds-breadcrumb__item">
+               <a href="#" class="bredcumInact">Home</a>
+            </li>
+            <li class="slds-breadcrumb__item" >
+               <a href="#" class="bredcumAct">Parent Record Name</a>
+            </li>
+         </ol>
+      </nav>
+      <h2 class="headingXlarge">
+         Batch Product Submission
+      </h2>
+      <div class="slds-m-top_small">
+         The batch upload process will allow you to set up a spreadsheet with up to 50 products, and submit them into Partner Hub.  
+      </div>
+      <div class="slds-grid slds-gutters slds-wrap">
+         <div class="slds-col slds-size_1-of-2 posRel  slds-m-top_large">
+            <div>
+               <span class="cirNum ">1</span>
+               <span class="cirtext">			Prepare your spreadsheet by going to <strong>“I want to prepare my batch upload document”,</strong>  and selecting your vendor and range to upload products into.
+               </span>
+            </div>
+         </div>
+					 <div class="slds-col slds-size_1-of-2 posRel  slds-m-top_large">
+					  <div>
+               <span class="cirNum ">2</span>
+               <span class="cirtext">			Download your spreadsheet and start adding your products to the spreadsheet.  There are a lot of options to fill in, within your spreadsheet, so read the instructions in the spreadsheet carefully.
+               </span>
+            </div>
+					</div>		 
+         <div class="slds-col slds-size_1-of-2 posRel  slds-m-top_large">
+            <span class="cirNum ">3</span>
+            <span class="cirtext">				 Once you have completed filling in your spreadsheet, you can return to this page and go to <strong>“I’m ready to upload my batch file”,</strong>  to begin the upload process.  Upon uploading, you will be informed of any errors that need to be addressed in the spreadsheet before you are able to sync the data.
+            </span>
+         </div>
+      </div>
+   </div>
+   <!-- batch product submsison content end -->
+   <!-- batch upload options boxes -->
+   <div class="batchOptSelCont">
+      <div class="slds-grid slds-gutters slds-m-top_large">
+         <div class="slds-col slds-size_1-of-2 posRel">
+            <div class="batoptinTxt ">
+               <span class="batoptIcn">
+               <img src={botarrow} class="icnup" />
+							 <img src={botarrowact} class="icnupact" style="display:none;" />		 
+               </span>
+               <div class="batoptTxt">
+                  <h3 class="slds-m-bottom_medium">I want to prepare my batch <br/> upload document </h3>
+                  Prepare your spreadsheet, by selecting you vendor number and range to submit your products into.  You can only upload 50 products per spreadsheet, and must download a new spreadsheet for additional product uploads.
+               </div>
+               <div class="slds-text-align_right">
+                  <img src={icnarw} class="icnarw" />
+								  <div class="icnarwact" style="display:none;">
+											<img src={icnarwact}  />
+									 </div>	 
+               </div>
+            </div>
+         </div>
+         <div class="slds-col slds-size_1-of-2 posRel">
+            <div class="batoptinTxt batoptionAct">
+               <span class="batoptIcn"> <img src={icnfile} class="icnfile" /></span>
+							 <span class="batoptIcn" > <img src={icnfileact} class="icnfileact" style="display:none;"  /></span>
+               <div class="batoptTxt">
+                  <h3 class="slds-m-bottom_medium">I’m ready to upload my  <br/> batch file  </h3>
+                  You’ve completed setting your spreadsheet and are ready to upload the products into Partner Hub.  You can only upload one spreadsheet at a time, and it will take up to 24 hours to complete the syncing process.
+               </div>
+               <div class="slds-text-align_right">
+                  <img src={icnarw} class="icnarw" />
+									   <div class="icnarwact" style="display:none;">
+											<img src={icnarwact}  />
+									 </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- batch upload options boxes end -->
+   <!-- my recents upload -->
+   <div class="boxWrapperCont recentUploadCont">
+      <h3>
+         My Recent uploads
+      </h3>
+      <table class="slds-table slds-table_cell-buffer " aria-labelledby="element-with-table-label other-element-with-table-label">
+         <thead>
+            <tr class="slds-line-height_reset">
+               <th class="" scope="col">
+                  <div class="slds-truncate" title="File">File</div>
+               </th>
+               <th class="" scope="col">
+                  <div class="slds-truncate" title="Date">Date</div>
+               </th>
+               <th class="" scope="col">
+                  <div class="slds-truncate" title="Status">Status</div>
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="slds-hint-parent">
+               <td data-label="">
+                  <div class="slds-truncate" title="This is a file name or number">This is a file name or number
+                  </div>
+               </td>
+               <td data-label="Account Name">
+                  <div class="slds-truncate" title="Cloudhub">10/12/2022</div>
+               </td>
+               <td data-label="Close Date">
+                  <div class="slds-truncate" title="">
+                     <lightning-button label="Completed" title=""  class="slds-m-left_x-small secondaryBtn tbBtn"></lightning-button>
+                  </div>
+               </td>
+            </tr>
+            <tr class="slds-hint-parent">
+               <td data-label="">
+                  <div class="slds-truncate" title="This is a file name or number">This is a file name or number
+                  </div>
+               </td>
+               <td data-label="Account Name">
+                  <div class="slds-truncate" title="Cloudhub">10/12/2022</div>
+               </td>
+               <td data-label="Close Date">
+                  <div class="slds-truncate" title="">
+                     <lightning-button label="Completed" title=""  class="slds-m-left_x-small secondaryBtn tbBtn"></lightning-button>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</template>

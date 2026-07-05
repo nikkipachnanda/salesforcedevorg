@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Tabset Demo">
+        <lightning-tabset
+            active-tab-value={selectedTab}
+            onactive={handleTabChange}
+        >
+            <lightning-tab label="Backdoor" value="backdoor">
+                <p>This is Backdoor content.</p>
+            </lightning-tab>
+
+            <lightning-tab label="Middledoor" value="middledoor">
+                <p>This is Middledoor content.</p>
+            </lightning-tab>
+
+            <lightning-tab label="Frontdoor" value="frontdoor">
+                <p>This is Frontdoor content.</p>
+            </lightning-tab>
+        </lightning-tabset>
+
+        <div class="slds-m-top_medium">
+            <lightning-button label="Previous" onclick={goToPreviousTab}></lightning-button>
+            <lightning-button label="Next" onclick={goToNextTab}></lightning-button>
+        </div>
+
+        <p class="slds-m-top_medium">Current Tab: <strong>{selectedTab}</strong></p>
+    </lightning-card>
+</template>

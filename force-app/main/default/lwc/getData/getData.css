@@ -1,0 +1,21 @@
+.cardBoxIno 
+{
+    border:1px #ccc solid;
+    padding:20px;
+    border-radius: 5px;
+    margin:10px;
+}
+
+
+ul 
+{
+    margin:0px;
+}
+ul li 
+{
+    float:left;
+    background: green;
+    padding:10px;
+    margin-right:10px;
+    color:#fff;
+}

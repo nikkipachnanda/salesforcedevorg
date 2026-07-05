@@ -1,0 +1,61 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.part {
+    position: absolute;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #b5905A;
+    font-weight: bold;
+}
+
+.head {
+    top: 36%;
+    left: 35%;
+    width: 15%;
+    height: 20%;
+    text-align: center;
+}
+
+.chuck {
+    top: 37%;
+    left: 56%;
+    width: 12%;
+    height: 9%;
+    text-align: center;
+}
+
+.rib {
+    top: 37%;
+    left: 22%;
+    width: 11%;
+    height: 16%;
+    text-align: center;
+}
+
+/* Hover and active styling */
+.part:hover,
+.part.active {
+    color: #fff;
+    background-color:transparent;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size:14px;
+}
+
+.info-display {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.cowhead:hover { fill: green};

@@ -1,0 +1,367 @@
+<template>
+        <div lwc:dom="manual"></div>
+      <div class="speakerCont">
+        <div class="midSectionCont">   
+        <div style={backgroundStylebotBg}>
+        <div class="partnersCont" style={backgroundStyleTopBg}>
+            <h2 class="midContHeading">Speakers</h2>
+
+            <div class="slds-grid slds-wrap">
+                <div class="imageScrollerCont imageScrollerCont slds-size_11-of-12  slds-large-size_11-of-12 ">
+                    <div class="imageGallery imageGallerySpeakers">
+
+                        <ul>
+                            <li class="left_scroll_btn" onclick={prevSlide}><img src={lftarw} /> </li>
+                        </ul>
+                        <ul class="imageGallCont">
+                            <li class="speakersTxtCont">
+                                <div>
+                                    <img src={profpic} />
+                                </div>
+                                <div class="speakersTxt">
+                                    <div class="spkhead">Anouche Newman</div>
+                                    <div>Chief Executive Officer</div>
+                                    <div>Customer Service Institute</div>
+                                    <div class="spkheadBold">of Australia</div>
+
+                                </div>
+                            </li>
+                            <li class="speakersTxtCont">
+                                <div>
+                                    <img src={profpic2} />
+                                </div>
+                                <div class="speakersTxt">
+                                    <div class="spkhead">Glenn King</div>
+                                    <div> Customer Service Commissioner</div>
+                                    <div>NSW Department of Premier</div>
+                                    <div class="spkheadBold">& Cabinet</div>
+
+                                </div>
+                            </li>
+                            <li class="speakersTxtCont">
+                                <div>
+                                    <img src={profpic3} />
+                                </div>
+                                <div class="speakersTxt">
+                                    <div class="spkhead">Helen Lever
+                                    </div>
+                                    <div> General Manager,
+                                    </div>
+                                    <div>Customer and Corporate
+                                    </div>
+                                    <div class="spkheadBold">Northern Beaches Council</div>
+
+                                </div>
+                            </li>
+                            <li class="speakersTxtCont">
+                                <div>
+                                    <img src={profpic4} />
+                                </div>
+                                <div class="speakersTxt">
+                                    <div class="spkhead">Michael Berndt
+
+                                    </div>
+                                    <div> Chief Customer,
+                                    </div>
+                                    <div>Experience Officer
+
+                                    </div>
+                                    <div class="spkheadBold">eHealth Queensland</div>
+
+                                </div>
+                            </li>
+                            <li class="speakersTxtCont">
+                                <div>
+                                    <img src={profpic4} />
+                                </div>
+                                <div class="speakersTxt">
+                                    <div class="spkhead">Michael Berndt
+
+                                    </div>
+                                    <div> Chief Customer,
+                                    </div>
+                                    <div>Experience Officer
+
+                                    </div>
+                                    <div class="spkheadBold">eHealth Queensland</div>
+
+                                </div>
+                            </li>
+                            <li class="speakersTxtCont">
+                                <div>
+                                        <img src={profpic4} />
+                                </div>
+                                <div class="speakersTxt">
+                                        <div class="spkhead">Michael Berndt
+    
+                                        </div>
+                                        <div> Chief Customer,
+                                        </div>
+                                        <div>Experience Officer
+    
+                                        </div>
+                                        <div class="spkheadBold">eHealth Queensland</div>
+    
+                                    </div>
+                            </li>
+                            <li class="speakersTxtCont">
+                                <div>
+                                    <img src={profpic4} />
+                                </div>
+                                <div class="speakersTxt">
+                                    <div class="spkhead">Michael Berndt
+
+                                    </div>
+                                    <div> Chief Customer,
+                                    </div>
+                                    <div>Experience Officer
+
+                                    </div>
+                                    <div class="spkheadBold">eHealth Queensland</div>
+
+                                </div>
+                            </li>
+
+                            <li class="speakersTxtCont">
+                                <div>
+                                    <img src={profpic4} />
+                                </div>
+                                <div class="speakersTxt">
+                                    <div class="spkhead">Michael Berndt
+
+                                    </div>
+                                    <div> Chief Customer,
+                                    </div>
+                                    <div>Experience Officer
+
+                                    </div>
+                                    <div class="spkheadBold">eHealth Queensland</div>
+
+                                </div>
+                            </li>
+
+                            <li class="speakersTxtCont">
+                                <div>
+                                    <img src={profpic4} />
+                                </div>
+                                <div class="speakersTxt">
+                                    <div class="spkhead">Michael Berndt
+
+                                    </div>
+                                    <div> Chief Customer 2 last,
+                                    </div>
+                                    <div>Experience Officer
+
+                                    </div>
+                                    <div class="spkheadBold">eHealth Queensland</div>
+
+                                </div>
+                            </li>
+
+                            <li class="speakersTxtCont">
+                                <div>
+                                    <img src={profpic4} />
+                                </div>
+                                <div class="speakersTxt">
+                                    <div class="spkhead">Michael Berndt
+
+                                    </div>
+                                    <div> Chief Customer last ,
+                                    </div>
+                                    <div>Experience Officer
+
+                                    </div>
+                                    <div class="spkheadBold">eHealth Queensland</div>
+
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <ul>
+                            <li class="right_scroll_btn" onclick={nextSlide}><img src={rgtarw} /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workProfileBox">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-size_1-of-1 slds-large-size_2-of-12 ">
+                        <div class="profilPic slds-text-align_center"><img src={profilepic}>
+                            <div class="icnCont slds-x-small-show-only"> <i class="fab fa-linkedin-in"></i> </div>
+                        </div>
+                    </div>
+
+                    <div class="slds-size_1-of-1 slds-large-size_9-of-12 ">
+                            <div class="slds-clearfix proBg" style={backgroundSep}>    
+                                <ul class="slds-m-top_large slds-float_left">
+                                    <li>Anouche Newman</li>
+                                    <li class="proCol">Chief Executive Officer</li>
+                                    <li>Customer Service Institute of Australia</li>
+                                </ul>
+                                <div class="slds-float_left slds-m-top_large icnProfile slds-show_large">
+                                    <div class="icnCont"> <i class="fab fa-linkedin-in"></i> </div>
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="slds-m-top_large slds-text-align_center"> Anouche has spent half her life thinking about
+                    how to create better customer service
+                    interactions. In 2013, after spending nearly a decade combining an academic career
+                    with consulting for forward-thinking organisations, she accepted a senior role at CSIA.
+                    Since 2015, she has been its CEO, where she focuses her team on assisting individuals
+                    and organisations in achieving their true customer service potential.</div>
+            </div>
+
+            <div class="slds-align_absolute-center slds-m-top_large show"><img src={seemore} title={showContent} /></div>
+
+            <div class="slds-grid slds-wrap">
+                <div class="slds-size_1-of-1 slds-large-size_3-of-12 slds-text-align_center slds-m-top_large">
+                    <div>
+                        <img src={profpic3} />
+                    </div>
+                    <div class="speakersTxt">
+                        <div class="spkhead">Michael Berndt
+
+                        </div>
+                        <div> Chief Customer,
+                        </div>
+                        <div>Experience Officer
+
+                        </div>
+                        <div class="spkheadBold">eHealth Queensland</div>
+
+                    </div>
+                </div>
+                <div class="slds-size_1-of-1 slds-large-size_3-of-12 slds-text-align_center slds-m-top_large">
+                    <div>
+                        <img src={profpic3} />
+                    </div>
+                    <div class="speakersTxt">
+                        <div class="spkhead">Michael Berndt
+
+                        </div>
+                        <div> Chief Customer,
+                        </div>
+                        <div>Experience Officer
+
+                        </div>
+                        <div class="spkheadBold">eHealth Queensland</div>
+
+                    </div>
+                </div>
+                <div class="slds-size_1-of-1 slds-large-size_3-of-12 slds-text-align_center slds-m-top_large">
+                    <div>
+                        <img src={profpic3} />
+                    </div>
+                    <div class="speakersTxt">
+                        <div class="spkhead">Michael Berndt
+
+                        </div>
+                        <div> Chief Customer,
+                        </div>
+                        <div>Experience Officer
+
+                        </div>
+                        <div class="spkheadBold">eHealth Queensland</div>
+
+                    </div>
+                </div>
+                <div class="slds-size_1-of-1 slds-large-size_3-of-12 slds-text-align_center slds-m-top_large">
+                    <div>
+                        <img src={profpic4} />
+                    </div>
+                    <div class="speakersTxt">
+                        <div class="spkhead">Michael Berndt
+
+                        </div>
+                        <div> Chief Customer,
+                        </div>
+                        <div>Experience Officer
+
+                        </div>
+                        <div class="spkheadBold">eHealth Queensland</div>
+
+                    </div>
+                </div>
+
+                <div class="slds-size_1-of-1 slds-large-size_3-of-12 slds-text-align_center slds-m-top_large">
+                        <div>
+                            <img src={profpic3} />
+                        </div>
+                        <div class="speakersTxt">
+                            <div class="spkhead">Michael Berndt
+        
+                            </div>
+                            <div> Chief Customer,
+                            </div>
+                            <div>Experience Officer
+        
+                            </div>
+                            <div class="spkheadBold">eHealth Queensland</div>
+        
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-1 slds-large-size_3-of-12 slds-text-align_center slds-m-top_large">
+                        <div>
+                            <img src={profpic3} />
+                        </div>
+                        <div class="speakersTxt">
+                            <div class="spkhead">Michael Berndt
+        
+                            </div>
+                            <div> Chief Customer,
+                            </div>
+                            <div>Experience Officer
+        
+                            </div>
+                            <div class="spkheadBold">eHealth Queensland</div>
+        
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-1 slds-large-size_3-of-12 slds-text-align_center slds-m-top_large">
+                        <div>
+                            <img src={profpic3} />
+                        </div>
+                        <div class="speakersTxt">
+                            <div class="spkhead">Michael Berndt
+        
+                            </div>
+                            <div> Chief Customer,
+                            </div>
+                            <div>Experience Officer
+        
+                            </div>
+                            <div class="spkheadBold">eHealth Queensland</div>
+        
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-1 slds-large-size_3-of-12 slds-text-align_center slds-m-top_large">
+                        <div>
+                            <img src={profpic4} />
+                        </div>
+                        <div class="speakersTxt">
+                            <div class="spkhead">Michael Berndt
+        
+                            </div>
+                            <div> Chief Customer,
+                            </div>
+                            <div>Experience Officer
+        
+                            </div>
+                            <div class="spkheadBold">eHealth Queensland</div>
+        
+                        </div>
+                    </div>
+                    <div class="slds-align_absolute-center slds-m-top_large hide imghide"><img src={hidecont}  title={hideContent}/></div>
+                
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+</div>
+</template>

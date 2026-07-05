@@ -1,0 +1,373 @@
+<template>
+  <div class={tableClass}>
+    <div class="tableCont">
+    <table  class="slds-table slds-table_cell-buffer slds-table_bordered" aria-label="Example default base table of Opportunities">
+
+  <tbody>
+    <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub">Cloudhub</div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+
+        <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub"> <lightning-combobox
+            name="progress"
+            label="Status"
+            value={value}
+            placeholder="Select Progress"
+            options={options}
+            onchange={handleChange} ></lightning-combobox></div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+   
+
+       <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub">Cloudhub</div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+   
+
+       <!-- <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub">Cloudhub</div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+
+     <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub">Cloudhub</div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+
+     <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub">Cloudhub</div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+
+     <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub">Cloudhub</div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+
+     <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub">Cloudhub</div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+    -->
+   
+  </tbody>
+</table>
+
+    </div>
+  </div> 
+
+<br/>
+<br/>
+<br/>
+<div class={tableClass}>
+    <div class="tableCont">
+ <table  class="slds-table slds-table_cell-buffer slds-table_bordered" aria-label="Example default base table of Opportunities">
+
+  <tbody>
+    <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub">Cloudhub</div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+
+        <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub">Cloudhub</div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+   
+
+       <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub">Cloudhub</div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+   
+
+       <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub">Cloudhub</div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+
+     <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub">Cloudhub</div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+
+     <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub">Cloudhub</div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+
+     <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub">Cloudhub</div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+
+     <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td">
+        <div  title="Cloudhub">Cloudhub</div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+   
+   
+  </tbody>
+</table>
+    </div>
+</div>  
+</template>

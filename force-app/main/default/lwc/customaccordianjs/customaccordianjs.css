@@ -1,0 +1,10 @@
+.cstm_table tr { cursor: pointer; }
+.RecordRow { background: #eee; }
+
+.RecordRow[data-open="true"] .slds-icon_container {
+  transform: rotate(180deg);
+  transition: transform .2s ease;
+}
+
+.rowCellIcon { width: 280px; }
+.rowRadio { cursor: default; }

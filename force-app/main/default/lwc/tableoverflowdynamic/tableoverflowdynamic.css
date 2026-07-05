@@ -1,0 +1,7 @@
+.dummy{
+	color : black;
+}
+
+.tableCont { overflow: auto; height: 200px;}
+
+.tableContOI { overflow: initial!important;}

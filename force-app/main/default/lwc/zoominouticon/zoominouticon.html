@@ -1,0 +1,31 @@
+<template>
+  <div class="image-container" 
+       onmousedown={handleMouseDown} 
+       onmousemove={handleMouseMove} 
+       onmouseup={handleMouseUp} 
+       onmouseleave={handleMouseUp}>
+
+     <img src="https://cdn0.woolworths.media/content/wowproductimages/large/263634_6.jpg" 
+          class="zoom-image" 
+          style={imageStyle} 
+          draggable="false" />
+
+    <div class="controls">
+      <lightning-icon 
+        icon-name="utility:zoomin" 
+        alternative-text="Zoom In" 
+        size="small" 
+        onclick={handleZoomIn} 
+        class="zoom-icon">
+      </lightning-icon>
+
+      <lightning-icon 
+        icon-name="utility:zoomout" 
+        alternative-text="Zoom Out" 
+        size="small" 
+        onclick={handleZoomOut} 
+        class="zoom-icon">
+      </lightning-icon>
+    </div>
+  </div>
+</template>

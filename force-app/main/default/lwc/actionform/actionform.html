@@ -1,0 +1,359 @@
+<template>
+
+    <div class="wrapperCont">
+
+        <nav role="navigation" aria-label="Breadcrumbs" class="slds-m-bottom_large">
+            <ol class="slds-breadcrumb slds-list--horizontal">
+                <li class="slds-breadcrumb__item slds-text-title--caps"><a href="javascript:void(0);">Home</a></li>
+                <li class="slds-breadcrumb__item slds-text-title--caps"><span class="slds-m-left_x-small">Action
+                        forms</span></li>
+            </ol>
+        </nav>
+
+        <h1>Action form to complete </h1>
+
+        <div class="slds-grid slds-wrap slds-gutters">
+            <div class="slds-col  slds-size_1-of-1 slds-medium-size_9-of-12">
+                 <!--action form component-->
+                <div class="midFCol">
+                    <div class="slds-grid slds-wrap slds-gutters actionFormInfo">
+                        <div class="slds-col  slds-size_1-of-1 slds-medium-size_3-of-12">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="form-element-01">Parent Account</label>
+                                <div class="slds-form-element__control">
+                                    The Best Company
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col  slds-size_1-of-1 slds-medium-size_3-of-12">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="form-element-01">Non-Conformance
+                                    Category</label>
+                                <div class="slds-form-element__control">
+                                    Carton Issue
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col  slds-size_1-of-1 slds-medium-size_3-of-12">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="form-element-01">Non-Conformance Sub
+                                    Category</label>
+                                <div class="slds-form-element__control">
+                                    Empty Carton <img src={expicn} />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col  slds-size_1-of-1 slds-medium-size_3-of-12">
+                            <div class="slds-form-element">
+                                <label class="slds-form-element__label" for="form-element-01">Status</label>
+                                <div class="slds-form-element__control">
+                                    Escalated
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!--Supplier resolution component-->
+                 <h2 class="slds-m-top_large">Supplier Resolution Comment</h2>
+                 <div class="midFCol">
+                    <div class="supplierResCont ">
+                        <h3>Select Resolution</h3>
+                        <div class="slds-m-top_large"> 
+                            <lightning-radio-group name="radioGroup"
+                            label=""
+                            options={options}
+                            value={value}
+                            type="radio"></lightning-radio-group>
+                        </div>
+                      
+                   <div class="slds-grid slds-wrap slds-gutters slds-m-top_large colFcont">  
+                        
+                      <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12">
+                            <div> <lightning-textarea name="input1" label="What corrective/preventive actions are you taking to address this issue?" ></lightning-textarea></div>
+
+                            <div class="slds-m-top_small">   <lightning-input type="date" name="input1" label="When will this be resolved?" ></lightning-input></div>
+                            <div class="slds-m-top_small">   <lightning-button variant="brand" label="Submit Resolution" title="Primary action" onclick={handleClick} ></lightning-button></div>
+                      </div>    
+                    </div>
+                    </div>
+                </div>
+
+                <!--Non conformance cases(4)-->
+                <h2 class="slds-m-top_large">Non-conformance Cases (4)</h2>
+                <div class="midFCol">
+                    <div>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped tabCont">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="NC Created Date">NC Created Date</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Vendor GS No.">Vendor GS No./Name</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Case">Case #</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="DC">DC</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Articles">Article</div>
+                                    </th>   
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title=""></div>
+                                    </th>   
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title=""></div>
+                                    </th>   
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td data-label="NC Created Date">
+                                        <div class="slds-truncate" title="Case ">
+                                            20/02/2020 
+                                        </div>
+                                    </td>
+                                    <td data-label="Vendor GS No./Name">
+                                        <div class="slds-truncate" title="Date"> Lorem ipsum dolor sit</div>
+                                    </td>
+
+                                    <td data-label="Case">
+                                        <div class="slds-truncate" title="DC"><a href="#">00026029 </a> </div>
+                                    </td>
+
+                                    <td data-label="DC">
+                                        <div class="slds-truncate" title="View">3995 Melbourne South 
+                                            Regional DC</div>
+                                    </td>
+
+                                    <td data-label="Article">
+                                        <div class="slds-truncate" title="View">774766</div>
+                                    </td>
+
+                                    <td data-label="Article">
+                                        <div class="slds-truncate" title="View"> Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+                                    </td>
+
+                                    <td data-label="Article">
+                                        <div class="slds-truncate" title="View"> 
+                                            <img src={attachicn} />    <img src={arrwdown} class="arwicn" />
+                                        </div>
+                                    </td>
+                                    
+
+                                </tr>
+
+                                <tr>
+                                    <td colspan="7">
+                                        <div class="slds-grid slds-wrap slds-gutters actionFormInfo">
+                                            <div class="slds-col  slds-size_1-of-1 slds-medium-size_6-of-12">
+                                                    <div class="slds-grid slds-wrap slds-gutters actionFormInfo">
+                                                        <div class="slds-col  slds-size_1-of-1 slds-medium-size_6-of-12">
+                                                            PO No.:
+                                                        </div>
+                                                        <div class="slds-col  slds-size_1-of-1 slds-medium-size_6-of-12">
+                                                            010007921
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div class="slds-col  slds-size_1-of-1 slds-medium-size_6-of-12">
+                                                <div class="slds-grid slds-wrap slds-gutters actionFormInfo">
+                                                    <div class="slds-col  slds-size_1-of-1 slds-medium-size_6-of-12">
+                                                        Additional Comment :
+                                                    </div>
+                                                    <div class="slds-col  slds-size_1-of-1 slds-medium-size_6-of-12 wraptxt">
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus maximus tempor ipsum vitae aliquet. Mauris posuere orci ac tortor tincidunt lacinia.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slds-col  slds-size_1-of-1 slds-medium-size_6-of-12">
+                                                <div class="slds-grid slds-wrap slds-gutters actionFormInfo">
+                                                    <div class="slds-col  slds-size_1-of-1 slds-medium-size_6-of-12">
+                                                        Attached File :
+                                                    </div>
+                                                    <div class="slds-col  slds-size_1-of-1 slds-medium-size_6-of-12">
+                                                        <lightning-file-upload
+                                                        label=""
+                                                        name="fileUploader"
+                                                        accept={acceptedFormats}
+                                                        onuploadfinished={handleUploadFinished}
+                                                        multiple>
+                                                </lightning-file-upload>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slds-col  slds-size_1-of-1 slds-medium-size_6-of-12">
+                                                <div class="slds-grid slds-wrap slds-gutters actionFormInfo">
+                                                    <div class="slds-col  slds-size_1-of-1 slds-medium-size_6-of-12">
+
+                                                    </div>
+                                                    <div class="slds-col  slds-size_1-of-1 slds-medium-size_6-of-12">
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="slds-col  slds-size_1-of-1 slds-medium-size_3-of-12">
+
+                <!--knowledge component-->
+                <div class="midFCol">
+                    <h3>Knowledge Hub Documents</h3>
+                    <div class="slds-grid slds-wrap slds-gutters slds-m-top_large">
+                        <div class="slds-col  slds-size_1-of-1 slds-medium-size_4-of-12" >
+                            <img src={knowimg1} width="110" height="83" class="imgWidth" />
+                        </div>
+
+                        <div class="slds-col  slds-size_1-of-1 slds-medium-size_8-of-12">
+                            <h2>Document title <span class="docicn"><img src={documenticn}/></span> </h2>
+                            
+                            <div>Short Summary of document will go here.Lorem ipsum dolor sit amet, consectetur.</div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap slds-gutters slds-m-top_large">
+                        <div class="slds-col  slds-size_1-of-1 slds-medium-size_4-of-12" >
+                            <img src={knowimg2} width="110" height="83" class="imgWidth" />
+                        </div>
+
+                        <div class="slds-col  slds-size_1-of-1 slds-medium-size_8-of-12">
+                            <h2>Document title <span class="docicn"><img src={documenticn}/></span> </h2>
+                            <div>Short Summary of document will go here.Lorem ipsum dolor sit amet, consectetur.</div>
+                        </div>
+                    </div>
+
+                    <div class="slds-grid slds-wrap slds-gutters slds-m-top_large">
+                        <div class="slds-col  slds-size_1-of-1 slds-medium-size_4-of-12">
+                            <img src={knowimg3} width="110" height="83" class="imgWidth" />
+                        </div>
+
+                        <div class="slds-col  slds-size_1-of-1 slds-medium-size_8-of-12">
+                            <h2>Document title <span class="docicn"><img src={documenticn}/></span> </h2>
+                            <div>Short Summary of document will go here.Lorem ipsum dolor sit amet, consectetur.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Prev attachment component-->
+                <div class="midFCol slds-m-top_large">
+                    <h3>Prev. Attachments (Sub Category) </h3>
+                    <div style="overflow:auto;">
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Case">Case #</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Date">Date</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="File Type">File Type</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="View">View</div>
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td data-label="NC Category">
+                                        <div class="slds-truncate" title="Case ">
+                                            <a href="#">00026034 </a></div>
+                                    </td>
+                                    <td data-label="NC Sub Category">
+                                        <div class="slds-truncate" title="Date"> 01/08/2019</div>
+                                    </td>
+
+                                    <td data-label="Status">
+                                        <div class="slds-truncate" title="DC">PDF </div>
+                                    </td>
+
+                                    <td data-label="Issue">
+                                        <div class="slds-truncate" title="View">
+                                            <img src={eyeicn} />
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+                <!--Prev attachment component-->
+                <div class="midFCol slds-m-top_large">
+                    <h3>5 Prev. Case History </h3>
+                    <div style="overflow:auto;">
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Case">Case #</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Creation Date">Creation Date</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="DC">DCType</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Supplier">Last Updated Supplier</div>
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td data-label="NC Category">
+                                        <div class="slds-truncate" title="Case ">
+                                            <a href="#">00026034 </a></div>
+                                    </td>
+                                    <td data-label="NC Sub Category">
+                                        <div class="slds-truncate" title="Date"> 01/08/2019</div>
+                                    </td>
+
+                                    <td data-label="Status">
+                                        <div class="slds-truncate" title="DC">3995 Melbourne
+                                            South Regional DC </div>
+                                    </td>
+
+                                    <td data-label="Issue">
+                                        <div class="slds-truncate" title="View">Supplier Name</div>
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>

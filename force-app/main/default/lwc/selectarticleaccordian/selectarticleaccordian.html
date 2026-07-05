@@ -1,0 +1,148 @@
+<template>
+   <h2 class="heading">Select Article</h2>
+   <lightning-accordion class="example-accordion"
+      onsectiontoggle={handleToggleSection}
+      active-section-name="B">
+      <lightning-accordion-section name="A" label="SSCC ID: 000123456789012334">
+         <lightning-radio-group
+            label="Radio Button Group"
+            options={options}
+            value={value}
+            onchange={handleChange}
+            class="radioBtn"														
+            required
+            >
+         </lightning-radio-group>
+         <table class="slds-table slds-table_cell-buffer  slds-max-medium-table_stacked-horizontal articleTabCont">
+            <thead>
+               <tr class="slds-line-height_reset">
+                  <th class="" scope="col">
+                     <div class="slds-truncate" title="Article Number">Article Number</div>
+                  </th>
+                  <th class="" scope="col">
+                     <div class="slds-truncate" title="Article Description">Article Description</div>
+                  </th>
+                  <th class="" scope="col">
+                     <div class="slds-truncate" title="Supplier">Supplier</div>
+                  </th>
+                
+               </tr>
+            </thead>
+            <tbody>
+               <tr class="slds-hint-parent">
+                  <td data-label="Article Number" scope="row">
+                     <div class="slds-truncate" title="">878378</div>
+                  </td>
+                  <td data-label="Article Description">
+                     <div class="slds-truncate" title="">Article Description will go here...</div>
+                  </td>
+                  <td data-label="Supplier">
+                     <div class="slds-truncate" title="">Chobani</div>
+                  </td>
+               </tr>
+								
+								 <tr class="slds-hint-parent">
+                  <td data-label="Article Number" scope="row">
+                     <div class="slds-truncate" title="">878378</div>
+                  </td>
+                  <td data-label="Article Description">
+                     <div class="slds-truncate" title="">Article Description will go here...</div>
+                  </td>
+                  <td data-label="Supplier">
+                     <div class="slds-truncate" title="">Chobani</div>
+                  </td>
+               </tr>
+              
+            </tbody>
+         </table>
+      </lightning-accordion-section>
+      <lightning-accordion-section name="B" label="SSCC ID: 000123456789078954">
+          <table class="slds-table slds-table_cell-buffer  slds-max-medium-table_stacked-horizontal articleTabCont">
+            <thead>
+               <tr class="slds-line-height_reset">
+                  <th class="" scope="col">
+                     <div class="slds-truncate" title="Article Number">Article Number</div>
+                  </th>
+                  <th class="" scope="col">
+                     <div class="slds-truncate" title="Article Description">Article Description</div>
+                  </th>
+                  <th class="" scope="col">
+                     <div class="slds-truncate" title="Supplier">Supplier</div>
+                  </th>
+                
+               </tr>
+            </thead>
+            <tbody>
+               <tr class="slds-hint-parent">
+                  <td data-label="Article Number" scope="row">
+                     <div class="slds-truncate" title="">878378</div>
+                  </td>
+                  <td data-label="Article Description">
+                     <div class="slds-truncate" title="">Article Description will go here...</div>
+                  </td>
+                  <td data-label="Supplier">
+                     <div class="slds-truncate" title="">Chobani</div>
+                  </td>
+               </tr>
+								
+								 <tr class="slds-hint-parent">
+                  <td data-label="Article Number" scope="row">
+                     <div class="slds-truncate" title="">878378</div>
+                  </td>
+                  <td data-label="Article Description">
+                     <div class="slds-truncate" title="">Article Description will go here...</div>
+                  </td>
+                  <td data-label="Supplier">
+                     <div class="slds-truncate" title="">Chobani</div>
+                  </td>
+               </tr>
+              
+            </tbody>
+         </table>
+      </lightning-accordion-section>
+      <lightning-accordion-section name="C" label="SSCC ID: 000123456789009878">
+         <table class="slds-table slds-table_cell-buffer  slds-max-medium-table_stacked-horizontal articleTabCont">
+            <thead>
+               <tr class="slds-line-height_reset">
+                  <th class="" scope="col">
+                     <div class="slds-truncate" title="Article Number">Article Number</div>
+                  </th>
+                  <th class="" scope="col">
+                     <div class="slds-truncate" title="Article Description">Article Description</div>
+                  </th>
+                  <th class="" scope="col">
+                     <div class="slds-truncate" title="Supplier">Supplier</div>
+                  </th>
+                
+               </tr>
+            </thead>
+            <tbody>
+               <tr class="slds-hint-parent">
+                  <td data-label="Article Number" scope="row">
+                     <div class="slds-truncate" title="">878378</div>
+                  </td>
+                  <td data-label="Article Description">
+                     <div class="slds-truncate" title="">Article Description will go here...</div>
+                  </td>
+                  <td data-label="Supplier">
+                     <div class="slds-truncate" title="">Chobani</div>
+                  </td>
+               </tr>
+								
+								 <tr class="slds-hint-parent">
+                  <td data-label="Article Number" scope="row">
+                     <div class="slds-truncate" title="">878378</div>
+                  </td>
+                  <td data-label="Article Description">
+                     <div class="slds-truncate" title="">Article Description will go here...</div>
+                  </td>
+                  <td data-label="Supplier">
+                     <div class="slds-truncate" title="">Chobani</div>
+                  </td>
+               </tr>
+              
+            </tbody>
+         </table>
+      </lightning-accordion-section>
+   </lightning-accordion>
+</template>

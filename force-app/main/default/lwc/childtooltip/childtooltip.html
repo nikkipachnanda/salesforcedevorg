@@ -1,0 +1,12 @@
+<template>
+    <div class="tooltip-container">
+        <button class="tooltip-trigger" onclick={handleButtonClick}>
+            {label}
+        </button>
+        <template if:true={isTooltipVisible}>
+            <div class="tooltip-content">
+                {text}
+            </div>
+        </template>
+    </div>
+</template>

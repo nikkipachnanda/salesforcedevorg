@@ -1,0 +1,5 @@
+.dummyClass{color:black;}
+
+.alignHorizontal .activeRow .slds-icon_container{
+	transform: rotate(180deg);
+}

@@ -1,0 +1,16 @@
+<template>
+<div class="scroller-container">
+<!-- Left Arrow -->
+<button class="arrow left" onclick={scrollLeft}>&#10094;</button>
+<!-- Scrollable content -->
+<div class="scroll-wrapper"  data-id="scrollable">
+<template for:each={items} for:item="item">
+<div key={item.id} class="scroll-item">
+                   {item.label}
+</div>
+</template>
+</div>
+<!-- Right Arrow -->
+<button class="arrow right" onclick={scrollRight}>&#10095;</button>
+</div>
+</template>

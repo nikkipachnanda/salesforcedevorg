@@ -1,0 +1,22 @@
+.bottomMenuCont{
+	position : fixed;
+	bottom:0px;
+}
+.posRel {position:relative;}
+
+.bottomMenu{
+	margin:10px;
+	background: #eee;
+	position:absolute;
+	top:-70px;
+	width:200px;
+}
+
+.bottomMenu ul { padding:10px;}
+
+.toggleBtn {margin:10px;}
+
+.dspn { display: none!important; }
+.dsblk { display: block!important; }
+
+.closeicn { float: right; margin-top:5px; margin-right:5px;}

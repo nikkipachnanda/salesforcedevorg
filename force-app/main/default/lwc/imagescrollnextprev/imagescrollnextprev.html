@@ -1,0 +1,30 @@
+<template>
+    <!-- Carousel Tasks Tiles Section -->
+    <div class="carousel-container slds-m-bottom_xx-large">
+        <div class="carousel-viewport">
+            <ul class="alignHorizontal" style={transformStyle}>
+                <template for:each={tiles} for:item="tile">
+                    <li key={tile.id} class="taskCard slds-p-around_medium alignHorizontal slds-m-right_small" onclick={handleTileClick}>
+                        <div class="categoryTint tintColorFruit alignHorizontal centerAlign">
+                            <div class="categoryName slds-m-top_medium">{tile.category}</div>
+                        </div>
+                        <div class="rangeTileCol slds-p-left_medium">
+                            <div class="rangeSec alignHorizontal alignRight">
+                                <div class="rangeHeading">Range review:<div>{tile.range}</div></div>
+                                <div class={tile.statusClass}>{tile.status}</div>
+                            </div>
+                            <p class="rangeSubTxt slds-p-bottom_xx-small">{tile.subText}</p>
+                            <div class="taskDueSec alignHorizontal alignRight alignMiddle">
+                                <span>{tile.dueDate}</span>
+                            </div>
+                        </div>
+                    </li>
+                </template>
+            </ul>
+        </div>
+        <div class="slds-m-vertical_medium slds-text-align_center carouselBtn">
+            <lightning-button-icon variant="base" size="medium" icon-name="utility:chevronleft" alternative-text="Slide left" class="slds-m-horizontal_small" onclick={previousSlide}></lightning-button-icon>
+            <lightning-button-icon variant="base" size="medium" icon-name="utility:chevronright" alternative-text="Slide right" class="slds-m-horizontal_small" onclick={nextSlide}></lightning-button-icon>
+        </div>
+    </div>
+</template>

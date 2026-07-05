@@ -1,0 +1,106 @@
+<template>
+    <div style={backgroundStylebotBg}> 
+        <div class="overViewCont " style={backgroundStyleTopBg}>
+            <h2 class="midContHeading">Overview</h2>
+            <div class="midContSubHeading slds-m-bottom_large">Driving your transformation to a customer-centric
+                organisation
+            </div>
+            <div class="midInnerCont slds-m-top_large">
+                In achieving customer service excellence there is no ‘one-size-fits-all’ and the Achieving Customer
+                Excellence in Public Services conference will showcase the diverse ways in which public sector
+                departments, agencies and local councils are setting their customer-centric service strategies,
+                providing unique insights into the key factors for success. The key themes that presentations and
+                discussions will revolve around are:
+                <ul>
+                    <li><span class="bulletIcn" style={backgroundStyleBullet}></span> <strong>Building
+                            commitment</strong> - learn how to create the customer-centric mindset and integrate the
+                        customer culture into your organisational planning</li>
+                    <li> <span class="bulletIcn" style={backgroundStyleBullet}></span> <strong>Enhancing
+                            capacity</strong> - assess best practices in how to train, upskill, create agile teams and
+                        integrate customer insights to your service strategy</li>
+                    <li> <span class="bulletIcn" style={backgroundStyleBullet}></span> <strong>Measuring
+                            effectively</strong> - learn to set the standards, choose the tools, evaluate what works and
+                        what doesn’t</li>
+                </ul>
+                <div class="slds-align_absolute-center slds-m-top_large show"><img src={seemore} title={showContent}
+                        onclick={handleClick} /></div>
+
+                <div class="outerCont" if:true={boolVisible}>
+                    <div class="innerCont slds-m-top_large">
+
+                        <div><strong>Who will attend? </strong>
+                        </div>
+                        <div><strong>Senior Executives and Directors from Federal, State and Local Government with
+                                responsibilities for:</strong>
+                        </div>
+
+                        <ul>
+                            <li><span class="bulletIcn" style={backgroundStyleBullet}></span>Customer Service</li>
+                            <li><span class="bulletIcn" style={backgroundStyleBullet}></span>Customer Experience
+                            </li>
+                            <li><span class="bulletIcn" style={backgroundStyleBullet}></span>Service Delivery</li>
+                            <li><span class="bulletIcn" style={backgroundStyleBullet}></span>Customer Contact</li>
+                            <li><span class="bulletIcn" style={backgroundStyleBullet}></span>Customer Strategy and
+                                Insight
+                            </li>
+                            <li><span class="bulletIcn" style={backgroundStyleBullet}></span>Client Services</li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="innerCont slds-m-top_large">
+
+                        <div><strong>What's new in 2019
+                            </strong>
+                        </div>
+
+                        <ul>
+                            <li><span class="bulletIcn" style={backgroundStyleBullet}></span>More presentations on
+                                building
+                                customer-centric service strategies</li>
+                            <li><span class="bulletIcn" style={backgroundStyleBullet}></span>Exclusive insights into
+                                Forrester Research on the state of Customer Experience in Government
+                            </li>
+                            <li><span class="bulletIcn" style={backgroundStyleBullet}></span>More interactive networking
+                                opportunities - 4 focused discussion groups will be facilitated by thought leaders
+                                within
+                                this space</li>
+                            <li><span class="bulletIcn" style={backgroundStyleBullet}></span>Out of industry
+                                presentations
+                                that can be easily applied to public sector services
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="innerCont slds-m-top_large">
+
+                        <div><strong>Attend to learn: </strong>
+                        </div>
+
+                        <ul>
+                            <li><span class="bulletIcn" style={backgroundStyleBullet}></span>More presentations on
+                                building
+                                customer-centric service strategies</li>
+                            <li><span class="bulletIcn" style={backgroundStyleBullet}></span>Exclusive insights into
+                                Forrester Research on the state of Customer Experience in Government
+                            </li>
+                            <li><span class="bulletIcn" style={backgroundStyleBullet}></span>More interactive networking
+                                opportunities - 4 focused discussion groups will be facilitated by thought leaders
+                                within
+                                this space</li>
+                            <li><span class="bulletIcn" style={backgroundStyleBullet}></span>Out of industry
+                                presentations
+                                that can be easily applied to public sector services
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="slds-align_absolute-center slds-m-top_large hide imghide"><img src={hidecont}
+                        title={hideContent} onclick={handleClick} /></div>
+            </div>
+        </div>
+    </div>
+</template>

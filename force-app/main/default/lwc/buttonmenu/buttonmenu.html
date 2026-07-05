@@ -1,0 +1,18 @@
+<!-- <template>
+ <button onclick={onToggle}> Menu </button>
+
+                    <div class="subMenu" if:true={displayMenu}>
+                            This is submenu
+                </div>
+</template> -->
+
+<template>
+    <div>
+        <button onclick={toggleMenu}>Toggle Menu</button>
+        <div  class="subMenu" if:true={isOpen}>
+            <div >
+                            This is submenu
+                </div>
+        </div>
+    </div>
+</template>

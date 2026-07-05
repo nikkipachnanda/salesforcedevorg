@@ -1,0 +1,31 @@
+<!-- <template>
+  <footer class="slds-p-around_large slds-box slds-theme_default">
+    <div class="slds-grid slds-wrap slds-gutters">
+      <template for:each={columns} for:item="col">
+        <div key={col.id} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-7 slds-m-bottom_large">
+          <h3 class="slds-text-heading_small">{col.heading}</h3>
+          <p class="slds-text-body_regular">{col.subtext}</p>
+        </div>
+      </template>
+    </div>
+  </footer>
+</template> -->
+
+<template>
+    <template if:true={footerData}>
+        <footer class="slds-p-around_large slds-box slds-theme_default">
+            <div class="slds-grid slds-wrap slds-gutters">
+                <template for:each={footerData} for:item="col">
+                    <div key={col.DeveloperName} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-7 slds-m-bottom_large">
+                        <h3 class="slds-text-heading_small">{col.heading__c}</h3>
+                        <p class="slds-text-body_regular">{col.subtext__c}</p>
+                    </div>
+                </template>
+            </div>
+        </footer>
+    </template>
+
+    <template if:true={error}>
+        <div class="slds-text-color_error">Error loading footer: {error.message}</div>
+    </template>
+</template>

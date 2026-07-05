@@ -1,0 +1,51 @@
+<template>
+
+
+
+
+    <div class="container">
+        <!-- Image Wrapper -->
+        <div class="image-wrapper">
+            <img src={cow} alt="Cow Cuts" width="400" />
+
+            <!-- Hotspot areas with data-image attribute -->
+            <div
+                class={headClass}
+                data-name="Short Plate"
+                data-content="This part is great for Short plate steaks"
+                data-image={rump}
+                onmouseover={handleMouseOver}
+                onmouseleave={handleMouseLeave}>
+                Short Plate
+            </div>
+            <div
+                class={chuckClass}
+                data-name="Brisket"
+                data-content="Beef brisket is a flavorful and tender cut of meat that comes from the lower chest or breast of the animal"
+                data-image={brisk}
+                onmouseover={handleMouseOver}
+                onmouseleave={handleMouseLeave}>
+                Brisket
+            </div>
+            <div
+                class={ribClass}
+                data-name="Flank"
+                data-content="This part is great for Flank steaks."
+                data-image={beef}
+                onmouseover={handleMouseOver}
+                onmouseleave={handleMouseLeave}>
+                Rib
+            </div>
+            <!-- Add other parts similarly... -->
+        </div>
+
+        <!-- Information Display Div with Image -->
+        <div class="info-display">
+            <template if:true={partImage}>
+                <img src={partImage} alt="Part Image" class="part-image" />
+            </template>
+            <h2>{partName}</h2>
+            <p>{partContent}</p>
+        </div>
+    </div>
+</template>

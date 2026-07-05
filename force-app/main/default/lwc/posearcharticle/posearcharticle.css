@@ -1,0 +1,42 @@
+.cstm_table tr{
+	cursor: pointer;
+}
+
+.RecordRow:first-child 
+{
+		border-top:none;
+}
+
+.RecordRow 
+{
+		border-top:1px #ccc solid;
+}
+
+.cstm_table tr:not(.RecordRow) {
+	display: none;
+}
+
+.cstm_table tr table tr {
+	display: none;
+}
+
+.cstm_table tr.activeRow .slds-icon_container{
+	transform: rotate(180deg);
+}
+
+.cstm_table tr.activeRow + tr  {
+	display: table-row;
+
+}
+
+.cstm_table tr.activeRow + tr table tr {
+	display: table-row;
+
+}
+
+.heading {font-size:17px; padding-left:15px; font-weight:bold;}
+.radioBtn {}
+.radioBtn .slds-form-element__label { display:none;}
+.slds-accordion__summary-content {color:#2b2826;}
+.articleTabCont .slds-table th{ font-size:13px; color:#ccc; font-weight:normal; }
+.articleTabCont .slds-table td{ font-size:14px; color:#464646; font-weight:bold;  }

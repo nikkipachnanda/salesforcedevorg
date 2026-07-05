@@ -1,0 +1,69 @@
+<template>
+    <lightning-card title="My Contact Record" icon-name="standard:contact">
+        <ul class="slds-grid slds-wrap slds-gutters">
+          
+        
+            <template if:true={getCustomData}>
+                <template for:each={getCustomData} for:item="getData">
+             
+                  <!--   <li  key={getData.Id}>  {getData.Navigation_Links__c} </li> -->
+                <li  key={getData.Id}>  {getData.Name} </li> 
+                </template>
+            </template>
+        </ul>
+
+
+
+          <div> <img src={dashboard} />  </div>
+
+            <template if:true={getmidContData}>
+                <template for:each={getmidContData} for:item="getData">
+             
+                  <!--   <li  key={getData.Id}>  {getData.Navigation_Links__c} </li> -->
+                <div  key={getData.Id}>  {getData.data__c} </div> 
+                </template>
+            </template>
+
+   
+      <template if:true={contacts}>
+            
+            <template for:each={contacts} for:item="contact">
+         
+                <div key={contact.Id} class="slds-col  slds-medium-size_1-of-2 ">
+                   <div class="cardBoxIno"> 
+                    <p>{contact.Name}</p>
+                    <p>{contact.Title}</p>
+                    </div>
+                </div>
+      
+          </template>
+        </template>
+
+        
+                <template if:true={getTilesData}>
+                <template for:each={getTilesData} for:item="tilesData">
+             
+                  <!--   <li  key={getData.Id}>  {getData.Navigation_Links__c} </li> -->
+                <div  key={getTilesData.Id}>  
+                         <div class="cardBoxIno"> 
+                           <!--  <p><strong><img src={tilesData.imgname} /></strong></p> -->
+                            <p><strong><img src={tilesData.imgnameformula__c} /></strong></p>
+                            <p ><strong>{tilesData.Name}</strong></p>
+                            <p>{tilesData.description__c}</p>
+                             <p><strong>Rating :</strong> {tilesData.rating__c}</p>
+                            </div>
+                     </div> 
+                </template>
+            </template>
+
+    </lightning-card>
+  <div>
+         <div><strong>Custom Label Example</strong> </div>
+         <div>   <span>{label.bodylabel}</span> </div>
+        
+
+            <div><strong>Custom Image Label</strong> </div>
+         <div>   <span><img src={label.testimglogo} /></span> </div>
+          </div>
+      
+</template>

@@ -1,0 +1,30 @@
+<template>
+    <div> Dropdown Values </div>
+
+ <select class="slds-select" onchange={handleGetSelectedValue}>
+        <option value="Select">Select</option>
+            <template for:each={options} for:item="option">
+                <option key={option.Id} class="uiInputSelectOption" value={option.Id}>{option.Name}</option>
+            </template>
+    </select>
+
+    <br/>
+<br/>
+    <div class="slds-grid slds-wrap  slds-gutters" >
+ <div class={dynamicClassFc}>
+       <h1>Screen1</h1>
+       <div class="spviewtsec dsnone " style="text-align:right;"> <b >Split View </b></div>
+        <div class="slds-clearfix">    
+          <div class="slds-float_left">Text1 | Text2 | Text3 | Text4 | Text5 </div>
+          <div class="slds-float_right spviewbsec"><b>Split View </b></div>
+        </div>
+  </div>
+
+<template if:true={splitview}>
+ <div class={dynamicClassSc}>
+    <span>Screen 2</span>
+  </div>
+  </template>
+    </div>
+
+</template>

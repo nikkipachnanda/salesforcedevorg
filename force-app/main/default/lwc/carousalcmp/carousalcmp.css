@@ -1,0 +1,44 @@
+.scroller-container {
+   display: flex;
+   align-items: center;
+   position: relative;
+   width: 600px;
+   margin:0 auto;
+}
+.scroll-wrapper {
+   display: flex;
+   overflow-x: auto;
+   scroll-behavior: smooth;
+   gap: 10px;
+   padding: 10px;
+   scrollbar-width: none; /* Firefox */
+   -ms-overflow-style: none; /* IE */
+}
+.scroll-wrapper::-webkit-scrollbar {
+   display: none; /* Chrome/Safari */
+}
+.scroll-item {
+   min-width: 150px;
+   height: 100px;
+   background: #dfe6e9;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 6px;
+   font-weight: bold;
+   flex-shrink: 0;
+}
+.arrow {
+   background: #2d3436;
+   color: #fff;
+   border: none;
+   font-size: 24px;
+   cursor: pointer;
+   padding: 10px;
+   border-radius: 50%;
+   z-index: 10;
+   margin: 0 5px;
+}
+.arrow:hover {
+   background: #636e72;
+}

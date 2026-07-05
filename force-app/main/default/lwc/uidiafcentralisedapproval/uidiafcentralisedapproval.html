@@ -1,0 +1,1089 @@
+<template>
+	<div class="phHorizonCont">
+
+		<!-- Header Content -->
+		<div class="searchWdth slds-m-bottom_large alignH alignR">
+			<lightning-input type="search" variant="standard" name="name"
+				placeholder="Search this list">
+			</lightning-input>
+
+			<div class="alignH ownerDd alignC">
+				<span class="slds-m-right_small">Owner of Article</span>
+				<lightning-combobox name="" value={value} placeholder="--Select--" options={options} onchange={handleChange}>
+				</lightning-combobox>
+			</div>
+		</div>
+
+		<h2 class="filterHdng txtSz16 boldTxt">
+			<lightning-icon variant="base" size="x-small" icon-name="utility:filter" alternative-text="opne"
+				class="filterIcn"></lightning-icon><strong> Filters </strong>
+		</h2>
+
+        <div class="slds-m-top_small">
+			<ul class="alignH searchCont filterWdth fwrap">
+				<li class="">
+					<lightning-combobox name="" label="Status" value={value} placeholder="None"
+						options={options} onchange={handleChange}></lightning-combobox>
+				</li>
+				<li class="">
+					<lightning-combobox name="" label="Status" value={value} placeholder="None"
+						options={options} onchange={handleChange}></lightning-combobox>
+				</li>
+				<li class="">
+					<lightning-combobox name="" label="Status" value={value} placeholder="None"
+						options={options} onchange={handleChange}></lightning-combobox>
+				</li>
+				<li class="">
+					<lightning-combobox name="" label="Status" value={value} placeholder="None"
+						options={options} onchange={handleChange}></lightning-combobox>
+				</li>
+				<li class="">
+					<lightning-combobox name="" label="Status" value={value} placeholder="None"
+						options={options} onchange={handleChange}></lightning-combobox>
+				</li>
+                <li class="alignBtm">
+                    <lightning-button variant="brand" label="Clear filters" title="Clear filters" onclick={handleClick}
+							class="">
+					</lightning-button>
+                </li>
+			</ul>
+		</div>
+		<!-- Header Content Close -->
+
+		<!-- My Article Table -->
+		<div class="myArticleTable slds-m-top_large tableCont fixTableHead">
+			<table class="slds-table slds-table_cell-buffer tblBdr"
+				aria-labelledby="element-with-table-label other-element-with-table-label">
+				<thead>
+					<tr class="slds-line-height_reset">
+						<th class="" scope="col">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</th>
+						<th class="" scope="col" width="10%">
+							<div class="slds-truncate" title="">
+								<span>Sub Category</span>
+								<span>
+											<lightning-icon icon-name="utility:arrowup" size="xx-small" >
+											</lightning-icon>
+										</span>
+							</div>
+						</th>
+			
+						<th class="" scope="col" width="12%">
+							<div class="slds-truncate" title="">
+								<span>Article Name</span>
+								<span>
+											<lightning-icon icon-name="utility:arrowup" size="xx-small" >
+											</lightning-icon>
+										</span>
+							</div>
+						</th>
+						<th class="" scope="col" width="">
+							<div class="slds-truncate" title="">
+								<span>Article #</span>
+								<span>
+											<lightning-icon icon-name="utility:arrowup" size="xx-small" >
+											</lightning-icon>
+										</span>
+							</div>
+						</th>
+						<th class="" scope="col" width="">
+							<div class="slds-truncate" title="">
+								<span>Planogram Date</span>
+								<span>
+											<lightning-icon icon-name="utility:arrowup" size="xx-small" >
+											</lightning-icon>
+										</span>
+							</div>
+						</th>
+						<th class="" scope="col" width="">
+							<div class="slds-truncate alignH" title="">
+								<span>Last Status</br>Change Date</span>
+								<span>
+											<lightning-icon icon-name="utility:arrowup" size="xx-small" >
+											</lightning-icon>
+										</span>
+							</div>
+						</th>
+						<th class="" scope="col" width="">
+							<div class="slds-truncate" title="">
+								<span>Case Type</span>
+								<span>
+											<lightning-icon icon-name="utility:arrowup" size="xx-small" >
+											</lightning-icon>
+										</span>
+							</div>
+						</th>
+						<th class="" scope="col" width="">
+							<div class="slds-truncate" title="">CoOL</div>
+						</th>
+						<th class="" scope="col" width="">
+							<div class="slds-truncate" title="">Display</br>On Pack</div>
+						</th>
+						<th class="" scope="col" width="">
+							<div class="slds-truncate" title="">Image</div>
+						</th>
+						<th class="" scope="col" width="">
+							<div class="slds-truncate" title="">
+			
+							</div>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="slds-hint-parent">
+						<td data-label="" class="" width="5%">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								Incorrect TI HI
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<a href="">Grape Red Seedless</a>
+			
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								011198732
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								case type
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:warning" alternative-text="" title="" variant="warning"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="" title="">
+								<lightning-button variant="brand" label="View Details" title="" onclick={handleClick} class="">
+			
+								</lightning-button>
+							</div>
+						</td>
+					</tr>
+					<tr class="slds-hint-parent">
+						<td data-label="" class="" width="5%">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								Incorrect TI HI
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<a href="">Grape Red Seedless</a>
+			
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								011198732
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								case type
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:warning" alternative-text="" title="" variant="warning"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="" title="">
+								<lightning-button variant="brand" label="View Details" title="" onclick={handleClick} class="">
+			
+								</lightning-button>
+							</div>
+						</td>
+					</tr>
+					<tr class="slds-hint-parent">
+						<td data-label="" class="" width="5%">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								Incorrect TI HI
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<a href="">Grape Red Seedless</a>
+			
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								011198732
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								case type
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:warning" alternative-text="" title="" variant="warning"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="" title="">
+								<lightning-button variant="brand" label="View Details" title="" onclick={handleClick} class="">
+			
+								</lightning-button>
+							</div>
+						</td>
+					</tr>
+					<tr class="slds-hint-parent">
+						<td data-label="" class="" width="5%">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								Incorrect TI HI
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<a href="">Grape Red Seedless</a>
+			
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								011198732
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								case type
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:warning" alternative-text="" title="" variant="warning"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="" title="">
+								<lightning-button variant="brand" label="View Details" title="" onclick={handleClick} class="">
+			
+								</lightning-button>
+							</div>
+						</td>
+					</tr>
+					<tr class="slds-hint-parent">
+						<td data-label="" class="" width="5%">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								Incorrect TI HI
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<a href="">Grape Red Seedless</a>
+			
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								011198732
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								case type
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:warning" alternative-text="" title="" variant="warning"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="" title="">
+								<lightning-button variant="brand" label="View Details" title="" onclick={handleClick} class="">
+			
+								</lightning-button>
+							</div>
+						</td>
+					</tr>
+					<tr class="slds-hint-parent">
+						<td data-label="" class="" width="5%">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								Incorrect TI HI
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<a href="">Grape Red Seedless</a>
+			
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								011198732
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								case type
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:warning" alternative-text="" title="" variant="warning"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="" title="">
+								<lightning-button variant="brand" label="View Details" title="" onclick={handleClick} class="">
+			
+								</lightning-button>
+							</div>
+						</td>
+					</tr>
+					<tr class="slds-hint-parent">
+						<td data-label="" class="" width="5%">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								Incorrect TI HI
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<a href="">Grape Red Seedless</a>
+			
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								011198732
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								case type
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:warning" alternative-text="" title="" variant="warning"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="" title="">
+								<lightning-button variant="brand" label="View Details" title="" onclick={handleClick} class="">
+			
+								</lightning-button>
+							</div>
+						</td>
+					</tr>
+					<tr class="slds-hint-parent">
+						<td data-label="" class="" width="5%">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								Incorrect TI HI
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<a href="">Grape Red Seedless</a>
+			
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								011198732
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								case type
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:warning" alternative-text="" title="" variant="warning"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="" title="">
+								<lightning-button variant="brand" label="View Details" title="" onclick={handleClick} class="">
+			
+								</lightning-button>
+							</div>
+						</td>
+					</tr>
+					<tr class="slds-hint-parent">
+						<td data-label="" class="" width="5%">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								Incorrect TI HI
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<a href="">Grape Red Seedless</a>
+			
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								011198732
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								case type
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:warning" alternative-text="" title="" variant="warning"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="" title="">
+								<lightning-button variant="brand" label="View Details" title="" onclick={handleClick} class="">
+			
+								</lightning-button>
+							</div>
+						</td>
+					</tr>
+					<tr class="slds-hint-parent">
+						<td data-label="" class="" width="5%">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								Incorrect TI HI
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<a href="">Grape Red Seedless</a>
+			
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								011198732
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								case type
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:warning" alternative-text="" title="" variant="warning"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="" title="">
+								<lightning-button variant="brand" label="View Details" title="" onclick={handleClick} class="">
+			
+								</lightning-button>
+							</div>
+						</td>
+					</tr>
+					<tr class="slds-hint-parent">
+						<td data-label="" class="" width="5%">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								Incorrect TI HI
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<a href="">Grape Red Seedless</a>
+			
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								011198732
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								case type
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:warning" alternative-text="" title="" variant="warning"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="" title="">
+								<lightning-button variant="brand" label="View Details" title="" onclick={handleClick} class="">
+			
+								</lightning-button>
+							</div>
+						</td>
+					</tr>
+					<tr class="slds-hint-parent">
+						<td data-label="" class="" width="5%">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								Incorrect TI HI
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<a href="">Grape Red Seedless</a>
+			
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								011198732
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								case type
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:warning" alternative-text="" title="" variant="warning"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="" title="">
+								<lightning-button variant="brand" label="View Details" title="" onclick={handleClick} class="">
+			
+								</lightning-button>
+							</div>
+						</td>
+					</tr>
+					<tr class="slds-hint-parent">
+						<td data-label="" class="" width="5%">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								Incorrect TI HI
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<a href="">Grape Red Seedless</a>
+			
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								011198732
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								case type
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:warning" alternative-text="" title="" variant="warning"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="" title="">
+								<lightning-button variant="brand" label="View Details" title="" onclick={handleClick} class="">
+			
+								</lightning-button>
+							</div>
+						</td>
+					</tr>
+					<tr class="slds-hint-parent">
+						<td data-label="" class="" width="5%">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								Incorrect TI HI
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<a href="">Grape Red Seedless</a>
+			
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								011198732
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								case type
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:warning" alternative-text="" title="" variant="warning"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="" title="">
+								<lightning-button variant="brand" label="View Details" title="" onclick={handleClick} class="">
+			
+								</lightning-button>
+							</div>
+						</td>
+					</tr>
+					<tr class="slds-hint-parent">
+						<td data-label="" class="" width="5%">
+							<div class="slds-truncate" title="">
+								<lightning-input type="checkbox" label="" name="" class=""></lightning-input>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								Incorrect TI HI
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<a href="">Grape Red Seedless</a>
+			
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								011198732
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								28/11/2023
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								case type
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:success" alternative-text="" title="" variant="success"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="slds-line-clamp" title="">
+								<lightning-icon icon-name="utility:warning" alternative-text="" title="" variant="warning"
+									size="x-small"></lightning-icon>
+							</div>
+						</td>
+						<td data-label="" class="slds-cell-wrap" width="">
+							<div class="" title="">
+								<lightning-button variant="brand" label="View Details" title="" onclick={handleClick} class="">
+			
+								</lightning-button>
+							</div>
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+		<!-- My Article Table Close-->
+
+
+	</div>
+</template>

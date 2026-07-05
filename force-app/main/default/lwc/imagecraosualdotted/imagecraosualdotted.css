@@ -1,0 +1,58 @@
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+	width: 1200px;
+	margin: 0 auto;
+		border:1px blue solid;
+
+}
+
+.carousel {
+    display: flex;
+  
+}
+
+.image-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+	transition: transform 300ms linear;
+}
+
+.image-list li {
+    flex: 0 0 100%;
+	border:1px red solid;
+
+}
+
+.dots-container {
+    text-align: center;
+}
+
+.dots {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.dots li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dots li.active {
+    background-color: #333;
+}
+
+.image-list li:nth-child(1) {  background:blue}
+.image-list li:nth-child(2) {  background:red}
+.image-list li:nth-child(3) {  background:black}
+.image-list li:nth-child(4) {  background:yellow}
+.image-list li:nth-child(5) {  background:pink}
+.image-list li:nth-child(6) {  background:green}

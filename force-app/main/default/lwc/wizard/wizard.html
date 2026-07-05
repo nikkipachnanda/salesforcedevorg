@@ -1,0 +1,49 @@
+<template>
+
+<div class="slds-progress customProgressCont">
+
+   <!-- <div class="progressBarCont">  
+        <ul>
+            <li> A </li>
+            <li> A </li>
+            <li> A </li>
+            <li> A </li>
+        </ul> 
+        <div class="progressBarStatus"> </div>  
+   </div>  -->
+
+   <ol class="slds-progress__list">
+    <li class="slds-progress__item slds-is-completed">
+      <button class="slds-button slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 1 - Completed">
+       <img src={tickcom} width="30" />
+      </button>
+         <span class="proText">Select email template</span> 
+     
+    </li>
+   
+    <li class="slds-progress__item slds-is-active">
+       <button class="slds-button slds-button_icon slds-progress__marker slds-progress__marker_icon" title="Step 1 - Completed">
+       <img src={editact} width="30" />
+      </button>
+        <span class="proText">Edit template</span> 
+    </li>
+    <li class="slds-progress__item">
+        <img src={dissup} width="30" class="disableIcn"  />
+          <span class="proText disableTxt">Assign suppliers and contacts </span>
+    
+    </li>
+    <li class="slds-progress__item">
+          <img src={disrev} width="30" class="disableIcn"   />
+           <span class=" proText disableTxt">Review and send </span>
+   
+    </li>
+  </ol>
+  <div class="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="" role="progressbar">
+    <span class="slds-progress-bar__value" style="width:33%">
+      <span class="slds-assistive-text ">Progress: 50%</span>
+    </span>
+  </div>
+</div>    
+
+
+</template>

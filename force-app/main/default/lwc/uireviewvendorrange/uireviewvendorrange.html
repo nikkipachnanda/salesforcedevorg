@@ -1,0 +1,122 @@
+<template>
+   <!-- batch product submsison content -->
+   <div class="boxWrapperCont bgNone batchDownloadCont">
+      <nav role="navigation" aria-label="Breadcrumbs">
+         <ol class="slds-breadcrumb slds-list_horizontal slds-wrap bredcum">
+            <li class="slds-breadcrumb__item">
+               <a href="#" class="bredcumInact">Home</a>
+            </li>
+            <li class="slds-breadcrumb__item">
+               <a href="#" class="bredcumInact">Batch Product Submission</a>
+            </li>
+            <li class="slds-breadcrumb__item" >
+               <a href="#" class="bredcumInact">Select Vendor and Range</a>
+            </li>
+            <li class="slds-breadcrumb__item" >
+               <a href="#" class="bredcumAct">Review Vendor and Range</a>
+            </li>
+         </ol>
+      </nav>
+      <div class="slds-m-top_large">
+         <lightning-button variant="success" label="Back" title="Back" icon-name="utility:back" icon-position="left" class=" btnIcnBack"></lightning-button>
+      </div>
+      <div class="slds-m-top_large">
+         <h2>
+            Review Vendor and Range
+         </h2>
+      </div>
+      <div class="slds-grid slds-gutters slds-wrap">
+         <div class="slds-col slds-size_9-of-12 posRel  slds-m-top_large">
+            <h4>
+               Please review that the data and options you have selected is correct.
+            </h4>
+            <div class="slds-top-m_medium">
+               If you need to change any of the data below, before submitting your spreadsheet, you will need to download a new spreadsheet.	
+            </div>
+            <ul class="slds-m-top_large vendorList">
+               <li><strong>Vendor Number Account:</strong> VEN30498234</li>
+               <li><strong>Third party data source selected:</strong> Yes</li>
+               <li><strong>Source type:</strong> GS1</li>
+               <li><strong>GLN:</strong> VEN30498234</li>
+               <li><strong>Range Review Calendar:</strong> Promotional Appare 2022</li>
+            </ul>
+						 
+						 <div class="slds-m-top_large">
+								  <lightning-tabset>
+										<lightning-tab label="Details">
+												  <div class="slds-grid slds-gutters slds-wrap">
+														 <div class="slds-col slds-size_4-of-12 posRel  slds-m-top_large">
+																 <ul>
+																		 <li class="rLbl">Range Review Name</li>
+																		 <li  class="rLblTxt">Promotional Apparel 2022</li>
+																 </ul>
+														</div>
+															 <div class="slds-col slds-size_4-of-12 posRel  slds-m-top_large">
+																 <ul>
+																		 <li class="rLbl">Category Name</li>
+																		 <li  class="rLblTxt">Family Footwear</li>
+																 </ul>
+														</div>
+															 <div class="slds-col slds-size_4-of-12 posRel  slds-m-top_large">
+																 <ul>
+																		 <li class="rLbl">Review Type</li>
+																		 <li  class="rLblTxt">Major</li>
+																 </ul>
+														</div>
+															
+																 <div class="slds-col slds-size_4-of-12 posRel  slds-m-top_large">
+																 <ul>
+																		 <li class="rLbl">Category Manager</li>
+																		 <li  class="rLblTxt">Placeholder copy</li>
+																 </ul>
+														</div>
+															
+																 <div class="slds-col slds-size_4-of-12 posRel  slds-m-top_large">
+																 <ul>
+																		 <li class="rLbl">Created By</li>
+																		 <li  class="rLblTxt">Abby Nicollis, 10/02/2020, 11:20am</li>
+																 </ul>
+														</div>
+															
+																 <div class="slds-col slds-size_4-of-12 posRel  slds-m-top_large">
+																 <ul>
+																		 <li class="rLbl">Last Modified By</li>
+																		 <li  class="rLblTxt">Odaseva Service Account, 22/06/2022, 10:30am</li>
+																 </ul>
+														</div>
+												</div>	
+												<div class="slds-m-top_large">
+											     <lightning-button variant="success" label="Back" title="Back"  class=" secondaryBtn slds-m-right_large"></lightning-button>
+        										<lightning-button variant="success" label="Confirm and download" title="Confirm and download" icon-name="utility:arrow_bottom" icon-position="right" class=" primaryBtn"></lightning-button>
+    										</div>
+												
+										</lightning-tab>
+										<lightning-tab label="Related" >
+												Two Content !
+										</lightning-tab>
+									
+								</lightning-tabset>
+								 
+						 </div>
+         </div>
+         <div class="slds-col slds-size_3-of-12 posRel  slds-m-top_large">
+            <div class="tooltipCont">
+               <h2>
+                  <span><img src={icnques}/></span>
+                  Select your vendor and range
+               </h2>
+               <div>
+									 <p>You can only upload 50 products at a time.</p>
+                  <p class="slds-m-top_medium"> You can only download 1 and upload 1 spreadsheet at a time. </p> 
+                  <p class="slds-m-top_medium"> You will not be able to download a second spreadsheet until you have completed the upload process of first spreadsheet.</p>
+                  <p class="slds-m-top_medium"> Each spreadsheet is assigned a unique token.  Please do not duplicate a spreadsheet, and attempt to reupload it, it will not work.
+             			</p>
+								</div>
+            </div>
+         </div>
+      </div>
+			 
+			 
+      
+   </div>
+</template>

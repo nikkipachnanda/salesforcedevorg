@@ -1,0 +1,54 @@
+.sticky-note {
+    width: 200px;
+    height: 200px;
+    background-color: #FFF4D4; /* Light yellow */
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    position: relative;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none; /* Removed blue border */
+    box-shadow: none; /* No shadow */
+}
+
+/* Dark folded background */
+.sticky-note::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid #fff; /* Dark yellow fold */
+    border-left: 30px solid transparent;
+}
+
+/* White highlight (simulating the paper lift) */
+.sticky-note::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 28px solid transparent;
+    border-left: 28px solid transparent;
+    background-color: #f7f8f9;
+}
+
+/* Extra folded corner inside (arrow effect) */
+.folded-corner {
+    position: absolute;
+    bottom: 0px;
+    right: -1px;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid #FFE69C;
+    border-left: 31px solid transparent;
+    z-index: 9;
+    transform: rotate(180deg);
+}

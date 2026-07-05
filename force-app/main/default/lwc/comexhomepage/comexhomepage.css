@@ -1,0 +1,15 @@
+.dummy{
+	color : black;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('resource/arlofonts/Tinos-Regular.ttf') format('truetype'),
+         url('resource/arlofonts/Tinos-Regular') format('truetype');
+}
+
+
+div {
+	font-family: 'MyCustomFont';
+	color: red!important;
+}

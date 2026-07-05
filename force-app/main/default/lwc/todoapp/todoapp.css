@@ -1,0 +1,8 @@
+.todoListCont{
+	width:400px;
+	margin:0 auto;
+	padding:20px;
+}
+
+.innerCont { width:100%;}
+.slds-form-element__label:empty  { display:none;}

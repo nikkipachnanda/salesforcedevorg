@@ -1,0 +1,15 @@
+<template>
+     <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+       <lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions"></lightning-button-icon>
+       <!-- <p class="slds-p-horizontal_small">{message}</p> -->
+
+       <template if:true={recobject}>
+            <div>
+               <div> {recobject.name} </div>
+               <div> {recobject.contact} </div>
+               <div> {recobject.company} </div>
+            </div>    
+       </template>    
+       <p slot="footer">Card Footer</p>
+   </lightning-card>
+</template>

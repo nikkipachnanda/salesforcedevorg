@@ -1,0 +1,912 @@
+<template>
+
+    <div>
+        <!-- progress path -->
+        <div class="wrapperScoreHeaderBgCont">
+            <div class="wrapperScoreHeader progressBarCont">
+                <lightning-progress-indicator current-step="1" type="base" variant="base">
+                    <span class="posRel slds-show_large"><lightning-progress-step label="Step 1" value="1"></lightning-progress-step> <span class="proTextF slds-show_large">Add PO <br/> Number </span>
+                    </span>
+                    <span class="posRel slds-m-top_xx-small slds-show_large"><lightning-progress-step label="Step 2" value="2"></lightning-progress-step> <span class="proTextS slds-show_large">Equipment<br/> & Carrier Detail </span>
+                    </span>
+                    <span class="posRel slds-show_large"><lightning-progress-step label="Step 4" value="3"></lightning-progress-step> <span class="proTextS slds-show_large">Temperature
+                    <br/> Check </span>
+                    </span>
+                    <span class="posRel slds-show_large"><lightning-progress-step label="Step 4" value="4"></lightning-progress-step> <span class="proTextS slds-show_large">Review & Confirm <br/> Details </span>
+                    </span>
+                </lightning-progress-indicator>
+            </div>
+        </div>
+        <!-- progress path end -->
+
+        <!-- mid section start -->
+        <div class="wrapperScoreMidBgCont ">
+            <div class="wrapperScoreMidCont wrapperScoreMidTableCont">
+                <h1 class="slds-m-top_large"> Review & Confirm Details </h1>
+
+                <!-- Back Door produce article -->
+                <div class="boxBgCont slds-m-top_medium">
+                    <div class="scoreBrdB alignHorizontal alignRight">
+                        <div class="alignHorizontal">
+                            <h3>
+                                <lightning-button-icon variant="bare" size="medium" icon-name="utility:chevrondown"
+                                    alternative-text="chevronup" class="slds-m-right_small arrow">
+                                </lightning-button-icon>
+                                Back Door
+
+                            </h3>
+                            <span class="pConnect slds-m-left_small"> Primary Connect </span>
+                        </div>
+                        <div class="fv"> <img src={fruit}  width="10" /> Fruit & Vegetable </div>
+                    </div>
+
+                    <div>
+                        <table
+                            class="slds-table slds-table_bordered1 slds-m-top_large tableScoreCont slds-table_fixed-layout">
+                            <thead>
+                                <tr >
+                                    <th scope="col" rowspan="2" class="slds-text-align_center slds-text-middle"
+                                        width="11%">
+                                        <div class="slds-truncate" title="PO">PO</div>
+                                    </th>
+                                    <th scope="col" rowspan="2" class="slds-text-align_center slds-text-middle"
+                                        width="15%">
+                                        <div class="slds-truncate" title="Article Detail">Article Detail</div>
+                                    </th>
+                                    <th scope="col" rowspan="2" class="slds-text-align_center slds-text-middle"
+                                        width="11%">
+                                        <div class="slds-truncate" title="Supplier">Supplier</div>
+                                    </th>
+                                    <th scope="col " class="slds-text-align_center scoreOCF" width="7%">
+                                        <span class="irCheck slds-text-align_center ">IR CHECK </span>
+                                        <div class="slds-truncate " title="Temp (in C)">Temp <br/> (in C)</div>
+                                    </th>
+                                    <th scope="col " class="slds-text-align_center scoreOCF" width="12%">
+                                        <div class="slds-truncate" title="Temp Range" width="12%">Temp Range</div>
+                                    </th>
+                                    <th scope="col " class="slds-text-align_center scoreBCF" width="7%">
+                                        <span class="probCheck slds-text-align_center">PROBE CHECK </span>
+                                        <div class="slds-truncate " title="Temp (in C)">Temp <br/>  (in C)</div>
+                                    </th>
+                                    <th scope="col " class="slds-text-align_center scoreBCF" width="12%">
+                                        <div class="slds-truncate" title="Temp Range">Temp Range</div>
+                                    </th>
+                                    <th scope="col" rowspan="2" class="slds-text-align_center slds-text-middle"
+                                        width="10%">
+                                        <div class="slds-truncate" title="Reason">Reason/ <br/> Detail
+                                        </div>
+                                    </th>
+                                    <th scope="col" rowspan="2" class="slds-text-align_center slds-text-middle"
+                                        width="20%">
+                                        <div class="slds-truncate" title="Outcome">Outcome
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >
+                                    <th scope="row" data-label="PO" rowspan="2"
+                                        class="slds-text-align_center slds-text-middle">
+                                        <div class="slds-truncate" title="PO-001">010007921</div>
+                                    </th>
+                                    <td data-label="Article Detail" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="">878378-Chobani Yogurt 6</div>
+                                    </td>
+                                    <td data-label="Supplier" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="Chobani">Chobani</div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate bold" title="-5">-5</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="successP">  Within Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate bold" title="">-5</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="warningP">  Out of Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Reason" class="slds-text-align_center">
+                                        <div class="alignHorizontal addText slds-m-right_small slds-m-top_x-small" title="Additional cooling is required">
+                                            <a href="#" class="slds-truncate">Additional cooling is required </a>
+
+                                        </div>
+                                    </td>
+
+                                    <td data-label="outcome" class="slds-text-align_center ">
+                                        <div class="CondAccBadge">
+                                            <lightning-icon icon-name="utility:success" class="warningIcn slds-m-right_xx-small" size="x-small">
+                                            </lightning-icon>
+                                            <span>Conditionally Accepted</span>
+                                    
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr >
+                                    <td data-label="Article Detail" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="">878378-Chobani Yogurt 8</div>
+                                    </td>
+                                    <td data-label="Supplier" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="Chobani">Chobani</div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate bold" title="-5">-5</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="successP">  Within Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate bold" title="">-5</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="warningP">  Out of Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Reason" class="slds-text-align_center">
+                                        
+                                    </td>
+
+                                    <td data-label="outcome" class="slds-text-align_center ">
+                                        <lightning-button variant="brand-outline" label="Conditionally Accept"
+                                            title="titleName" onclick={handleClick} >Conditionally Accept
+                                        </lightning-button>
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td scope="row" data-label="PO" class="slds-text-align_center slds-text-middle">
+                                        <div class="slds-truncate" title="PO-002">010007922</div>
+                                    </td>
+                                    <td data-label="Article Detail" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="">878378-Chobani Yogurt 10</div>
+                                    </td>
+                                    <td data-label="Supplier" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="Chobani">Chobani</div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate bold" title="-4">-4</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="warningP">  Out of Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate bold" title="">-4</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="warningP">  Out of Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Reason" class="slds-text-align_center">
+                                        
+                                    </td>
+
+                                    <td data-label="outcome" class="slds-text-align_center ">
+                                        <lightning-button variant="brand-outline" label="Conditionally Accept"
+                                            title="titleName" onclick={handleClick}>Conditionally Accept
+                                        </lightning-button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <!-- Back Door -->
+                <div class="boxBgCont slds-m-top_medium">
+                    <div class={scoreBrdBClassBack}>
+                        <div class="alignHorizontal">
+                            <h3>
+                                <lightning-button-icon variant="bare" size="medium" icon-name={sectionBack.icon}
+                                    alternative-text="Toggle Section 1" class="slds-m-right_small arrow"
+                                    onclick={handleToggleSectionBack}>
+                                </lightning-button-icon>
+                                Back Door
+                            </h3>
+                            <span class="pConnect slds-m-left_small"> Primary Connect </span>
+                        </div>
+
+                    </div>
+
+                    <div class={sectionBack.class}>
+                        <table
+                            class="slds-table slds-table_bordered1 slds-m-top_large tableScoreCont slds-table_fixed-layout">
+                            <thead>
+                                <tr >
+                                    <th scope="col" rowspan="2" class="slds-text-align_center slds-text-middle"
+                                        width="11%">
+                                        <div class="slds-truncate" title="PO">PO</div>
+                                    </th>
+                                    <th scope="col" rowspan="2" class="slds-text-align_center slds-text-middle"
+                                        width="15%">
+                                        <div class="slds-truncate" title="Article Detail">Article Detail</div>
+                                    </th>
+                                    <th scope="col" rowspan="2" class="slds-text-align_center slds-text-middle"
+                                        width="11%">
+                                        <div class="slds-truncate" title="Supplier">Supplier</div>
+                                    </th>
+                                    <th scope="col " class="slds-text-align_center scoreOCF" width="7%">
+                                        <span class="irCheck slds-text-align_center">IR CHECK </span>
+                                        <div class="slds-truncate " title="Temp (in C)">Temp <br/> (in C)</div>
+                                    </th>
+                                    <th scope="col " class="slds-text-align_center scoreOCF" width="12%">
+                                        <div class="slds-truncate" title="Temp Range" width="12%">Temp Range</div>
+                                    </th>
+                                    <th scope="col " class="slds-text-align_center scoreBCF" width="7%">
+                                        <span class="probCheck slds-text-align_center">PROBE CHECK </span>
+                                        <div class="slds-truncate " title="Temp (in C)">Temp <br/>  (in C)</div>
+                                    </th>
+                                    <th scope="col " class="slds-text-align_center scoreBCF" width="12%">
+                                        <div class="slds-truncate" title="Temp Range">Temp Range</div>
+                                    </th>
+                                    <th scope="col" rowspan="2" class="slds-text-align_center slds-text-middle"
+                                        width="10%">
+                                        <div class="slds-truncate" title="Reason">Reason/ <br/> Detail
+                                        </div>
+                                    </th>
+                                    <th scope="col" rowspan="2" class="slds-text-align_center slds-text-middle"
+                                        width="20%">
+                                        <div class="slds-truncate" title="Outcome">Outcome
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >
+                                    <th scope="row" data-label="PO" rowspan="2"
+                                        class="slds-text-align_center slds-text-middle">
+                                        <div class="slds-truncate" title="PO-001">010007921</div>
+                                    </th>
+                                    <td data-label="Article Detail" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="">878378-Chobani Yogurt 6</div>
+                                    </td>
+                                    <td data-label="Supplier" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="Chobani">Chobani</div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate bold" title="-5">-5</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="warningP">  Out of Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate bold" title="">-5</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="successP">  Within Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Reason" class="slds-text-align_center">
+                                        
+                                    </td>
+
+                                    <td data-label="outcome" class="slds-text-align_center ">
+                                        <lightning-button variant="brand-outline" label=" Accept" title="titleName"
+                                            onclick={handleclick}> Accept
+                                        </lightning-button>
+                                    </td>
+
+                                </tr>
+                                <tr >
+                                    <td data-label="Article Detail" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="">878378-Chobani Yogurt 8</div>
+                                    </td>
+                                    <td data-label="Supplier" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="Chobani">Chobani</div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate bold" title="-5">-5</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="warningP">  Out of Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate bold" title="">-5</div>
+                                    </td>
+                                    
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="successP">  Within Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Reason" class="slds-text-align_center">
+                                        
+                                    </td>
+
+                                    <td data-label="outcome" class="slds-text-align_center">
+                                        <div class="acceptedBadge">
+                                            <lightning-icon icon-name="utility:success" class="successIcn slds-m-right_xx-small" size="x-small">
+                                            </lightning-icon>
+                                            <span>Accepted</span>
+                                        
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr >
+                                    <td scope="row" data-label="PO" class="slds-text-align_center slds-text-middle">
+                                        <div class="slds-truncate" title="PO-002">010007922</div>
+                                    </td>
+                                    <td data-label="Article Detail" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="">878378-Chobani Yogurt 10</div>
+                                    </td>
+                                    <td data-label="Supplier" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="Chobani">Chobani</div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate bold" title="-4">-4</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="warningP">  Out of Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate bold" title="">-4</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="warningP">  Out of Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="View Detail" class="slds-text-align_center">
+                                        <div>
+                                            <lightning-icon icon-name="utility:edit_form" alternative-text="Edit" size="small"
+                                                class="slds-input__icon_right scoreIcnDoc">
+                                            </lightning-icon>
+                                         
+                                        </div>
+                                    </td>
+
+                                    <td data-label="outcome" class="slds-text-align_center reject ">
+                                        <lightning-button label="Reject" icon-name="utility:dislike"
+                                            icon-position="right" onclick={handleClick}></lightning-button>
+
+                                    </td>
+                                </tr>
+
+                                <tr >
+                                    <td scope="row" data-label="PO" class="slds-text-align_center slds-text-middle">
+                                        <div class="slds-truncate" title="PO-002">010007922</div>
+                                    </td>
+                                    <td data-label="Article Detail" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="">878378-Chobani Yogurt 10</div>
+                                    </td>
+                                    <td data-label="Supplier" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="Chobani">Chobani</div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate bold" title="-4">-4</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="warningP">  Out of Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate bold" title="">-4</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="warningP">  Out of Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="View Detail" class="slds-text-align_center">
+                                        <div title="View Detail">
+                                            <a href="#">View Detail </a>
+
+                                        </div>
+                                    </td>
+
+                                    <td data-label="outcome" class="slds-text-align_center reject ">
+                                        <lightning-button label="Reject" icon-name="utility:dislike"
+                                            icon-position="right" onclick={handleClick}></lightning-button>
+
+                                    </td>
+                                </tr>
+                                
+                                <tr >
+                                    <td scope="row" data-label="PO" class="slds-text-align_center slds-text-middle">
+                                        <div class="slds-truncate" title="PO-002">010007922</div>
+                                    </td>
+                                    <td data-label="Article Detail" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="">878378-Chobani Yogurt 10</div>
+                                    </td>
+                                    <td data-label="Supplier" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="Chobani">Chobani</div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate bold" title="-4">-4</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="warningP">  Out of Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate bold" title="">-4</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreBCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="warningP">  Out of Range </span>
+                                        </div>
+                                    </td>
+                                    <td data-label="View Detail" class="slds-text-align_center">
+                                        <div title="View Detail">
+                                            <a href="#">View Detail </a>
+
+                                        </div>
+                                    </td>
+
+                                    <td data-label="outcome" class="slds-text-align_center reject ">
+                                        <div class="rejectedBadge">
+                                            <lightning-icon icon-name="utility:error" class="errorIcn slds-m-right_xx-small" size="x-small">
+                                            </lightning-icon>
+                                            <span>Rejected</span>
+                                        
+                                        </div>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <!-- midddle Door -->
+                <div class="boxBgCont slds-m-top_medium">
+                    <div class={scoreBrdBClassMiddle}>
+                        <div class="alignHorizontal alignRight">
+                            <div class="alignHorizontal ">
+                                <h3>
+                                    <lightning-button-icon variant="bare" size="medium" icon-name={sectionMiddle.icon}
+                                        alternative-text="Toggle Section 2" class="slds-m-right_small arrow" onclick={handleToggleSectionMiddle}>
+                                    </lightning-button-icon>
+                                    Middle
+                                </h3>
+                                <span class="pConnect slds-m-left_small"> Primary Connect </span>
+                            
+                                
+                            </div>
+                            <div class="acceptedBadge">
+                                    <lightning-icon icon-name="utility:success" class="successIcn slds-m-right_xx-small" size="x-small">
+                                    </lightning-icon>
+                                    <span>Accepted</span>
+                            
+                                </div>
+                        </div>
+
+                    </div>
+
+                    
+                    <div class={sectionMiddle.class}>
+
+                        <div class="alignHorizontal slds-m-top_medium">
+                        <div>
+                            <span class="chkDone slds-m-right_x-small"></span>
+                            <span class="legendTxt">Temp check done</span>
+                        </div>
+
+                        <div class="slds-m-left_x-large">
+                            <span class="chkApply slds-m-right_x-small"></span>
+                            <span class="legendTxt">Temp check applied</span>
+                        </div>
+                    </div>
+
+                        <table
+                            class="slds-table slds-table_bordered1 slds-m-top_large tableScoreCont slds-table_fixed-layout">
+                            <thead>
+                                <tr >
+                                    <th scope="col" rowspan="2" class="slds-text-align_center slds-text-middle"
+                                        width="11%">
+                                        <div class="slds-truncate" title="PO">PO</div>
+                                    </th>
+                                    <th scope="col" rowspan="2" class="slds-text-align_center slds-text-middle"
+                                        width="15%">
+                                        <div class="slds-truncate" title="Article Detail">Article Detail</div>
+                                    </th>
+                                    <th scope="col" rowspan="2" class="slds-text-align_center slds-text-middle"
+                                        width="11%">
+                                        <div class="slds-truncate" title="Supplier">Supplier</div>
+                                    </th>
+                                    <th scope="col" class="slds-text-align_center scoreOCF" width="7%">
+                                        <span class="irCheck slds-text-align_center scoreIrC">IR CHECK </span>
+                                        <div class="slds-truncate bold" title="Temp (in C)">Temp <br/> (in C)</div>
+                                    </th>
+                                    <th scope="col" class="slds-text-align_center scoreOCF" width="12%">
+                                        <div class="slds-truncate" title="Temp Range" width="12%">Temp Range</div>
+                                    </th>
+                                     <th scope="col" rowspan="2" class="slds-text-align_center slds-text-middle"
+                                        width="11%">
+                                        <div class="slds-truncate" title="Outcome">Outcome</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >
+                                    <td scope="row" rowspan="2" data-label="PO"
+                                        class="slds-text-align_center slds-text-middle">
+                                        <div class="slds-truncate" title="PO-002">
+                                          <strong> 010007922 </strong>
+                                        </div>
+                                    </td>
+                                    <td data-label="Article Detail" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="">
+                                            <span class="chkDone  slds-m-right_x-small" lwc-54bht2ttu4u=""></span>
+                                            878378-Chobani Yogurt 8
+                                        </div>
+                                    </td>
+                                    <td data-label="Supplier" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="Chobani">Chobani</div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate bold" title="-5">-5</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="successP"> Within Range </span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                         <div class="acceptedBadge">
+                                        <lightning-icon icon-name="utility:success" class="successIcn slds-m-right_xx-small" size="x-small">
+                                        </lightning-icon>
+                                        <span>Accepted</span>
+                                         </div>
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td data-label="Article Detail" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="">
+                                            <span class="chkApply slds-m-right_x-small" lwc-54bht2ttu4u=""></span>
+                                            Another Article for PO-002
+                                        </div>
+                                    </td>
+                                    <td data-label="Supplier" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="Chobani">Chobani</div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate bold" title="1">1</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreOCS" >
+                                        <div class="slds-truncate" title="">
+                                             <span class="successP"> Within Range </span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                         <div class="acceptedBadge">
+                                        <lightning-icon icon-name="utility:success" class="successIcn slds-m-right_xx-small" size="x-small">
+                                        </lightning-icon>
+                                        <span>Accepted</span>
+                                         </div>
+                                    </td>
+                                </tr>
+
+                               
+                                <tr >
+                                    <td scope="row" rowspan="2" data-label="PO"
+                                        class="slds-text-align_center slds-text-middle">
+                                        <div class="slds-truncate" title="PO-004"><strong>010009112 </strong></div>
+                                    </td>
+                                    <td data-label="Article Detail" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="">
+                                            <span class="chkApply slds-m-right_x-small" lwc-54bht2ttu4u=""></span>
+                                            987654-Apples Bag
+                                        </div>
+                                    </td>
+                                    <td data-label="Supplier" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="Orchard Inc.">Orchard Inc.</div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate bold" title="10">10</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="successP"> Within Range </span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                         <div class="acceptedBadge">
+                                        <lightning-icon icon-name="utility:success" class="successIcn slds-m-right_xx-small" size="x-small">
+                                        </lightning-icon>
+                                        <span>Accepted</span>
+                                         </div>
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td data-label="Article Detail" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="">
+                                            <span class="chkApply slds-m-right_x-small" lwc-54bht2ttu4u=""></span>
+                                            Another Item for PO-004
+                                        </div>
+                                    </td>
+                                    <td data-label="Supplier" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="Orchard Inc.">Orchard Inc.</div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate bold" title="12">12</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate" title="">
+                                             <span class="successP"> Within Range </span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                         <div class="acceptedBadge">
+                                        <lightning-icon icon-name="utility:success" class="successIcn slds-m-right_xx-small" size="x-small">
+                                        </lightning-icon>
+                                        <span>Accepted</span>
+                                         </div>
+                                    </td>
+                                </tr>
+
+                                 <tr >
+                                    <td scope="row" data-label="PO" class="slds-text-align_center slds-text-middle">
+                                        <div class="slds-truncate" title="PO-003"><strong>010008541</strong></div>
+                                    </td>
+                                    <td data-label="Article Detail" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="">
+                                            <span class="chkApply slds-m-right_x-small" lwc-54bht2ttu4u=""></span>
+                                            123456-Milk Gallon
+                                        </div>
+                                    </td>
+                                    <td data-label="Supplier" class="slds-text-align_center">
+                                        <div class="slds-truncate" title="Dairy Farms">Dairy Farms</div>
+                                    </td>
+                                    <td data-label="Temp (in C)" class="slds-text-align_center  scoreOCS">
+                                        <div class="slds-truncate bold" title="2">2</div>
+                                    </td>
+                                    <td data-label="Temp Range" class="slds-text-align_center scoreOCS">
+                                        <div class="slds-truncate" title="">
+                                            <span class="successP"> Within Range </span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                         <div class="acceptedBadge">
+                                        <lightning-icon icon-name="utility:success" class="successIcn slds-m-right_xx-small" size="x-small">
+                                        </lightning-icon>
+                                        <span>Accepted</span>
+                                         </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <!-- front Door -->
+                <div class="boxBgCont slds-m-top_medium">
+
+                    <div class={scoreBrdBClassFront}>
+                        <div class="alignHorizontal">
+                            <h3>
+                                <lightning-button-icon variant="bare" size="medium" icon-name={sectionFront.icon}
+                                    alternative-text="Toggle Section 3" class="slds-m-right_small arrow"
+                                    onclick={handleToggleSectionFront}>
+                                </lightning-button-icon>
+                                Front
+                            </h3>
+                            <span class="pConnect slds-m-left_small"> Primary Connect </span>
+                        </div>
+
+                        <span class="na slds-m-left_small"> not applicable </span>
+
+                    </div>
+
+
+                    <div class={sectionFront.class}>
+                        <div class="slds-m-top_medium">
+                            <div class="slds-m-bottom_medium slds-text-align_center">
+                                <p class="slds-m-bottom_medium"> <img src={tempcheck}/> </p>
+                                <p><strong>Temperature not recorded for this Location </strong> </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- completeion text -->
+                <div class="boxBgCont slds-m-top_medium slds-text-align_center">
+                    <div>
+                        <p class="slds-m-bottom_medium"> <img src={success} width="20" /> </p>
+                        <p class=" slds-m-bottom_medium">
+                            Temperature Check <br/>
+                            has been completed successfully
+                        </p>
+
+                        <p class="slds-m-bottom_medium">
+                            <lightning-button variant="brand" label="Go To Temperature Receiving Home" title=""
+                                onclick={handleClick}></lightning-button>
+                        </p>
+
+
+                    </div>
+
+
+
+                </div>
+
+                <lightning-button variant="brand-outline" label="Modal Window" title="titleName" onclick={showModalBox}>
+                </lightning-button>
+
+            </div>
+        </div>
+        <!-- mid section end -->
+
+        <!-- footer section start -->
+        <div class="wrapperFooterBgCont">
+            <div class="wrapperScoreFooterCont">
+                <div class="alignHorizontal alignRight slds-m-top_medium">
+                    <lightning-button label="Previous" title="" onclick={handleClick} class="slds-m-left_x-small">
+                    </lightning-button>
+                    <lightning-button variant="brand" label="Next" title="Next" onclick={handleClick}>
+                    </lightning-button>
+                </div>
+            </div>
+        </div>
+        <!-- footer section end -->
+
+
+        <!-- modal start -->
+        <template if:true={isShowModal}>
+
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open scoreTempModalWindow">
+                <div class="slds-modal__container">
+                    <!-- modal header start -->
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox}>
+                <lightning-icon icon-name="utility:close"
+                   alternative-text="close"
+                   variant="inverse"
+                   size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+             </button>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Rejection Detail
+                        </h2>
+                    </header>
+
+                    <!-- modal body start -->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <!-- rejection detail modal window -->
+                        <div class="slds-m-bottom_medium slds-size_2-of-3">
+                            <lightning-textarea name="inputname" label="Rejection Comments" placeholder="Write here..."
+                                value=""></lightning-textarea>
+                        </div>
+                        <div class="slds-m-bottom_medium">
+                            <lightning-file-upload label="Attach Document" name="fileUploader"
+                                accept=".csv,.doc,.xsl,.pdf" record-id="XXXXXXXX98766"
+                                onuploadfinished={handleUploadFinished} multiple>
+                            </lightning-file-upload>
+                        </div>
+
+                        <div class="slds-m-bottom_medium">
+                            <table
+                                class="slds-table slds-table_bordered1 slds-m-top_large tableScoreCont slds-table_fixed-layout">
+                                <thead>
+                                    <tr >
+                                        <th scope="col" width="20%">
+                                            <div class="slds-truncate" title="Image">Image</div>
+                                        </th>
+                                        <th scope="col" width="">
+                                            <div class="slds-truncate" title="File Name">File Name</div>
+                                        </th>
+                                        <th scope="col" width="">
+                                            <div class="slds-truncate" title=""></div>
+                                        </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr >
+
+                                        <td data-label="Image">
+                                            <div class="slds-truncate" title="">
+                                                <lightning-icon icon-name="doctype:image" alternative-text="Doc image">
+                                                </lightning-icon>
+                                            </div>
+                                        </td>
+                                        <td data-label="File Name">
+                                            <div class="slds-truncate" title="Chobani">Back Door Initial IR check-1
+                                            </div>
+                                        </td>
+
+                                        <td data-label="Delete" class="slds-text-align_center">
+                                            <div title="">
+                                                <lightning-button-icon variant="bare" class="btnIcn"
+                                                    icon-name="utility:delete" alternative-text="Delete">
+                                                </lightning-button-icon>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- rejection detail modal window -->
+
+                        <!-- reason  modal window -->
+                        <div class="slds-size_2-of-3">
+                            <lightning-combobox name="conditional acceptence"
+                                label="Select reason for conditional acceptance" value={value} placeholder=""
+                                options={options} onchange={handleChange}></lightning-combobox>
+                        </div>
+                        <!-- reason  modal end window -->
+
+
+                        <!-- confirmation submission -->
+                        <div class="slds-m-top_large">
+                            <ul>
+                                <li> <strong> 10 </strong> no. of POs have been successfully Accepted </li>
+                                <li> <strong> 3 </strong> no. of POs have been Conditionally Accepted </li>
+                                <li> <strong> 7 </strong> no. of POs have been Rejected </li>
+
+                            </ul>
+                            <p class="slds-m-top_medium">
+                                Do you wish to proceed to create Non-Conformance <br/> cases for the Rejected PO-articles?
+                            </p>
+                            <!-- confirmation end submission -->
+
+                            <!-- rejection content -->
+                            <div class="slds-m-top_medium">
+                                <p class="slds-text-align_center"> The rejection of <strong>PO # 0123456 </strong> is
+                                    going to create a <br/>
+                            Non Conformance case for the Supplier. </p>
+                                <p class="slds-m-top_medium slds-text-align_center">
+                                    Do you wish to proceed ?
+                                </p>
+                            </div>
+
+                            <!-- rejection end content -->
+
+                            <!-- skip content -->
+                            <p class="slds-text-align_center"> Do you want to Skip <strong>Front Location? </strong>
+                            </p>
+                            <!-- skip content -->
+
+
+                        </div>
+
+                    </div>
+
+                    <!-- modal footer start-->
+                    <footer class="slds-modal__footer">
+                        <lightning-button variant="base" label="Cancel" title="" onclick={hideModalBox}
+                            class="slds-m-right_small"></lightning-button>
+                        <lightning-button variant="brand" label="Add" title="" onclick={hideModalBox}>
+                        </lightning-button>
+                    </footer>
+
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+        <!-- modal end -->
+    </div>
+</template>

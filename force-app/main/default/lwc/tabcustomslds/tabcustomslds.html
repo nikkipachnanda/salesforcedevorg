@@ -1,0 +1,35 @@
+<template>
+  <div class="slds-tabs_default">
+    <ul class="slds-tabs_default__nav" role="tablist">
+      <template for:each={tabs} for:item="tab">
+        <li
+          class={tab.tabClass}
+          role="presentation"
+          key={tab.label}
+        >
+          <a
+            class="slds-tabs_default__link"
+            role="tab"
+            tabindex="0"
+            aria-selected={tab.active}
+            onclick={handleTabClick}
+            data-tab={tab.label}
+          >
+            {tab.label}
+          </a>
+        </li>
+      </template>
+    </ul>
+
+    <template for:each={tabs} for:item="tab">
+      <div
+        key={tab.label}
+        class="slds-tabs_default__content slds-p-around_medium"
+        role="tabpanel"
+        if:true={tab.active}
+      >
+        <p>{tab.content}</p>
+      </div>
+    </template>
+  </div>
+</template>

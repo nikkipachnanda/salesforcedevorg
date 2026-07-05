@@ -1,0 +1,17 @@
+<template>
+     <c-resuablecard
+        title="Welcome"
+        subtitle="This is a dynamic card"
+        button-label="Click Me"
+        show-button={showCardButton}
+        background-color="#f0f8ff"
+        text-color="#333333"
+        oncardbuttonclick={handleCardClick}
+    >
+        <!-- Slot content -->
+        <div>
+            <p>This content is projected inside the card slot.</p>
+            <lightning-button label="Extra Action" onclick={extraAction}></lightning-button>
+        </div>
+    </c-resuablecard>
+</template>

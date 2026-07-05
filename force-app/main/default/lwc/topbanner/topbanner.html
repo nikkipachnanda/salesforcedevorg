@@ -1,0 +1,168 @@
+<template>
+    
+   
+    <div class="mobOrder stickyMenu slds-show_large mobNavCont">
+        <header class="headerNavigation ">
+            <div class="slds-clearfix slds-hide_large evenHeading">
+                <div class="slds-float_left">Events Details1111</div>
+                <div class="slds-float_right">
+                        <button class="navTopArw navMobArw"  onclick={handleClick}><i class='fas fa-caret-down'></i> </button>
+                </div>
+            </div>
+
+            <ul class="menu menuHide mobNav"  >
+                    <li class="tabs active"  data-href="overViewCont" onclick={activeNavHead}><a href="#work" >Overview <br/> <span class="activeLogo"><img src={neticn} width="10" /></span></a>
+                       </li>
+                    <li class="tabs"  data-href="agendaCont" onclick={activeNavHead}><a href="#about" >Agenda <br/> <span class="activeLogo" style="display: none1;"><img src={neticn} width="10" /></span></a></li>
+                    <li class="tabs " data-href="speakerCont" onclick={activeNavHead}><a href="#careers" >Speakers <br/> <span class="activeLogo"  style="display: none1;"><img src={neticn} width="10" /></span></a></li>
+                    <li class="tabs "  data-href="sponsorsCont" onclick={activeNavHead}><a href="#contact1" >Sponsors <br/> <span class="activeLogo"  style="display: none1;"><img src={neticn} width="10" /></span></a></li>
+                    <li class="tabs "  data-href="partnersMidCont" onclick={activeNavHead}><a href="#contact2" >Partners <br/> <span class="activeLogo"  style="display: none1;"><img src={neticn} width="10" /></span></a></li>
+                    <li class="tabs "  data-href="venueCont" onclick={activeNavHead}><a href="#contact3" >Venue <br/> <span class="activeLogo"  style="display: none1;"><img src={neticn} width="10" /></span></a></li>
+                    <li class="tabs "  data-href="contactusCont" onclick={activeNavHead}><a href="#contact4" >Contact US <br/> <span class="activeLogo"  style="display: none1;"><img src={neticn} width="10" /></span></a></li>
+                    <li>
+                        <lightning-button variant="base" label="BROCHURE" title="Base action"
+                            class="slds-m-left_x-small brochureBtn slds-show_large" ></lightning-button>
+                    </li>
+                    <li>
+                        <lightning-button variant="Neutral" label="REGISTER NOW" title="Neutral action"
+                            class="slds-m-left_x-small regisBtn slds-show_large" ></lightning-button>
+                    </li>
+                </ul>
+           
+            
+        </header>
+    </div>
+
+    <div class="TopBannerSection">
+        <div class="mobOrder1">
+            <div style={backgroundStyle} class="topBanner">
+                <div class="slds-grid">
+                    <div class="slds-col">
+                        <div class="slds-size_6-of-12 slds-float_left slds-x-small-show-only">
+                                <lightning-button variant="Success" label="BROCHURE" title="Base action"
+                                class="slds-m-left_x-small brochureDark"></lightning-button>
+                        </div>
+                        <div class="discountBoxCont slds-size_6-of-12 slds-float_left slds-show_large">
+                            <div class="text">
+                                <div class="slds-float_left mrgnlft">
+                                    EARLY BIRD<br />
+                                    Book by 09/11/18<br />
+                                    SAVE $400
+                                </div>
+                                <div class="slds-float_left mrgnlft"> <img src={clockdesk} width="35" /> </div>  
+                            </div>
+                            <div class="discountBox "></div>
+                        </div>
+                    </div>`
+                    <div class="slds-col">
+                        <div class="routeImg"> <img src={routeImg} /> </div>
+                    </div>
+                    <div class="slds-col">
+                        <div class="slds-size_10-of-12 slds-float_right slds-x-small-show-only">
+                                <lightning-button variant="Neutral" label="REGISTER NOW" title="Neutral action"
+                                class="slds-m-left_x-small regisBtnLight"></lightning-button>
+                        </div>
+                        <div class="discountBoxCont slds-size_7-of-12 slds-float_right slds-show_large">
+                            <div class="text textsnd">TEAM DISCOUNTS<br />
+                                <div class="slds-float_left mrgnlft disimg"> <img src={discountdesk}  width="35"  /> </div>
+                                <div class="slds-float_left mrgnlft">3 save 10% <br />4 save 15%
+                                </div>
+                                <div class="slds-float_left mrgnlft">5 save 20% <br />6+ save 25%
+                                </div>
+                            </div>
+                            <div class="discountBox discountBoxSnd"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-grid slds-m-top_large">
+                    <div class="headingCont slds-size_1-of-1">
+                        <div class="medHeading">Achieving</div>
+                        <div class="largeHeading">Customer Excellence in Public Services</div>
+                        <div class="smallHeading">Building commitment | Enhancing capacity | Measuring performance</div>
+                    </div>
+                </div>
+
+                <div class="slds-grid slds-m-top_small">
+                    <div class="slds-size_1-of-1 slds-text-align_center buttonsCont slds-show_large">
+                        <lightning-button variant="Success" label="BROCHURE" title="Base action"
+                            class="slds-m-left_x-small brochureDark"></lightning-button>
+                        <lightning-button variant="Neutral" label="REGISTER NOW" title="Neutral action"
+                            class="slds-m-left_x-small regisBtnLight"></lightning-button>
+
+                    </div>
+                </div>
+
+                <div class="dateTxt slds-m-top_large ">
+                    <div class="slds-size_1-of-1 slds-text-align_center"><span class="dateBox">12-13 February 2019 | The Grace Hotel Sydney
+                        </span> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slds-grid topBoxSection topBoxMob" >
+            <div class="slds-col">
+                <div class="discountBoxCont slds-size_1-of-1 slds-float_left slds-x-small-show-only">
+                    <div class="text">
+                        <div class="slds-float_left mrgnlft">
+                            EARLY BIRD<br />
+                            Book by 09/11/18<br />
+                            SAVE $400
+                        </div>
+                        <div class="slds-float_left mrgnlft"> <img src={clockdeskwh} width="35" /> </div>  
+                    </div>
+                    <div class="discountBox "></div>
+                </div>
+            </div>`
+            <div class="slds-col">
+                <div class="discountBoxCont slds-size_1-of-1 slds-float_right slds-x-small-show-only">
+                    <div class="text textsnd">TEAM DISCOUNTS<br />
+                        <div class="slds-float_left mrgnlft disimg"> <img src={discountdeskwh}  width="35"  /> </div>
+                        <div class="slds-float_left mrgnlft">3 save 10% <br />4 save 15%
+                        </div>
+                        <div class="slds-float_left mrgnlft">5 save 20% <br />6+ save 25%
+                        </div>
+                    </div>
+                    <div class="discountBox discountBoxSnd"></div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="mobOrder1 stickyMenu1 slds-hide_large mobNavCont ">
+            <header class="headerNavigation mobResNav">
+                <div class="slds-clearfix slds-hide_large evenHeading">
+                    <div class="slds-float_left">Events Details11111</div>
+                    <div class="slds-float_right">
+                            <button class="navTopArw navMobArw"  onclick={handleClick}><i class='fas fa-caret-down'></i> </button>
+                    </div>
+                </div>
+    
+                <ul class="menu menuHide mobNav"  >
+                        <li class="tabs active"  data-href="overViewCont" onclick={activeNavHead}><a href="#work" >Overview <br/> <span class="activeLogo"><img src={neticn} width="10" /></span></a>
+                           </li>
+                        <li class="tabs"  data-href="agendaCont" onclick={activeNavHead}><a href="#about" >Agenda <br/> <span class="activeLogo" style="display: none1;"><img src={neticn} width="10" /></span></a></li>
+                        <li class="tabs " data-href="speakerCont" onclick={activeNavHead}><a href="#careers" >Speakers <br/> <span class="activeLogo"  style="display: none1;"><img src={neticn} width="10" /></span></a></li>
+                        <li class="tabs "  data-href="sponsorsCont" onclick={activeNavHead}><a href="#contact1" >Sponsors <br/> <span class="activeLogo"  style="display: none1;"><img src={neticn} width="10" /></span></a></li>
+                        <li class="tabs "  data-href="partnersMidCont" onclick={activeNavHead}><a href="#contact2" >Partners <br/> <span class="activeLogo"  style="display: none1;"><img src={neticn} width="10" /></span></a></li>
+                        <li class="tabs "  data-href="venueCont" onclick={activeNavHead}><a href="#contact3" >Venue <br/> <span class="activeLogo"  style="display: none1;"><img src={neticn} width="10" /></span></a></li>
+                        <li class="tabs "  data-href="contactusCont" onclick={activeNavHead}><a href="#contact4" >Contact US <br/> <span class="activeLogo"  style="display: none1;"><img src={neticn} width="10" /></span></a></li>
+                        <li>
+                            <lightning-button variant="base" label="BROCHURE" title="Base action"
+                                class="slds-m-left_x-small brochureBtn slds-show_large" ></lightning-button>
+                        </li>
+                        <li>
+                            <lightning-button variant="Neutral" label="REGISTER NOW" title="Neutral action"
+                                class="slds-m-left_x-small regisBtn slds-show_large" ></lightning-button>
+                        </li>
+                    </ul>
+                    
+                    <div> <lightning-button variant="Neutral" label="REGISTER NOW" title="Neutral action"
+                        class="slds-m-left_x-small regisBtn slds-hide_large registerNow dspn" ></lightning-button></div>
+                
+            </header>
+        </div>
+        
+        
+      
+        
+    </template>

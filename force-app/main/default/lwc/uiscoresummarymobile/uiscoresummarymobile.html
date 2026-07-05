@@ -1,0 +1,640 @@
+<template>
+
+    <div>
+        <!-- progress path -->
+        <div class="wrapperScoreHeaderBgCont">
+            <div class="wrapperScoreHeader progressBarCont">
+                <lightning-progress-indicator current-step="4" type="base" variant="base">
+                    <span class="posRel"><lightning-progress-step label="Step 1" value="1"></lightning-progress-step> <span class="proTextF slds-show_large1">Add PO <br/> Number </span>
+                    </span>
+                    <span class="posRel slds-m-top_xx-small"><lightning-progress-step label="Step 2" value="2"></lightning-progress-step> <span class="proTextS slds-show_large1">Equipment<br/> & Carrier Detail </span>
+                    </span>
+                    <span class="posRel"><lightning-progress-step label="Step 4" value="3"></lightning-progress-step> <span class="proTextS slds-show_large1">Temperature
+                    <br/> Check </span>
+                    </span>
+                    <span class="posRel"><lightning-progress-step label="Step 4" value="4"></lightning-progress-step> <span class="proTextS slds-show_large1">Review & Confirm <br/> Details </span>
+                    </span>
+                </lightning-progress-indicator>
+            </div>
+        </div>
+        <!-- progress path end -->
+
+        <!-- mid section start -->
+        <div class="wrapperScoreMidBgCont">
+            <div class="wrapperScoreMidCont ">
+                <h1 class="slds-m-top_large slds-m-bottom_x-large slds-m-left_x-small"> Review & Confirm Details </h1>
+
+                <!-- Back Door accordion conditionally accept scenario -->
+                <div class="boxBgCont slds-m-top_medium">
+                    <div class="scoreBrdB alignHorizontal alignRight slds-m-bottom_medium">
+                        <div class="alignHorizontal">
+                            <h3>
+                                <lightning-button-icon variant="bare" size="medium" icon-name="utility:chevrondown"
+                                    alternative-text="chevronup" class="slds-m-right_small arrow">
+                                </lightning-button-icon>
+                                Back Door (BD)
+
+                            </h3>
+                            <span class="pConnect slds-m-left_small"> Primary Connect </span>
+                        </div>
+                        <div class="fv"> <img src={fruit}  width="12" /> Fruit & Vegetable </div>
+                    </div>
+
+                    <div class="mobileScoreCard slds-p-around_small slds-m-top_small">
+                        
+                        <div class="cardHeader">
+                            <span class="PO">010007921</span>
+                            <span class="supplierInfo">Chobani</span>
+                        </div>
+
+                       <ul class="cardBody slds-p-top_medium">
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Article Detail</label>
+                                <div class="bold">878378-Chobani Yogurt</div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Temp (in C)</label>
+                                <div>
+                                    <span class="tempVal">-5</span>
+                                    <span class="outRStatus">Out of Range</span>
+                                </div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Probe Check Temp</label>
+                                <div>
+                                    <span class="tempVal">-5</span>
+                                    <span class="outRStatus">Out of Range</span>
+                                </div>
+                            </li>
+
+                            <li class="list alignHorizontal slds-p-top_large slds-p-bottom_medium bdrLightBlue ">
+                                <div class="leftCol">
+
+                                </div>
+                                <div class="CondAccBadge">
+                                    <lightning-icon icon-name="utility:success" class="warningIcn slds-m-right_xx-small" size="x-small">
+                                    </lightning-icon>
+                                    <span>Conditionally Accepted</span>
+                                
+                                </div>
+                            </li>
+                       </ul>
+
+                       <ul class="cardBody slds-p-top_medium">
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Article Detail</label>
+                                <div class="bold">878378-Chobani Yogurt</div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Temp (in C)</label>
+                                <div>
+                                    <span class="tempVal">-5</span>
+                                    <span class="outRStatus">Out of Range</span>
+                                </div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Probe Check Temp</label>
+                                <div>
+                                    <span class="tempVal">-5</span>
+                                    <span class="outRStatus">Out of Range</span>
+                                </div>
+                            </li>
+
+                            <li class="list alignHorizontal slds-p-top_large slds-p-bottom_medium bdrLightBlue ">
+                                <div class="leftCol">
+                                    <a class="slds-truncate editFormTxt slds-hide">
+                                        Additional cooling is required
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <lightning-button variant="brand-outline" label="Conditionally Accept" title="titleName" onclick={handleClick}>
+                                        Conditionally Accept
+                                    </lightning-button>
+                                </div>
+                            </li>
+                       </ul>
+
+                       <ul class="cardBody slds-p-top_medium">
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Article Detail</label>
+                                <div class="bold">878378-Chobani Yogurt</div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Temp (in C)</label>
+                                <div>
+                                    <span class="tempVal">-10</span>
+                                    <span class="inRStatus">Within Range</span>
+                                </div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Probe Check Temp</label>
+                                <div>
+                                    <span class="tempVal">-10</span>
+                                    <span class="inRStatus">Within Range</span>
+                                </div>
+                            </li>
+
+                            <li class="list alignHorizontal slds-p-top_large slds-p-bottom_medium bdrLightBlue ">
+                                <div class="leftCol">
+                                    <a class="slds-truncate editFormTxt slds-hide">
+                                        Additional cooling is required
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <lightning-button variant="brand-outline" label="Conditionally Accept" title="titleName" onclick={handleClick}>
+                                        Conditionally Accept
+                                    </lightning-button>
+                                </div>
+                            </li>
+                       </ul>
+
+                    </div>
+
+                </div>
+
+                <!-- Back Door accordion reject, accept scenario -->
+                <div class="boxBgCont slds-m-top_medium">
+                    <div class="scoreBrdB alignHorizontal alignRight slds-m-bottom_medium">
+                        <div class="alignHorizontal">
+                            <h3>
+                                <lightning-button-icon variant="bare" size="medium" icon-name="utility:chevrondown"
+                                    alternative-text="chevronup" class="slds-m-right_small arrow">
+                                </lightning-button-icon>
+                                Back Door
+
+                            </h3>
+                            <span class="pConnect slds-m-left_small"> Primary Connect </span>
+                        </div>
+                        
+                    </div>
+
+                    <div class="mobileScoreCard slds-p-around_small slds-m-top_small">
+                        
+                        <div class="cardHeader">
+                            <span class="PO">010007921</span>
+                            <span class="supplierInfo">Chobani</span>
+                        </div>
+
+                       <ul class="cardBody slds-p-top_medium">
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Article Detail</label>
+                                <div class="bold">878378-Chobani Yogurt</div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Temp (in C)</label>
+                                <div>
+                                    <span class="tempVal">-5</span>
+                                    <span class="outRStatus">Out of Range</span>
+                                </div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Probe Check Temp</label>
+                                <div>
+                                    <span class="tempVal">-5</span>
+                                    <span class="outRStatus">Out of Range</span>
+                                </div>
+                            </li>
+
+                            <li class="list alignHorizontal slds-p-top_large slds-p-bottom_medium bdrLightBlue ">
+                                <div class="leftCol">
+                                    <a class="slds-truncate editFormTxt ">
+                                        View Detail
+                                    </a>
+                                </div>
+                                <div class="rejectedBadge">
+                                    <lightning-icon icon-name="utility:error" class="errorIcn slds-m-right_xx-small" size="x-small">
+                                    </lightning-icon>
+                                    <span>Rejected</span>
+                                
+                                </div>
+                            </li>
+                       </ul>
+
+                       <ul class="cardBody slds-p-top_medium">
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Article Detail</label>
+                                <div class="bold">878378-Chobani Yogurt</div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Temp (in C)</label>
+                                <div>
+                                    <span class="tempVal">-5</span>
+                                    <span class="outRStatus">Out of Range</span>
+                                </div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Probe Check Temp</label>
+                                <div>
+                                    <span class="tempVal">-5</span>
+                                    <span class="outRStatus">Out of Range</span>
+                                </div>
+                            </li>
+                            
+                            <li class="list alignHorizontal slds-p-top_large slds-p-bottom_medium bdrLightBlue ">
+                                <div class="leftCol">
+                                    <lightning-icon icon-name="utility:edit_form" alternative-text="Edit" size="small"
+                                        class="slds-input__icon_right scoreIcnDoc">
+                                    </lightning-icon>
+                                </div>
+                                <div class="reject">
+                                    <lightning-button label="Reject" icon-name="utility:dislike" icon-position="right" onclick={handleClick}>
+                                    </lightning-button>
+                                </div>
+                            </li>
+                       </ul>
+
+                       <ul class="cardBody slds-p-top_medium">
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Article Detail</label>
+                                <div class="bold">878378-Chobani Yogurt</div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Temp (in C)</label>
+                                <div>
+                                    <span class="tempVal">-10</span>
+                                    <span class="inRStatus">Within Range</span>
+                                </div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Probe Check Temp</label>
+                                <div>
+                                    <span class="tempVal">-10</span>
+                                    <span class="inRStatus">Within Range</span>
+                                </div>
+                            </li>
+
+                            <li class="list alignHorizontal slds-p-top_large slds-p-bottom_medium bdrLightBlue ">
+                                <div class="leftCol">
+                                    <lightning-icon icon-name="utility:edit_form" alternative-text="Edit" size="small"
+                                        class="slds-input__icon_right scoreIcnDoc">
+                                    </lightning-icon>
+                                </div>
+                                <div class="reject">
+                                    <lightning-button label="Reject" icon-name="utility:dislike" icon-position="right" onclick={handleClick}>
+                                    </lightning-button>
+                                </div>
+                            </li>
+                       </ul>
+
+
+
+                    </div>
+
+                    <div class="mobileScoreCard slds-p-around_small slds-m-top_small">
+                        
+                        <div class="cardHeader">
+                            <span class="PO">010007921</span>
+                            <span class="supplierInfo">Chobani</span>
+                        </div>
+
+                       <ul class="cardBody slds-p-top_medium">
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Article Detail</label>
+                                <div class="bold">878378-Chobani Yogurt</div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Temp (in C)</label>
+                                <div>
+                                    <span class="tempVal">-5</span>
+                                    <span class="outRStatus">Out of Range</span>
+                                </div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Probe Check Temp</label>
+                                <div>
+                                    <span class="tempVal">-5</span>
+                                    <span class="outRStatus">Out of Range</span>
+                                </div>
+                            </li>
+
+                            <li class="list alignHorizontal slds-p-top_large slds-p-bottom_medium bdrLightBlue ">
+                                <div class="leftCol">
+                                    <lightning-icon icon-name="utility:edit_form" alternative-text="Edit" size="small"
+                                        class="slds-input__icon_right scoreIcnDoc">
+                                    </lightning-icon>
+                                </div>
+                                <div class="reject">
+                                    <lightning-button label="Reject" icon-name="utility:dislike" icon-position="right" onclick={handleClick}>
+                                    </lightning-button>
+                                </div>
+                            </li>
+                       </ul>
+
+
+                    </div>
+
+                    <div class="mobileScoreCard slds-p-around_small slds-m-top_small">
+                        
+                        <div class="cardHeader">
+                            <span class="PO">010007921</span>
+                            <span class="supplierInfo">Chobani</span>
+                        </div>
+
+                       <ul class="cardBody slds-p-top_medium">
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Article Detail</label>
+                                <div class="bold">878378-Chobani Yogurt</div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Temp (in C)</label>
+                                <div>
+                                    <span class="tempVal">-5</span>
+                                    <span class="outRStatus">Out of Range</span>
+                                </div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Probe Check Temp</label>
+                                <div>
+                                    <span class="tempVal">-10</span>
+                                    <span class="inRStatus">Within Range</span>
+                                </div>
+                            </li>
+
+                            <li class="list alignHorizontal slds-p-top_large slds-p-bottom_medium bdrLightBlue ">
+                                <div class="leftCol">
+                                    <a class="slds-truncate editFormTxt slds-hide">
+                                        Additional cooling is required
+                                    </a>
+                                </div>
+                                <div class="">
+                                    <lightning-button variant="brand-outline" label=" Accept" title="titleName" onclick={handleclick}> Accept
+                                </lightning-button>
+                                </div>
+                            </li>
+                       </ul>
+
+
+                    </div>
+
+                    <div class="mobileScoreCard slds-p-around_small slds-m-top_small">
+                        
+                        <div class="cardHeader">
+                            <span class="PO">010007921</span>
+                            <span class="supplierInfo">Chobani</span>
+                        </div>
+
+                       <ul class="cardBody slds-p-top_medium">
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Article Detail</label>
+                                <div class="bold">878378-Chobani Yogurt</div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Temp (in C)</label>
+                                <div>
+                                    <span class="tempVal">-5</span>
+                                    <span class="outRStatus">Out of Range</span>
+                                </div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Probe Check Temp</label>
+                                <div>
+                                    <span class="tempVal">-10</span>
+                                    <span class="inRStatus">Within Range</span>
+                                </div>
+                            </li>
+
+                            <li class="list alignHorizontal slds-p-top_large slds-p-bottom_medium bdrLightBlue ">
+                                <div class="leftCol">
+                                    <a class="slds-truncate editFormTxt slds-hide">
+                                        Additional cooling is required
+                                    </a>
+                                </div>
+                                <div class="acceptedBadge">
+                                    <lightning-icon icon-name="utility:success" class="successIcn slds-m-right_xx-small" size="x-small">
+                                    </lightning-icon>
+                                    <span>Accepted</span>
+                                
+                                </div>
+                            </li>
+                       </ul>
+
+                    </div>
+
+
+                    
+
+                </div>
+
+
+                 <!-- Middle accordion happy scenario -->
+                <div class="boxBgCont slds-m-top_medium">
+                    <div class="scoreBrdB alignHorizontal alignRight slds-m-bottom_medium">
+                        <div class="alignHorizontal">
+                            <h3>
+                                <lightning-button-icon variant="bare" size="medium" icon-name="utility:chevrondown"
+                                    alternative-text="chevronup" class="slds-m-right_small arrow">
+                                </lightning-button-icon>
+                                Middle
+
+                            </h3>
+                            <span class="pConnect slds-m-left_small"> Primary Connect </span>
+                        </div>
+                        <div class="acceptedBadge">
+                            <lightning-icon icon-name="utility:success" class="successIcn slds-m-right_xx-small" size="x-small">
+                            </lightning-icon>
+                            <span>Accepted</span>
+                        
+                        </div>
+                        
+                    </div>
+
+                    <div class="alignHorizontal slds-m-top_medium">
+                        <div>
+                            <span class="chkDone slds-m-right_x-small"></span>
+                            <span class="legendTxt">Temp check done</span>
+                        </div>
+
+                        <div class="slds-m-left_x-large">
+                            <span class="chkApply slds-m-right_x-small"></span>
+                            <span class="legendTxt">Temp check applied</span>
+                        </div>
+                    </div>
+
+                    <div class="mobileScoreCard slds-p-around_small slds-m-top_small">
+                        
+                        <div class="cardHeader">
+                            <span class="PO">010007921</span>
+                            <span class="supplierInfo">Chobani</span>
+                        </div>
+
+                       <ul class="cardBody slds-p-top_medium">
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Article Detail</label>
+                                <div class="bold slds-is-relative">878378-Chobani Yogurt
+                                    <span class="chkDone chkPos"></span>
+                                </div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Temp (in C)</label>
+                                <div>
+                                    <span class="tempVal">-10</span>
+                                    <span class="inRStatus">Within Range</span>
+                                </div>
+                            </li>
+
+                            <li class="list alignHorizontal slds-p-top_large slds-p-bottom_medium bdrLightBlue">
+                                <div class="leftCol">
+                                    
+                                </div>
+                                <div class="acceptedBadge">
+                                    <lightning-icon icon-name="utility:success" class="successIcn slds-m-right_xx-small" size="x-small">
+                                    </lightning-icon>
+                                    <span>Accepted</span>
+                                
+                                </div>
+                            </li>
+
+                           
+                         
+                       </ul>
+                    
+
+                    </div>
+
+                    <div class="mobileScoreCard slds-p-around_small slds-m-top_small">
+                        
+                        <div class="cardHeader">
+                            <span class="PO">010007921</span>
+                            <span class="supplierInfo">Chobani</span>
+                        </div>
+
+                       <ul class="cardBody slds-p-top_medium">
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Article Detail</label>
+                                <div class="bold slds-is-relative">878378-Chobani Yogurt
+                                    <span class="chkApply chkPos"></span>
+                                </div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Temp (in C)</label>
+                                <div>
+                                    <span class="tempVal">-10</span>
+                                    <span class="inRStatus">Within Range</span>
+                                </div>
+                            </li>
+
+                            <li class="list alignHorizontal slds-p-top_large slds-p-bottom_medium bdrLightBlue">
+                                <div class="leftCol">
+                                    
+                                </div>
+                                <div class="acceptedBadge">
+                                    <lightning-icon icon-name="utility:success" class="successIcn slds-m-right_xx-small" size="x-small">
+                                    </lightning-icon>
+                                    <span>Accepted</span>
+                                
+                                </div>
+                            </li>
+                         
+                       </ul>
+
+                       <ul class="cardBody slds-p-top_medium">
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Article Detail</label>
+                                <div class="bold slds-is-relative">878378-Chobani Yogurt
+                                    <span class="chkApply chkPos"></span>
+                                </div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Temp (in C)</label>
+                                <div>
+                                    <span class="tempVal">-10</span>
+                                    <span class="inRStatus">Within Range</span>
+                                </div>
+                            </li>
+
+                            <li class="list alignHorizontal slds-p-top_large slds-p-bottom_medium bdrLightBlue">
+                                <div class="leftCol">
+                                    
+                                </div>
+                                <div class="acceptedBadge">
+                                    <lightning-icon icon-name="utility:success" class="successIcn slds-m-right_xx-small" size="x-small">
+                                    </lightning-icon>
+                                    <span>Accepted</span>
+                                
+                                </div>
+                            </li>
+                         
+                       </ul>
+
+                       <ul class="cardBody slds-p-top_medium">
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Article Detail</label>
+                                <div class="bold slds-is-relative">878378-Chobani Yogurt
+                                    <span class="chkApply chkPos"></span>
+                                </div>
+                            </li>
+                            <li class="list alignHorizontal slds-p-vertical_xx-small">
+                                <label class="leftCol">Temp (in C)</label>
+                                <div>
+                                    <span class="tempVal">-10</span>
+                                    <span class="inRStatus">Within Range</span>
+                                </div>
+                            </li>
+
+                            <li class="list alignHorizontal slds-p-top_large slds-p-bottom_medium bdrLightBlue">
+                                <div class="leftCol">
+                                    
+                                </div>
+                                <div class="acceptedBadge">
+                                    <lightning-icon icon-name="utility:success" class="successIcn slds-m-right_xx-small" size="x-small">
+                                    </lightning-icon>
+                                    <span>Accepted</span>
+                                
+                                </div>
+                            </li>
+                         
+                       </ul>
+
+                       
+
+                    </div>
+ 
+
+                </div>
+                
+                <!-- Front Door --> 
+                 <div class="boxBgCont slds-m-top_medium">
+                    <div class="scoreBrdB  ">
+                        <div class="alignHorizontal alignRight">
+                            <div class="alignHorizontal">
+                            <h3>
+                                <lightning-button-icon variant="bare" size="medium" icon-name={section1.icon}
+                                    alternative-text="Toggle Section 1" class="slds-m-right_small arrow"
+                                    onclick={handleToggleSection1}>
+                                </lightning-button-icon>
+                                Front
+                            </h3>
+                            <span class="pConnect slds-m-left_small"> Primary Connect </span>
+                            </div>
+
+                            <span class="na slds-m-left_small"> Not Applicable </span>
+                           
+                        </div>
+
+                    </div>
+
+                    <div class="slds-m-top_medium">
+                       <div class="slds-m-bottom_medium slds-text-align_center">
+                            <p class="slds-m-bottom_medium"> <img src={tempcheck}/> </p>
+                            <p><strong>Temperature not recorded for this Location </strong> </p>
+                       </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <!-- mid section end -->
+
+    </div>
+    
+    <div class="alignHorizontal alignRight slds-p-vertical_medium slds-p-horizontal_x-small mobBtnPos">
+            <lightning-button label="Previous" title="" onclick={handleClick}></lightning-button>
+            <lightning-button variant="brand" label="Next" title="Next" onclick={handleClick}>
+            </lightning-button>
+        </div> 
+
+</template>

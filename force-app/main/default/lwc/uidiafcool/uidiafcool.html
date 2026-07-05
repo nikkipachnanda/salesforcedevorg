@@ -1,0 +1,577 @@
+<template>
+    <div class="phHorizonCont">
+
+		<!-- Header Content -->
+		<div class="alignH floatR alignC slds-m-bottom_medium splitViewSec slds-p-bottom_x-small">
+			<span class="slds-m-right_small">Split View:</span>
+			<lightning-combobox
+				name="progress"
+				value={value}
+				placeholder="Select Split View"
+				options={options}
+				onchange={handleChange} ></lightning-combobox>
+		</div>
+
+		<div class="alignH alignR  slds-m-bottom_small">
+			<div class="caseNo alignH alignC">
+				<span class="slds-m-right_x-small">Case Number:</span>
+				<span class="boldTxt">00090234203011</span>
+                
+				<div class="alignH inptLblN alignC slds-m-left_x-large effectiveDate">
+					<span class="slds-m-right_small">Effective Date</span>
+					<lightning-input type="date" value="2023/12/08" name="name" placeholder=""></lightning-input>
+				</div>
+
+			</div>
+			
+
+			<div class="">
+				<lightning-input type="toggle" label="Show All" name="input2" checked></lightning-input>
+			</div>
+		</div>
+		
+		<div class="actBtn alignH alignC floatR slds-m-bottom_x-small">
+			<lightning-button variant="success" label="Approve All" class="WtClr slds-m-right_xx-small" title="titleName"
+				onclick={handleClick}>
+			</lightning-button>
+			<lightning-button variant="destructive" label="Send All for Rework" class="WtClr slds-m-right_xx-small"
+				title="titleName" onclick={handleClick}>
+			</lightning-button>
+			<lightning-button variant="brand" label="Clear All" class="WtClr slds-m-right_xx-small" title="titleName"
+				onclick={handleClick} disabled>
+			</lightning-button>
+		
+		</div>
+        
+		<!-- Header Content Close -->
+
+		<!-- Cool Accordion -->
+		<div class="accordion box bdrNone ">
+			<div class="sectionExp">
+				<lightning-icon variant="base" size="xx-small" icon-name="utility:chevrondown" class="slds-m-right_small"
+					alternative-text="opne"></lightning-icon>
+				<span class="txtSz16">Review Required</span>
+			</div>
+			<div class="coolTable tableCont slds-m-top_x-small slds-m-bottom_medium">
+				<table class="slds-table slds-table_cell-buffer tdBdr"
+					aria-labelledby="element-with-table-label other-element-with-table-label">
+					<thead>
+						<tr class="slds-line-height_reset">
+		
+							<th class="" scope="col" width="35%">
+								<div class="" title="">
+		
+								</div>
+							</th>
+							<th class="" scope="col" width="20%">
+								<div class="" title="">
+		
+								</div>
+							</th>
+							<th class="" scope="col" width="40%">
+								<div class="slds-truncate" title="">
+		
+								</div>
+							</th>
+							<th class="" scope="col" width="100%">
+								<div class="slds-truncate" title="">
+								</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Labelling Category
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Priority Food</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Main Statement
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Vendor response</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">% Australian Ingredients
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Vendor response</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Contact Details
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Information Feed 9/10/2023, 6:07pm</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Country of Origin Statment
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Priority Food</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Australian Kangaroo Logo
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Vendor response</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Enable Standard Mark
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Vendor response</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Created By
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Vendor response</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Optional Country of Origin Statement
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Vendor response</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Country of Origin
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Australia</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Additional Phrase
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Vendor respone</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Labelling Packed Statement
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Vendor respone</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Main Statement Formula
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Vendor respone</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Bar Chart
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span></span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Last Modified By
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Jane Smith  8/11/2023 10:45am</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Additional Phrase
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Vendor response</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+		
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp alignV" title="">
+									<span class="boldTxt">Labelling Packed Statement
+		                                <lightning-helptext content="You'll receive weekly updates"></lightning-helptext>
+		                                </span>
+									<span>Vendor response</span>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-combobox name="" value={value} placeholder="Rework" options={options}
+										onchange={handleChange}>
+									</lightning-combobox>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+									<lightning-input type="text" variant="standard" name="name" placeholder="type here...">
+									</lightning-input>
+								</div>
+							</td>
+							<td data-label="" class="slds-cell-wrap" width="">
+								<div class="slds-line-clamp" title="">
+								</div>
+							</td>
+						</tr>
+		
+		
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="accordion box bdrNone">
+			<div class="sectionExp">
+				<lightning-icon variant="base" size="xx-small" icon-name="utility:chevronright" class="slds-m-right_small"
+					alternative-text="opne"></lightning-icon>
+				<span class="txtSz16">Not Required</span>
+			</div>
+		</div>
+		<!-- Cool Accordion Close-->
+
+
+	</div>
+</template>

@@ -1,0 +1,34 @@
+<template>
+  <template if:false={isUploadScreenVisible}>
+    <div style="padding: 1rem">
+      <template for:each={inputFields} for:item="field">
+        <div key={field.id} style="margin-bottom: 1rem;">
+          <label>{field.label}</label><br />
+          <input
+            type="text"
+            data-id={field.id}
+            onfocus={handleFocus}
+            style="padding: 0.5rem; width: 70%; margin-right: 10px;"
+          />
+          <button
+            type="button"
+            onclick={handleUploadClick}
+            data-id={field.id}
+            style="padding: 0.5rem;"
+          >
+            Upload
+          </button>
+        </div>
+      </template>
+    </div>
+  </template>
+
+  <template if:true={isUploadScreenVisible}>
+    <div style="padding: 2rem; text-align: center;">
+      <p>📁 Upload your file here</p>
+      <button onclick={handleFileAdd} style="margin-top: 1rem; padding: 0.5rem 1rem;">
+        Add File
+      </button>
+    </div>
+  </template>
+</template>

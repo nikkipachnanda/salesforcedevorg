@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <dynamicChoiceSets>
+        <name>Hot_Account_Choices</name>
+        <dataType>String</dataType>
+        <displayField>Name</displayField>
+        <filters>
+            <field>Rating</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Hot</stringValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <sortField>Name</sortField>
+        <sortOrder>Asc</sortOrder>
+        <valueField>Id</valueField>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <interviewLabel>Hot Accounts {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Hot Accounts</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Select_Hot_Account</name>
+        <label>Hot Accounts</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>SelectedAccountId</name>
+            <choiceReferences>Hot_Account_Choices</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Select an Account with Hot Rating</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Select_Hot_Account</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

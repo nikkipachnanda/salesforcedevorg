@@ -1,0 +1,23 @@
+<template>
+    <template if:true={error}>
+        <div class="error">
+            {error}
+        </div>
+    </template>
+
+    <template if:true={thirdPartyData}>
+         <template for:each={thirdPartyData} for:item="item">
+            <div key={item.id} class="data-item">
+                <h3>{item.title}</h3>
+                <p>User ID: {item.userId}</p>
+                <p>ID: {item.id}</p>
+                <p>Body: {item.body}</p>
+                <hr/>
+            </div>
+          </template>
+    </template>
+
+    <template if:false={thirdPartyData} >
+        <p>Loading third-party data...</p>
+    </template>
+</template>

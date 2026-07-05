@@ -1,0 +1,94 @@
+/* All custom CSS classes from your original code are included here for completeness */
+.boxCont {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.alignHorizontal {
+    display: flex;
+}
+
+.alignMiddle {
+    align-items: center;
+}
+
+.alignRight {
+    justify-content: space-between;
+}
+
+.accArrow {
+    transform: rotate(90deg);
+}
+
+.textSubHeading {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.tertiaryBtn {
+    --sds-c-button-color-border: transparent;
+    --sds-c-button-styling-border: 0;
+    --sds-c-button-text-color: #0070d2;
+}
+
+.myTaskSec {
+    width: 100%;
+    overflow: hidden;
+}
+
+.greenIndBox,
+.redIndBox,
+.purpleIndBox,
+.greyIndBox {
+    position: relative;
+    /* Adjust width based on number of steps */
+    width: 25%;
+}
+
+.greenIndBox .greenTick {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.redIndBox .lightning-progress-step__base_completed {
+    background-color: #F44336;
+    border-color: #F44336;
+}
+.redIndBox .lightning-progress-step__base {
+    background-color: #F44336;
+    border-color: #F44336;
+}
+
+.purpleIndBox .lightning-progress-step__base_completed {
+    background-color: #9C27B0;
+    border-color: #9C27B0;
+}
+.purpleIndBox .lightning-progress-step__base {
+    background-color: #9C27B0;
+    border-color: #9C27B0;
+}
+
+.greyIndBox .lightning-progress-step__base_completed {
+    background-color: #BDBDBD;
+    border-color: #BDBDBD;
+}
+.greyIndBox .lightning-progress-step__base {
+    background-color: #BDBDBD;
+    border-color: #BDBDBD;
+}
+
+.flexEvenSpace {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.semiBold {
+    font-weight: 600;
+}
+
+.roleTxt {
+    font-size: 0.8rem;
+    color: #ccc;
+}

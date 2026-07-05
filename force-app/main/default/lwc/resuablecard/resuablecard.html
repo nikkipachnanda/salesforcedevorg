@@ -1,0 +1,13 @@
+<template>
+    <div class="card" style={computedStyle}>
+        <h2>{title}</h2>
+        <p>{subtitle}</p>
+
+        <!-- Flexible slot for custom content -->
+        <slot></slot>
+
+        <template if:true={showButton}>
+            <button onclick={handleClick}>{buttonLabel}</button>
+        </template>
+    </div>
+</template>

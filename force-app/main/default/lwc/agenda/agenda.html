@@ -1,0 +1,680 @@
+<template>
+   <slot>
+    <div class="agendaCont agendaCont1">
+            <div style={backgroundStylebotBg}> 
+							
+        <div class="agenda" style={backgroundStyleTopBg}>
+            <h2 class="midContHeading slds-m-bottom_small">Agenda {item}</h2>
+            <div class="agendaTabSection slds-clearfix slds-grid slds-wrap">
+                <ul>
+                    <li class="slds-size_1-of-1 slds-large-size_4-of-12  " onclick={activeNav}><span class="day">Day 1</span><br />
+                        <span>Tuesday, 12 February 2018</span> <br /> 
+
+                    </li>
+                    <li class="slds-size_1-of-1 slds-large-size_4-of-12  ptop" onclick={activeNav}><span class="day"> Day 2</span><br />
+                        <span>Wednesday, 13 February 2018</span>
+                    </li>
+                    <li class="slds-size_1-of-1 slds-large-size_4-of-12 tabFont ptop" onclick={activeNav}>
+                        Workshop <br />
+                        <span><img src={neticn} /></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="dayOne" style="display: none1;">
+
+
+                    <ul class="slds-timeline">
+                            <li>
+                                    <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                                        <span class="slds-assistive-text ">task</span>
+                                        <div class="slds-media">
+                                            <div class="slds-media__figure">
+                                                <span class="time">9.00</span>
+                                                <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+                                                    title="task">
+                                                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                                        <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="slds-media__body ">
+            
+                                                <div class="agendaBox">
+                                                    <strong>KEYNOTE: Understanding 8 million citizens to better align government’s
+                                                        customer service strategy</strong>
+                                                    <div class="slds-grid slds-wrap">
+                                                        <div class="slds-col slds-size_10-of-12"><span class="daytxtact">Glenn
+                                                                King,</span> Customer Service Commissioner, NSW
+                                                            Department of
+                                                            Premier & Cabinet</div>
+                                                            <div class="slds-col slds-size_2-of-12 slds-text-align_right"> <button class="navTopArw"><i class="fas fa-caret-down"></i></button></div>
+                                                    </div>
+                                                </div>
+                                                <div class="timelinebox">Improving customer service using a customer experience
+                                                    mindset
+                                                </div>
+                                            </div>
+            
+                                        </div>
+            
+                                    </div>
+            
+                                </li> 
+                    </ul>        
+
+
+                <ul class="slds-timeline">
+                    <li>
+                        <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                            <span class="slds-assistive-text ">task</span>
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <span class="time">8.20</span>
+                                    <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+                                        title="task">
+                                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="slds-media__body agendaBox">
+                                    <strong>Registration, coffee & networking</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                            <span class="slds-assistive-text ">task</span>
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <span class="time">8.50</span>
+                                    <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+                                        title="task">
+                                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="slds-media__body ">
+                                    <div class="agendaBox">
+                                        <strong>Welcome remarks from the Chair</strong>
+                                        <div><span class="daytxtact">Fiona Keough,</span> Chief Executive Officer,
+                                            Auscontact Association</div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                            <span class="slds-assistive-text ">task</span>
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <span class="time">9.00</span>
+                                    <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+                                        title="task">
+                                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="slds-media__body ">
+
+                                    <div class="agendaBox">
+                                        <strong>KEYNOTE: Understanding 8 million citizens to better align government’s
+                                            customer service strategy</strong>
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_10-of-12"><span class="daytxtact">Glenn
+                                                    King,</span> Customer Service Commissioner, NSW
+                                                Department of
+                                                Premier & Cabinet</div>
+                                                <div class="slds-col slds-size_2-of-12 slds-text-align_right"> <button class="navTopArw"><i class="fas fa-caret-down"></i></button></div>
+                                        </div>
+                                    </div>
+                                    <div class="timelinebox">Improving customer service using a customer experience
+                                        mindset
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                            <span class="slds-assistive-text ">task</span>
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <span class="time">9.40</span>
+                                    <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+                                        title="task">
+                                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="slds-media__body ">
+
+                                    <div class="agendaBox">
+                                        <strong>Determining a customer experience strategy compatible with
+                                            government agencies’ perpetual journey to provide cost-effective
+                                            services</strong>
+                                        <div><span class="daytxtact">Brad Meehan,</span> Managing Director, Strativity
+                                            Group
+                                        </div>
+                                        <div style="font-size: 40px;">
+
+                                        </div>
+                                    </div>
+                                    <div class="timelineSubbox">
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_10-of-12">
+                                                <ul>
+                                                    <li> How to meet growing citizen expectations with an organisation
+                                                        wide
+                                                        customer focus</li>
+                                                    <li> How improvements to citizen experience need not come at a heavy
+                                                        cost to
+                                                        operating expenditures or in the form of large capital
+                                                        investment
+                                                    </li>
+                                                    <li> Best practice case studies of journey maps and voice of
+                                                        customer
+                                                        programs
+                                                        delivering significant savings to government services</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="slds-col slds-size_2-of-12 slds-text-align_right"> <button class="navTopArw"><i class="fas fa-caret-down"></i></button></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                            <span class="slds-assistive-text ">task</span>
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <span class="time">10.00</span>
+                                    <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+                                        title="task">
+                                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="slds-media__body ">
+
+                                    <div class="agendaBox">
+
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_10-of-12"><span class="daytxtact">Glenn
+                                                    King,</span> Customer Service Commissioner, NSW
+                                                SPEED NETWORKING</div>
+                                            <div class="slds-col slds-size_2-of-12 slds-text-align_right"> <button class="navTopArw"><i class="fas fa-exchange-alt"></i></button></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                            <span class="slds-assistive-text ">task</span>
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <span class="time">10.30</span>
+                                    <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+                                        title="task">
+                                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="slds-media__body ">
+
+                                    <div class="agendaBox">
+
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_10-of-12"><span class="daytxtact">Glenn
+                                                    King,</span> Customer Service Commissioner, NSW
+                                                Morning tea & networking</div>
+                                            <div class="slds-col slds-size_2-of-12 slds-text-align_right"> </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                            <span class="slds-assistive-text ">task</span>
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <span class="time">11.00</span>
+                                    <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+                                        title="task">
+                                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="slds-media__body ">
+
+                                    <div class="agendaBox">
+                                        <strong>Resetting and re-imaging government service delivery for the 21st
+                                            century</strong>
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_10-of-12"><span class="daytxtact">Craig
+                                                    Stokes,</span> Director of Digital Services, Innovation and
+                                                Technology,
+                                                IP Australia </div>
+                                            <div class="slds-col slds-size_2-of-12 slds-text-align_right">  <button class="navTopArw"><i class='fas fa-caret-down'></i> </button></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+
+                    <li>
+                        <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                            <span class="slds-assistive-text ">task</span>
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <span class="time">11.40</span>
+                                    <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+                                        title="task">
+                                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="slds-media__body ">
+
+                                    <div class="agendaBox">
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_10-of-12"> INTERNATIONAL CASE STUDY: Instilling a CX culture in Government: 
+                                                    a story of transformation</div>
+                                            <div class="slds-col slds-size_2-of-12 slds-text-align_right"> </div>
+                                        </div>
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_10-of-12"><span class="daytxtact">Wendy Beban</span>, Head of Digital and Transformation, 
+                                                    ,Aukland City Council  </div>
+                                            <div class="slds-col slds-size_2-of-12 slds-text-align_right"> <button class="navTopArw"><i class='fas fa-caret-down'></i> </button></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+
+                    <li>
+                        <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                            <span class="slds-assistive-text ">task</span>
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <span class="time">11.40</span>
+                                    <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+                                        title="task">
+                                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="slds-media__body ">
+
+                                    <div class="agendaBox">
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_10-of-12"><span class="daytxtact">Craig
+                                                    Stokes,</span> Director of Digital Services, Innovation and
+                                                Technology,
+                                                INTERNATIONAL CASE STUDY: Instilling a CX culture in Government:
+                                                a story of transformation</div>
+                                            <div class="slds-col slds-size_2-of-12 slds-text-align_right"> <button class="navTopArw"><i class="fas fa-globe-asia"></i> </button></div>
+                                        </div>
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_10-of-12"><span class="daytxtact">Wendy
+                                                    Beban,</span> Head of Digital and Transformation,
+                                                Aukland City Council </div>
+                                            <div class="slds-col slds-size_2-of-12 slds-text-align_right"> <button class="navTopArw"><i class='fas fa-caret-down'></i> </button></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+
+                    <li>
+                        <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                            <span class="slds-assistive-text ">task</span>
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <span class="time">12.20</span>
+                                    <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+                                        title="task">
+                                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="slds-media__body ">
+
+                                    <div class="agendaBox">
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_10-of-12"><span class="daytxtact">
+                                                    Networking lunch</span></div>
+                                            <div class="slds-col slds-size_2-of-12 slds-text-align_right"> arrow</div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+
+                    <li>
+                        <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                            <span class="slds-assistive-text ">task</span>
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <span class="time">1.20</span>
+                                    <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+                                        title="task">
+                                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="slds-media__body ">
+
+                                    <div class="agendaBox">
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_10-of-12"><span class="daytxtact">
+                                                    COLLABORATION ZONES</span></div>
+                                            <div class="slds-col slds-size_2-of-12 slds-text-align_right"> <button class="navTopArw"><i class="fas fa-cube"></i> </button> <button class="navTopArw"><i class='fas fa-caret-down'></i> </button></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="timelinebox">Establishing a culture of service excellence
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+
+                    <li>
+                        <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                            <span class="slds-assistive-text ">task</span>
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <span class="time">2.20</span>
+                                    <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+                                        title="task">
+                                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="slds-media__body ">
+
+                                    <div class="agendaBox">
+                                        <strong>PANEL DISCUSSION: Leading the transformation to an agile,
+                                            customer-oriented organisation</strong>
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_11-of-12">
+                                                <div><span class="daytxtact">Shane Douglas,</span> Manager Customer
+                                                    Service,
+                                                    Whitsunday Regional Council</div>
+
+                                                <div><span class="daytxtact">Paulina Manenica,</span> National Customer
+                                                    Service Manager
+                                                    Defence Housing Australia </div>
+                                                <div><span class="daytxtact">Anouche Newman,</span> Chief Executive
+                                                    Officer,
+                                                    Customer Service Institute of Australia </div>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-12 slds-text-align_right"> <button class="navTopArw"><i class='fas fa-caret-down'></i> </button></div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+
+                    <li>
+                        <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                            <span class="slds-assistive-text ">task</span>
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <span class="time">3.00</span>
+                                    <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+                                        title="task">
+                                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="slds-media__body ">
+
+                                    <div class="agendaBox">
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_10-of-12"><span class="daytxtact">
+                                                    Afternoon tea & networking</span></div>
+                                            <div class="slds-col slds-size_2-of-12 slds-text-align_right"> </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="timelinebox">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+
+                    <li>
+                        <div class="slds-timeline__item_expandable slds-timeline__item_task">
+                            <span class="slds-assistive-text ">task</span>
+                            <div class="slds-media">
+                                <div class="slds-media__figure">
+                                    <span class="time">3.00</span>
+                                    <div class="slds-icon_container slds-icon-standard-task slds-timeline__icon"
+                                        title="task">
+                                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="slds-media__body ">
+
+                                    <div class="agendaBox">
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_10-of-12"><span class="daytxtact">
+                                                    Ability Links NSW: a case study on how to create a public service
+                                                    with
+                                                    high economic & social benefit relative to program costs</span>
+                                            </div>
+                                            <div class="slds-col slds-size_2-of-12 slds-text-align_right"> </div>
+                                        </div>
+
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_10-of-12"><span class="daytxtact">
+                                                    Joan Feeney</span>, Senior Project Officer, Ability Links NSW
+                                                </span>
+                                            </div>
+                                            <div class="slds-col slds-size_2-of-12 slds-text-align_right"> </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="timelinebox">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="workShop" style="display: none;">
+                <div class="workShopBox">
+                    <div class="workImg " style={whiteBoxBg}><span class="txt">A</span></div>
+                    <h3>Glen King </h3>
+                    <div>Customer Service Department </div>
+                    <div class="workDateTxt">NSW Department of Premier & Cabinet</div>
+                </div>
+
+                <div class="workProfileBox">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-size_1-of-1 slds-large-size_2-of-12 ">
+                            <div class="profilPic slds-text-align_center"><img src={profilepic}>
+                                <div class="icnCont slds-x-small-show-only"> <i class="fab fa-linkedin-in"></i> </div>
+                            </div>
+                        </div>
+
+                        <div class="slds-size_1-of-1 slds-large-size_9-of-12 ">
+                            <ul class="slds-m-top_large slds-float_left">
+                                <li>Anouche Newman</li>
+                                <li class="proCol">Chief Executive Officer</li>
+                                <li>Customer Service Institute of Australia</li>
+                            </ul>
+                            <div class="slds-float_left slds-m-top_large icnProfile slds-show_large">
+                                <div class="icnCont"> <i class="fab fa-linkedin-in"></i> </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="slds-m-top_large slds-text-align_center"> Anouche has spent half her life thinking about
+                        how to create better customer service
+                        interactions. In 2013, after spending nearly a decade combining an academic career
+                        with consulting for forward-thinking organisations, she accepted a senior role at CSIA.
+                        Since 2015, she has been its CEO, where she focuses her team on assisting individuals
+                        and organisations in achieving their true customer service potential.</div>
+                </div>
+
+                <div class="workProfileBox slds-m-top_large">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-size_1-of-1 slds-large-size_2-of-12 ">
+                            <div class="profilPic slds-text-align_center"><img src={profilepicsnd}>
+                                <div class="icnCont slds-x-small-show-only"> <i class="fab fa-linkedin-in"></i> </div>
+                            </div>
+                        </div>
+
+                        <div class="slds-size_1-of-1 slds-large-size_9-of-12 ">
+                            <ul class="slds-m-top_large slds-float_left">
+                                <li>Glen King
+                                </li>
+                                <li class="proCol">Customer Service Department</li>
+                                <li>NSW Department of Premier & Cabinet</li>
+                            </ul>
+                            <div class="slds-float_left slds-m-top_large icnProfile slds-show_large">
+                                <div class="icnCont"> <i class="fab fa-linkedin-in"></i> </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="slds-m-top_large slds-text-align_center"> Anouche has spent half her life thinking about
+                        how to create better customer service
+                        interactions. In 2013, after spending nearly a decade combining an academic career
+                        with consulting for forward-thinking organisations, she accepted a senior role at CSIA.
+                        Since 2015, she has been its CEO, where she focuses her team on assisting individuals
+                        and organisations in achieving their true customer service potential.</div>
+                </div>
+
+                <div class="workProfileSubBox">
+                    <div>The workshop</div>
+                    <div class="slds-m-top_large">The key to successful transformation lies in building the collective
+                        energy in teams and
+                        organisations to prepare and sustain them through the period of transition. In this
+                        highly upbeat and inspirational learning session, Sean will teach attendees how to
+                        energise staff and empower them to drive performance and shape the organisational
+                        culture</div>
+
+                        <div>
+                                <div class="slds-m-top_large">What you will learn</div>
+                                How to assess the level of energy depletion in your organisation and if your people
+                                are ‘fit for change’
+                                The capability of energy intelligence – the foundation for collective energy
+                                How to use a data-led approach make precise investments to lift collective energy
+                                Designing human-centered learning experiences your people will love and
+                                millennial’s demand
+                            </div>
+            
+                            <div class="slds-m-top_large">*Refreshments provided</div>
+                </div>
+
+
+               
+
+            </div>
+
+
+
+
+        </div>
+        </div>
+    </div>
+
+</slot>
+</template>

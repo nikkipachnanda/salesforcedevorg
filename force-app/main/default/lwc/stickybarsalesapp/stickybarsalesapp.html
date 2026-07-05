@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Door Tabs">
+        <!-- Header -->
+        <div style="background:green; color:#fff; height:100px;">
+            Header
+        </div>
+
+        <!-- Scrollable area -->
+        <div class="slds-p-around_medium tabMidCont" style="height:1200px;">
+            <!-- Tabset -->
+            <lightning-tabset onactive={handleTabChange}>
+                <lightning-tab label="Backdoor" name="backdoor">
+                    <p>This is Backdoor content.</p>
+                </lightning-tab>
+                <lightning-tab label="Middledoor" name="middledoor">
+                    <p>This is Middledoor content.</p>
+                </lightning-tab>
+                <lightning-tab label="Frontdoor" name="frontdoor">
+                    <p>This is Frontdoor content.</p>
+                </lightning-tab>
+            </lightning-tabset>
+
+            <!-- Always show current tab (for debug) -->
+            <p class="slds-m-top_medium">
+                Raw Selected: <strong>{selectedDoor}</strong>
+            </p>
+
+            <!-- Show label only after scroll -->
+            <template if:true={tempCheckTab}>
+                <div class="slds-m-top_medium backdoorText">
+                    Selected Label: {selectedDoor}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

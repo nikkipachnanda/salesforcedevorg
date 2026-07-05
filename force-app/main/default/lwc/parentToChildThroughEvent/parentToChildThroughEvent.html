@@ -1,0 +1,10 @@
+<template>
+    <div>Child to parent through event </div>
+  <div> {msg} </div>
+     <lightning-button label="Show Modal" 
+            onclick={clickHandler}></lightning-button>
+
+    <template if:true={showModal} >        
+    <c-child-To-Parent-Through-Event onclose={closeHandler} > </c-child-To-Parent-Through-Event>
+    </template>
+</template>

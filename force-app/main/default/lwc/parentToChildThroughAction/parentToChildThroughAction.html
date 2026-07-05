@@ -1,0 +1,14 @@
+<template>
+    
+<div>
+    <lightning-input type="number" variant="standard" name="name" label="label" placeholder="type here..."
+     value={percentage}
+     
+     onkeyup={changeHandler}></lightning-input>
+</div>
+
+<div>
+ <c-child-receive-through-action progress-value={percentage}> </c-child-receive-through-action>
+</div>
+
+</template>

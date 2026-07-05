@@ -1,0 +1,63 @@
+/* cow css image */
+.image-wrapper { position: relative; width:568px; margin:0 auto;}
+.part { position: absolute; background-color: transparent; cursor: pointer; transition: background-color 0.3s ease; color: #b5905A; font-size:13px; font-weight: bold; font-family: "FjallaRegular";}
+.splate { top: 46%; left: 29%; width: 15%; height: 10%; text-align: center;}
+.brisk { top: 46%; left: 46%; width: 12%; height: 10%; text-align: center;}
+.flank { top: 46%; left: 17%; width: 11%; height: 10%; text-align: center;}
+.shank { top: 54%; left: 6%; width: 11%; height: 10%; text-align: center;}
+.round { top: 40%; left: 5%; width: 11%; height: 10%; text-align: center;}
+.topside { top: 27%; left: 6%; width: 11%; height: 10%; text-align: center;}
+.rump { top: 15%; left: 6%; width: 11%; height: 10%; text-align: center;}
+.sirlion { top: 15%; left: 17%; width: 11%; height: 10%; text-align: center;}
+.tenderloin { top: 25%; left: 19%; width: 11%; height: 10%; text-align: center; }
+.shortloin { top: 13%; left: 26%; width: 11%; height: 10%; text-align: center; }
+.cuberoll { top: 18%; left: 36%; width: 11%; height: 10%; text-align: center; }
+.blade { top: 18%; left: 46%; width: 11%; height: 10%; text-align: center; }
+.chuck { top: 19%; left: 54%; width: 11%; height: 10%; text-align: center; }
+.neck { top: 25%; left: 60%; width: 11%; height: 10%; text-align: center; }
+.part { font-size:13px!important;}
+
+/* Hover and active styling */
+.part:hover, .part.active { color: #fff; background-color:transparent; border-radius: 10px; font-weight: bold; font-size:14px;}
+.part.neck:hover {  color:#B5905A!important; font-size:13px!important; }
+.part.chuck:hover {  color:#B5905A!important; font-size:13px!important; }
+.part.round:hover {  color:#B5905A!important; font-size:13px!important; }
+.part.shank:hover {  color:#B5905A!important; font-size:13px!important; }
+.part.splate:hover {  color:#B5905A!important; font-size:13px!important; }
+.part.flank:hover {  color:#B5905A!important; font-size:13px!important; }
+.part.shortloin:hover {  color:#B5905A!important; font-size:13px!important; }
+
+
+.slds-carousel__panel-action {border:none; border-radius:0px;}
+.defaultHeading { color:#B5905A; font-size:50px; text-align:center;}
+.textCenter {text-align:center;}
+
+
+@media only screen and (max-width: 600px) {
+
+.part { font-size:9px !important;} 
+.flank { left: 21% !important; }
+.neck { left:72% !important; }
+.chuck { left:64% !important;}
+.blade{ left:55% !important;}
+.cuberoll {left:44% !important;}
+.shortloin { top: 16% !important; left: 32% !important;}
+.sirlion { top: 17% !important; left: 21% !important;}
+.topside { top: 30% !important;}
+.tenderloin { top: 27% !important; left: 21% !important;}
+.splate { top: 46% !important; left: 35% !important;}
+.brisk { top: 39% !important; left: 12% !important;}
+.round { top: 40%; left: 7%;}
+.shank {top: 54%;left: 8%;}
+
+/* Hover and active styling */
+.part:hover, .part.active { color: #fff; background-color:transparent; border-radius: 10px; font-weight: bold; font-size:11px!important;}
+.part.neck:hover { color:#B5905A!important; font-size:9px!important; }
+.part.shank:hover { color:#B5905A!important; font-size:9px!important; }
+.part.splate:hover { color:#B5905A!important; font-size:9px!important; }
+.part.flank:hover { color:#B5905A!important; font-size:9px!important; }
+.part.shortloin:hover { color:#B5905A!important; font-size:9px!important;}
+.part.chuck:hover { color:#B5905A!important; font-size:9px!important; }
+.part.round:hover { color:#B5905A!important; font-size:9px!important; }
+
+}

@@ -1,0 +1,31 @@
+<template>
+    <!-- Green Header -->
+    <div class="header">
+        <h1 class="header-text">Green Header</h1>
+    </div>
+
+    <!-- Tabset -->
+    <lightning-tabset
+        class="tabs"
+        variant="standard"
+        active-tab-value={activeTab}>
+        <lightning-tab label="Back" value="Back">
+            <p>This is the Back tab content.</p>
+        </lightning-tab>
+        <lightning-tab label="Middle" value="Middle">
+            <p>This is the Middle tab content.</p>
+        </lightning-tab>
+        <lightning-tab label="Front" value="Front">
+            <p>This is the Front tab content.</p>
+        </lightning-tab>
+    </lightning-tabset>
+
+    <!-- Scroll padding -->
+    <div class="scroll-padding"></div>
+
+    <!-- Bottom nav buttons -->
+    <div class="navigation">
+        <button onclick={previousTab} disabled={isFirstTab}>Previous</button>
+        <button onclick={nextTab} disabled={isLastTab}>Next</button>
+    </div>
+</template>

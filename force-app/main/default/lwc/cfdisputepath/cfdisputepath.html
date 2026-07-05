@@ -1,0 +1,235 @@
+<template>
+
+  <div class=" slds-grid slds-wrap slds-m-top_large slds-gutters disputeColCont">
+     <div class="slds-col slds-size_1-of-2  slds-m-top_xx-large">
+        <div>
+            <span class="disputHeading"> Dispute: Missing item  </span>
+             <span class="disputSubtext slds-m-left_xx-large">   Raised on: 10 Oct 24, 14:22 PM </span>
+        </div>    
+            <div class=" slds-m-top_xx-large">
+        <div class="slds-path">
+            <div class="slds-grid slds-path__track">
+                <div class="slds-grid slds-path__scroller-container slds-gutters">
+                    <div class="slds-path__scroller">
+                        <div class="slds-path__scroller_inner">
+                            <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal"
+                                aria-labelledby="slds-path__stage-name">
+
+
+                                <li class="slds-path__item slds-is-current slds-is-active" role="presentation">
+                                    <a aria-selected="true" class="slds-path__link" href="#" id="path-9" role="option"
+                                        tabindex="0">
+                                        <span class="slds-path__stage">
+
+<span class="slds-assistive-text">Current Stage:</span>
+                                        </span>
+                                        <span class="slds-path__title">Assign to RKMT</span>
+                                    </a>
+                                </li>
+
+                                <li class="slds-path__item slds-is-incomplete" role="presentation">
+                                    <a aria-selected="false" class="slds-path__link" href="#" id="path-11" role="option"
+                                        tabindex="-1">
+                                        <span class="slds-path__stage">
+
+</span>
+                                        <span class="slds-path__title">Escalated</span>
+                                    </a>
+                                </li>
+
+                                <li class="slds-path__item slds-is-incomplete" role="presentation">
+                                    <a aria-selected="false" class="slds-path__link" href="#" id="path-10" role="option"
+                                        tabindex="-1">
+                                        <span class="slds-path__stage">
+
+</span>
+                                        <span class="slds-path__title">Escalation resolved</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                       
+                    </div>
+                </div>
+                <div class="slds-grid slds-path__action">
+                    <span id="slds-path__stage-name" class="slds-path__stage-name">Stage: Unqualified</span>
+                    <lightning-button variant="base" label="Escalate" title="titleName" class="base"
+                        onclick={handleClick}></lightning-button>
+                </div>
+            </div>
+        </div>
+
+         <div class=" slds-grid slds-wrap slds-m-top_large slds-col">
+                            <div class="slds-col slds-size_1-of-2 inputTextInfo slds-m-top_xx-large">
+                                <label>Category Selected </label>
+                                <div class="readOnlytext "> Missing Item </div>
+                            </div>
+
+                            <div class="slds-col slds-col slds-size_1-of-2 inputTextInfo slds-m-top_xx-large">
+                                <label>Item selected  </label>
+                                <div class="readOnlytext "> Key </div>
+                            </div>
+
+
+                            <div class="slds-col slds-col slds-size_1-of-2 inputTextInfo slds-m-top_xx-large">
+                                <label>Return option selected </label>
+                                <div class="readOnlytext "> Send by post</div>
+                            </div>
+
+                            <div class="slds-col slds-size_1-of-2 inputTextInfo slds-m-top_xx-large">
+                                <label>Summary and instructions</label>
+                                <div class="readOnlytext ">Lorem ipsum sample text </div>
+                            </div>
+
+
+            </div>
+
+             <!-- view upload document -->
+    <div class="viewUploadCont slds-m-top_xx-large">
+      <div class="disFlex spBetween viewUploadContTopInfo">
+        <h2>
+          Uploaded Files/Documents
+
+        </h2>
+        <div>
+          <div class="disFlex">
+         
+               <lightning-button-menu alternative-text="Show menu">
+                <lightning-menu-item value="MenuItemOne" label="Menu Item One"></lightning-menu-item>
+                <lightning-menu-item value="MenuItemTwo" label="Menu Item Two"></lightning-menu-item>
+
+            </lightning-button-menu>
+          </div>
+        </div>
+      </div>
+
+      <div class="txtInfo slds-m-top_large">
+        <div class="slds-grid slds-gutters">
+          <div class="slds-col">
+            File name:
+          </div>
+     
+        </div>
+
+        <div class="slds-grid slds-gutters">
+          <div class="slds-col">
+            File url:
+          </div>
+          <div class="slds-col ">
+            <a href="#">click here </a>
+          </div>
+        </div>
+
+        <div class="slds-grid slds-gutters">
+          <div class="slds-col">
+            Uploaded by:
+          </div>
+          <div class="slds-col ">
+            Customer
+          </div>
+        </div>
+
+        <div class="slds-grid slds-gutters">
+          <div class="slds-col">
+            Uploaded date:
+          </div>
+          <div class="slds-col ">
+            10/10/2024 14:22 PM
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="viewUploadCont slds-m-top_xx-large">
+      <div class="disFlex spBetween viewUploadContTopInfo">
+        <h2>
+          Disclaimer
+
+        </h2>
+        <div>
+          <div class="disFlex">
+         
+               <lightning-button-menu alternative-text="Show menu">
+                <lightning-menu-item value="MenuItemOne" label="Menu Item One"></lightning-menu-item>
+                <lightning-menu-item value="MenuItemTwo" label="Menu Item Two"></lightning-menu-item>
+
+            </lightning-button-menu>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="viewUploadCont slds-m-top_xx-large">
+      <div class="disFlex spBetween viewUploadContTopInfo">
+        <h2>
+          Drop-off Location
+
+        </h2>
+        <div>
+          <div class="disFlex">
+         
+               <lightning-button-menu alternative-text="Show menu">
+                <lightning-menu-item value="MenuItemOne" label="Menu Item One"></lightning-menu-item>
+                <lightning-menu-item value="MenuItemTwo" label="Menu Item Two"></lightning-menu-item>
+
+            </lightning-button-menu>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    </div>
+    <div class="slds-col slds-size_1-of-2  slds-m-top_xx-large">
+            <div class="communicationCont slds-m-bottom_large">
+              <div class="communicationHeading">
+                <h2> Communication </h2>
+              </div>
+            </div>   
+
+           <div class="adminInfo"> 
+                <div class="date slds-m-bottom_small"> 12 Oct 24, 14:20 PM </div>
+            <div class="disFlex slds-m-top_large">
+              <div class="slds-m-right_large"> 
+                <img src={logo} width="40" />
+              </div>
+              <div class="adminInfoTxt"> 
+                  Dear Customer, we have got your dispute on the missing item related. we have got your dispute on the missing item related. 
+              </div>
+            </div>
+
+            <div class="disFlex slds-m-top_large">
+              <div class="slds-m-right_large"> 
+                <img src={logo} width="40" />
+              </div>
+              <div class="adminInfoTxt"> 
+                 Lorem ipsum message sample text.
+              </div>
+            </div>
+
+            </div>    
+
+            <div class="customInfo slds-m-top_large"> 
+                <div class="date slds-m-bottom_small flexEnd"> 12 Oct 24, 14:20 PM </div>
+            <div class="disFlex slds-m-top_large flexEnd">
+              
+              <div class=" custInfoTxt custInfoTxtW"> 
+                 This is the sample text to show the description for escalation from the customer to RMKT team.
+                  Sample text to show the description for escalation from the customer to RMKT team.  
+              </div>
+              <div class="slds-m-right_large"> 
+                <img src={logo} width="40" />
+              </div>
+            </div>
+
+      
+
+            </div>    
+
+        
+    </div>
+  </div>                                
+
+
+</template>

@@ -1,0 +1,28 @@
+.header-container {
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav li {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header-nav li:hover {
+    background-color: #e2e6ea;
+}
+
+.header-nav li.active {
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+}

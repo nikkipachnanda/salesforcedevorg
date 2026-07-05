@@ -1,0 +1,10 @@
+@import 'c/cssLibrary';
+
+.dummy{
+	color : black;
+}
+
+.tabFont 
+{
+	height:35px;
+}

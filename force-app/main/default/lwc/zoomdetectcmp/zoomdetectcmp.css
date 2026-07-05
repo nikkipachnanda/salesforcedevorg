@@ -1,0 +1,11 @@
+.normal-background {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.zoomed-background {
+    background-color: #fff3cd; /* soft yellow background */
+    padding: 2rem;
+    border-radius: 8px;
+}

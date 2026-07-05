@@ -1,0 +1,23 @@
+.slds-table_custom {
+    display: block;
+    overflow-x: auto; /* Scroll if the table exceeds screen width */
+}
+
+.slds-table {
+    display: flex;
+    flex-direction: column; /* Flip the table layout to vertical */
+}
+
+.slds-table tr {
+    display: flex;
+}
+
+.slds-table th {
+    width: 150px; /* Set width of the row headers (left side) */
+    text-align: left;
+}
+
+.slds-table td {
+    width: 150px; /* Set width of the data columns */
+    text-align: left;
+}

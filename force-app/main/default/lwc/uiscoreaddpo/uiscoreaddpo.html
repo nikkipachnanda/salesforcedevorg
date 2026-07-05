@@ -1,0 +1,70 @@
+<template>
+    <div>
+        <!-- progress path -->
+            <div class="wrapperScoreHeaderBgCont">
+                <div class="wrapperScoreHeader progressBarCont">
+                    <lightning-progress-indicator current-step="1" type="base" variant="base">
+                        <span class="posRel slds-show_large"><lightning-progress-step label="Step 1" value="1"></lightning-progress-step> <span class="proTextF slds-show_large">Add PO <br/> Number </span>
+                        </span>
+                    <span class="posRel slds-m-top_xx-small slds-show_large"><lightning-progress-step label="Step 2" value="2"></lightning-progress-step> <span class="proTextS slds-show_large">Equipment<br/> & Carrier Detail </span>
+                        </span>
+                    <span class="posRel slds-show_large"><lightning-progress-step label="Step 4" value="3"></lightning-progress-step> <span class="proTextS slds-show_large">Temperature
+                    <br/> Check </span>
+                        </span>
+                <span class="posRel slds-show_large"><lightning-progress-step label="Step 4" value="4"></lightning-progress-step> <span class="proTextS slds-show_large">Review & Confirm <br/> Details </span>
+                        </span>
+                    </lightning-progress-indicator>
+                </div>
+            </div> 
+         <!-- progress path end -->
+
+         <!-- mid section start -->
+        <div class="wrapperScoreMidBgCont">
+            <div class="wrapperScoreMidCont ">
+                <h1 class="slds-m-top_large"> Add POs </h1>
+                <div class="boxBgCont">
+                    <h2> Please enter 10-digit valid PO Number </h2> 
+                    <div class="boxHeadBg slds-grid slds-wrap slds-m-top_medium slds-gutters"> 
+                        <div class="slds-col slds-size_1-of-2 slds-large-size_5-of-12 fontBold"> <span>*</span> Add PO Numbers</div>
+                        <div class="slds-col slds-size_1-of-2 slds-large-size_7-of-12 fontBold"> Supplier </div>
+                    </div>  
+                 
+                    <div class="removeLbl slds-m-top_medium slds-grid slds-wrap slds-gutters">
+                       <div class="slds-col slds-size_1-of-2 slds-large-size_5-of-12"> <lightning-input type="text" variant="standard" name="name" label="label" placeholder="Enter PO #"  ></lightning-input> </div>
+                       <div class="slds-col slds-size_1-of-2 slds-large-size_7-of-12"> Chobani </div>
+                    </div>   
+                       <div class="scoreSep"></div>  
+                      
+
+                    <div class="removeLbl slds-m-top_medium slds-grid slds-wrap slds-gutters">
+                       <div class="slds-col slds-size_1-of-2 slds-large-size_5-of-12 slds-has-error"> <lightning-input type="text" variant="standard" name="name" label="label" placeholder="Enter PO #"  ></lightning-input> 
+                       <div class="scoreError"> PO not found </div>
+                       </div>
+                       <div class="slds-col slds-size_1-of-2 slds-large-size_7-of-12 slds-text-align_right"> 
+                        <lightning-button-icon variant="bare" size="" icon-name="utility:delete" alternative-text="delete" class="slds-p-right_large"></lightning-button-icon>
+                        </div>
+                    </div>  
+
+                        <div class="scoreSep"></div>   
+                    <div>
+                     <lightning-button variant="brand-outline" label="+ Add PO" title="" onclick={handleClick} class="fw5"></lightning-button>
+                    </div>   
+
+                </div>    
+               
+            </div>  
+        </div>
+        <!-- mid section end -->
+
+        <!-- footer section start -->
+        <div class="wrapperFooterBgCont">
+            <div class="wrapperScoreFooterCont">
+                <div class="alignHorizontal alignRight slds-m-top_medium">
+                     <lightning-button label="Previous" title="" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+                      <lightning-button variant="brand" label="Next" title="Next" onclick={handleClick}></lightning-button>
+                </div>            
+            </div>    
+        </div>
+        <!-- footer section end -->      
+    </div>
+</template>

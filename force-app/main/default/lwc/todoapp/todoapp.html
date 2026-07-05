@@ -1,0 +1,42 @@
+<template>
+    <div class="todoListCont">
+        <lightning-card
+            variant="narrow"
+            icon-name="standard:opportunity">
+        <h1 slot="title">Todo App</h1>
+       <div slot="actions">
+            <lightning-button-icon icon-name="utility:sync"></lightning-button-icon>
+        </div>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item  padding="around-small" class="innerCont"  >
+                <ul class="slds-has-dividers_around-space">
+                   <template for:each={toDoTasks} for:item="todoTask"> 
+                     <li class="slds-item" key={todoTask.id}>
+                    <lightning-layout vertical-align="center" horizontal-align="spread">
+                         <lightning-layout-item >
+                        {todoTask.name}
+                           </lightning-layout-item>
+                       <lightning-layout-item >
+                         <lightning-button-icon icon-name="utility:delete"></lightning-button-icon>
+                         </lightning-layout-item>
+                         </lightning-layout> 
+                    </li>   
+                   </template>    
+                </ul>   
+            </lightning-layout-item>
+           
+        </lightning-layout>
+        <div slot="footer" class="slds-clearfix">
+              <lightning-layout multiple-rows>
+                  <lightning-layout-item flexibility="auto" >
+                        <lightning-input type="text" name="input1"   variant="label-hidden"  placeholder="Enter New task"  value={newTask} onchange={updateNewTask} ></lightning-input>
+                  </lightning-layout-item>
+                   <lightning-layout-item class="slds-m-left_x-small">
+                    <lightning-button variant="destructive" label="Add" title="Add" onclick={addToDoList} ></lightning-button>
+                </lightning-layout-item>
+              </lightning-layout>
+        </div>
+    </lightning-card>
+
+    </div>    
+</template>

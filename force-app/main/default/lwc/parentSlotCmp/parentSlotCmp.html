@@ -1,0 +1,22 @@
+<template>
+    <div>Parent Slot Component </div>
+    <c-child-slot-cmp>
+       
+        <div slot="name">Nitin</div>
+
+        <div slot="age"> 20 </div>
+
+        <div slot="footer"> Footer content </div>
+        
+    </c-child-slot-cmp>
+
+      <c-child-slot-cmp>
+       
+        <div slot="name">Rohit</div>
+
+        <div slot="age"> 22 </div>
+
+        <!-- <div slot="footer"> Footer content </div> -->
+        
+    </c-child-slot-cmp>
+</template>

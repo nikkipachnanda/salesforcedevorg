@@ -1,0 +1,19 @@
+.carousel-container {
+    width: 100%;
+    overflow: hidden; /* Hide the tiles outside of the viewport */
+}
+
+.carousel-viewport {
+    width: 1200px; /* 360px width * 3 tiles in view */
+    overflow: hidden;
+}
+
+ul.alignHorizontal {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.taskCard {
+    min-width: 360px; /* Width of each tile */
+    flex: 0 0 auto; /* Prevent shrinking of the tiles */
+}

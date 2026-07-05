@@ -1,0 +1,6 @@
+.heading {font-size:17px; padding-left:15px; font-weight:bold;}
+.radioBtn {position:absolute; right:10px; top:0px;}
+.radioBtn .slds-form-element__label { display:none;}
+.slds-accordion__summary-content {color:#2b2826;}
+.articleTabCont .slds-table th{ font-size:13px; color:#ccc; font-weight:normal; }
+.articleTabCont .slds-table td{ font-size:14px; color:#464646; font-weight:bold;  }

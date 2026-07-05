@@ -1,0 +1,26 @@
+<template>
+
+      <template if:true={getTilesData}>
+                    <!--   <li  key={getData.Id}>  {getData.Navigation_Links__c} </li> -->
+            <div class="slds-grid slds-wrap slds-gutters" key={getTilesData.Id}> 
+                <template for:each={getTilesData} for:item="tilesData">
+             
+        
+                <div  key={getTilesData.Id} class="slds-col slds-size_1-of-1 slds-large-size_6-of-12"> 
+               
+                         <div class="cardBoxIno"> 
+                           <!--  <p><strong><img src={tilesData.imgname} /></strong></p> -->
+                            <p><strong><img src={tilesData.imgnameformula__c} /></strong></p>
+                            <p><strong>{tilesData.Name}</strong></p>
+                            <p>{tilesData.description__c}</p>
+                             <p>{tilesData.rating__c}</p>
+                            </div>
+                     </div>
+
+                   
+                </template>
+                
+                    </div>
+            </template>
+
+</template>

@@ -1,0 +1,33 @@
+<template>
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+        <thead>
+            <tr>
+                <th>PO No</th>
+                <th>Record No</th>
+                <th>Supplier Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={processedData} for:item="po">
+                <template for:each={po.articles} for:item="article" for:index="index">
+                    <tr key={article.recordNo}>
+                        <!-- PO No (Rowspan applied dynamically & Centered) -->
+                        <template if:true={article.showPoNo}>
+                            <td rowspan={po.rowSpan} class="slds-text-align_center slds-align-middle">{po.poNo}</td>
+                        </template>
+                        <td>{article.recordNo}</td>
+                        <td>{article.supplierName}</td>
+                        <!-- Action Buttons (Rowspan & Centered) -->
+                        <template if:true={article.showPoNo}>
+                            <td rowspan={po.rowSpan} class="slds-text-align_center slds-align-middle">
+                                <button class="slds-button slds-button_success" onclick={handleAccept} data-id={po.poNo}>Accept</button>
+                                <button class="slds-button slds-button_destructive" onclick={handleReject} data-id={po.poNo}>Reject</button>
+                            </td>
+                        </template>
+                    </tr>
+                </template>
+            </template>
+        </tbody>
+    </table>
+</template>

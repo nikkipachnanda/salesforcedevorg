@@ -1,0 +1,20 @@
+<template>
+    <lightning-combobox 
+        name="options" 
+        label="Options" 
+        value={selectedValue} 
+        placeholder="Select an option"
+        options={options} 
+        onchange={handleChange}>
+    </lightning-combobox>
+
+    <template if:true={option1Content}>
+        <h1>Content for Audit</h1>
+        <p>This is the content for option 1.</p>
+    </template>
+    <template if:true={option2Content}>
+        <h1>Content for Commerical</h1>
+        <p>This is the content for option 2.</p>
+    </template>
+
+</template>

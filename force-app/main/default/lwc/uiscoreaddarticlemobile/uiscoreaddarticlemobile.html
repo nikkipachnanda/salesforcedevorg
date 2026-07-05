@@ -1,0 +1,168 @@
+<template>
+
+        <div class="scoreBackBtn mobScoreBackBtnPos slds-p-vertical_medium alignHorizontal slds-m-bottom_medium">
+            <lightning-icon icon-name="utility:back" class="slds-p-horizontal_small" size="small"></lightning-icon>
+            <span>Add Article</span>
+        </div>
+        <div class=" scoreTempModalWindow slds-p-horizontal_small">
+
+        <lightning-radio-group name="radioGroup" label="Select Option" options={options} value={value} type="radio">
+        </lightning-radio-group>
+
+        <!-- Selection by PO scenario Start -->
+        <div class="slds-m-top_large">
+            <lightning-combobox name="PO Number"
+                label="PO Number" value={value} placeholder="--Select PO Number--"
+                options={optionsPO} onchange={handleChange}></lightning-combobox>
+        </div> 
+
+        <h2 class="heading17B slds-m-top_large"> Select Article </h2>
+
+        <!-- Selection by PO scenario eND -->
+        <div class="mobileScoreCard slds-p-around_small slds-m-top_small">
+        
+            <div class="cardHeader alignHorizontal alignRight">
+                <span class="PO">Chobani Yogurt Cup</span>
+                <span class="supplierInfo">
+                    <lightning-radio-group name="" options={optionsRadio} value={value} type="radio">
+                                                </lightning-radio-group>
+                </span>
+            </div>
+        
+            <ul class="cardBody slds-p-top_medium">
+                <li class="list alignHorizontal slds-p-vertical_xx-small">
+                    <label class="leftCol">Article Number</label>
+                    <div class="bold">878378</div>
+                </li>
+                <li class="list alignHorizontal slds-p-vertical_xx-small">
+                    <label class="leftCol">Supplier</label>
+                    <div class="bold">Chobani</div>
+                </li>
+
+            </ul>
+        
+        </div>
+
+        <div class="mobileScoreCard slds-p-around_small slds-m-top_small">
+        
+            <div class="cardHeader alignHorizontal alignRight">
+                <span class="PO">Chobani Yogurt Cup</span>
+                <span class="supplierInfo">
+                    <lightning-radio-group name="" options={optionsRadio} value={value} type="radio">
+                                                </lightning-radio-group>
+                </span>
+            </div>
+        
+            <ul class="cardBody slds-p-top_medium">
+                <li class="list alignHorizontal slds-p-vertical_xx-small">
+                    <label class="leftCol">Article Number</label>
+                    <div class="bold">878378</div>
+                </li>
+                <li class="list alignHorizontal slds-p-vertical_xx-small">
+                    <label class="leftCol">Supplier</label>
+                    <div class="bold">Chobani</div>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="mobileScoreCard slds-p-around_small slds-m-top_small">
+        
+            <div class="cardHeader alignHorizontal alignRight">
+                <span class="PO">Chobani Yogurt Cup</span>
+                <span class="supplierInfo">
+                    <lightning-radio-group name="" options={optionsRadio} value={value} type="radio">
+                                                </lightning-radio-group>
+                </span>
+            </div>
+        
+            <ul class="cardBody slds-p-top_medium">
+                <li class="list alignHorizontal slds-p-vertical_xx-small">
+                    <label class="leftCol">Article Number</label>
+                    <div class="bold">878378</div>
+                </li>
+                <li class="list alignHorizontal slds-p-vertical_xx-small">
+                    <label class="leftCol">Supplier</label>
+                    <div class="bold">Chobani</div>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="mobileScoreCard slds-p-around_small slds-m-top_small">
+        
+            <div class="cardHeader alignHorizontal alignRight">
+                <span class="PO">Chobani Yogurt Cup</span>
+                <span class="supplierInfo">
+                    <lightning-radio-group name="" options={optionsRadio} value={value} type="radio">
+                                                </lightning-radio-group>
+                </span>
+            </div>
+        
+            <ul class="cardBody slds-p-top_medium">
+                <li class="list alignHorizontal slds-p-vertical_xx-small">
+                    <label class="leftCol">Article Number</label>
+                    <div class="bold">878378</div>
+                </li>
+                <li class="list alignHorizontal slds-p-vertical_xx-small">
+                    <label class="leftCol">Supplier</label>
+                    <div class="bold">Chobani</div>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="mobileScoreCard slds-p-around_small slds-m-top_small">
+        
+            <div class="cardHeader alignHorizontal alignRight">
+                <span class="PO">Chobani Yogurt Cup</span>
+                <span class="supplierInfo">
+                    <lightning-radio-group name="" options={optionsRadio} value={value} type="radio">
+                                                </lightning-radio-group>
+                </span>
+            </div>
+        
+            <ul class="cardBody slds-p-top_medium">
+                <li class="list alignHorizontal slds-p-vertical_xx-small">
+                    <label class="leftCol">Article Number</label>
+                    <div class="bold">878378</div>
+                </li>
+                <li class="list alignHorizontal slds-p-vertical_xx-small">
+                    <label class="leftCol">Supplier</label>
+                    <div class="bold">Chobani</div>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="mobileScoreCard slds-p-around_small slds-m-top_small">
+        
+            <div class="cardHeader alignHorizontal alignRight">
+                <span class="PO">Chobani Yogurt Cup</span>
+                <span class="supplierInfo">
+                    <lightning-radio-group name="" options={optionsRadio} value={value} type="radio">
+                                                </lightning-radio-group>
+                </span>
+            </div>
+        
+            <ul class="cardBody slds-p-top_medium">
+                <li class="list alignHorizontal slds-p-vertical_xx-small">
+                    <label class="leftCol">Article Number</label>
+                    <div class="bold">878378</div>
+                </li>
+                <li class="list alignHorizontal slds-p-vertical_xx-small">
+                    <label class="leftCol">Supplier</label>
+                    <div class="bold">Chobani</div>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="alignHorizontal alignRight slds-p-vertical_medium slds-p-horizontal_x-small mobBtnPos">
+            <lightning-button variant="base" label="Cancel" title="" onclick={handleClick}></lightning-button>
+            <lightning-button variant="brand" label="Add" title="" onclick={handleClick}>
+            </lightning-button>
+        </div>          
+
+    </div>
+</template>

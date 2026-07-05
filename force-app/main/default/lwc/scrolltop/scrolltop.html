@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Door Tabs">
+        <!-- Green Header -->
+        <div class="header">
+            Header
+        </div>
+
+        <!-- Floating Label (scroll-aware) -->
+        <template if:true={showStickyLabel}>
+            <div class="backdoorText">
+                Selected Label: {selectedDoorLabel}
+            </div>
+        </template>
+
+        <!-- Tab Content -->
+        <div class="slds-p-around_medium tabMidCont" style="height:1200px;">
+            <lightning-tabset onactive={handleTabChange}>
+                <lightning-tab label="Backdoor" name="backdoor">
+                    <p>This is Backdoor content.</p>
+                </lightning-tab>
+                <lightning-tab label="Middledoor" name="middledoor">
+                    <p>This is Middledoor content.</p>
+                </lightning-tab>
+                <lightning-tab label="Frontdoor" name="frontdoor">
+                    <p>This is Frontdoor content.</p>
+                </lightning-tab>
+            </lightning-tabset>
+
+            <p class="slds-m-top_medium">
+                Raw Selected: <strong>{selectedDoor}</strong>
+            </p>
+        </div>
+    </lightning-card>
+</template>

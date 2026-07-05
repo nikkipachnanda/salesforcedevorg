@@ -1,0 +1,54 @@
+/* carouselComponent.css */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-container {
+ display: flex;
+    transition: transform 0.5s ease; /* Add transition for smooth animation */
+    
+  
+}
+
+.slide {
+    flex: 0 0 calc(100% / 3);
+    border:1px red solid;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dots {
+    display: flex;
+}
+
+.dots div {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dots div.active {
+    background-color: #555;
+}
+
+img[alt="Image1"] { background-color: blue;}
+img[alt="Image2"] { background-color: red;}
+img[alt="Image3"] { background-color: green;}
+
+img[alt="Image4"] { background-color: yellow;}
+img[alt="Image5"] { background-color: pink;}
+img[alt="Image6"] { background-color: brown;}
+
+
+img[alt="Image7"] { background-color: aqua;}
+img[alt="Image8"] { background-color: darkgray;}
+img[alt="Image9"] { background-color: mediumseagreen}

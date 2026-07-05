@@ -1,0 +1,25 @@
+<template>
+    <lightning-button
+        variant="success"
+        label={clickedButtonLabel}
+        title="Next"
+        icon-name={iconName}
+        onclick={handleClick}
+        icon-position="right"
+        class="slds-m-left_x-small"
+    ></lightning-button>
+
+    <lightning-button
+        variant="brand"
+        label={clickedButtonLabel}
+        title="Show"
+        onclick={handleClick}
+        class="slds-m-left_x-small"
+    ></lightning-button>
+
+    <lightning-icon icon-name={iconName} size="xx-small"></lightning-icon>
+
+    <template if:true={boolVisible}>
+        <div>Testing Hide and Show</div>
+    </template>
+</template>

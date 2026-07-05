@@ -1,0 +1,37 @@
+<template>
+    <div class="upload-section upload-section1 drop-zone"
+         ondragover={handleDragOver}
+         ondrop={handleDrop}
+         if:true={showUploadSection1}>
+        Drag and drop files here or
+        <button class="custom-upload-button" onclick={handleButtonClick1}>Choose Files</button>
+        <input type="file" multiple onchange={handleFileChange1} class="file-input1">
+    </div>
+
+    <ul if:true={uploadedFiles1}>
+        <template for:each={uploadedFiles1} for:item="file" for:index="index">
+            <li key={file.name}>
+                {file.name}
+                <button onclick={deleteFile1} data-index={index}>Delete</button>
+            </li>
+        </template>
+    </ul>
+
+    <div class="upload-section upload-section2 drop-zone"
+         ondragover={handleDragOver}
+         ondrop={handleDrop}
+         if:true={showUploadSection2}>
+        Drag and drop files here or
+        <button class="custom-upload-button" onclick={handleButtonClick2}>Choose Files</button>
+        <input type="file" multiple onchange={handleFileChange2} class="file-input2">
+    </div>
+
+    <ul if:true={uploadedFiles2}>
+        <template for:each={uploadedFiles2} for:item="file" for:index="index">
+            <li key={file.name}>
+                {file.name}
+                <button onclick={deleteFile2} data-index={index}>Delete</button>
+            </li>
+        </template>
+    </ul>
+</template>

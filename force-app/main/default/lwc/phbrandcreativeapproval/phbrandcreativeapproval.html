@@ -1,0 +1,122 @@
+<template>
+	<div class="phLogoWrapCont">
+		<div class="slds-m-top_large slds-m-top_bottom backBtn">
+			<lightning-icon icon-name="utility:back" alternative-text="Warning!" title="Warning" size="x-small"
+				class="slds-margin-left_large">
+			</lightning-icon> Back
+		</div>
+		<h1 class="slds-m-top_large">Request for Branded Creative Approval </h1>
+		<div class="slds-m-top_medium slds-m-bottom_large">Please submit the form below to seek approval to use the
+			Woolworths branding on your high risk advertisement.
+			<br/> We will endeavor to respond within 48hours. </div>
+
+
+			<div class="phBgFormCont">
+				<div class="slds-grid slds-gutters slds-wrap">
+					<div class="slds-col slds-size_6-of-12 slds-m-top_large ">
+					
+						<lightning-input type="text" label="Your Name" class="sldsInput" required></lightning-input>
+
+					</div>
+
+					<div class="slds-col slds-size_6-of-12 slds-m-top_large ">
+					
+						<lightning-input type="text" label="Email" class="sldsInput" required></lightning-input>
+
+					</div>
+
+					<div class="slds-col slds-size_6-of-12 slds-m-top_large">
+
+						<lightning-input type="text" label="Company / Brand" class="sldsInput"> </lightning-input>
+
+					</div>
+
+					<div class="slds-col slds-size_6-of-12 slds-m-top_large ">
+				
+						<lightning-input type="date" label="Live Date" class="sldsInput" required></lightning-input>
+
+					</div>
+
+					<div class="slds-col slds-size_6-of-12 slds-m-top_large ">
+							<lightning-combobox name=" Channels Activated " label=" Channels Activated " value={value}
+							placeholder="Select" options={options} onchange={handleChange} required></lightning-combobox>
+
+					</div>
+
+					<div class="slds-col slds-size_6-of-12 slds-m-top_large ">
+						<lightning-input type="text" label="Other" class="sldsInput" required> </lightning-input>
+
+					</div>
+
+					<div class="slds-col slds-size_6-of-12 slds-m-top_large ">
+					
+						<lightning-combobox name="  High Risk Category " label=" High Risk Category  " value={value}
+							placeholder="Select" options={options} onchange={handleChange} required></lightning-combobox>
+
+					</div>
+
+					<div class="slds-col slds-size_6-of-12 slds-m-top_large ">
+						<lightning-combobox name="  Template/Brand Asset Used  " label=" Template/Brand Asset Used  "
+							value={value} placeholder="Select" options={options} onchange={handleChange} required>
+						</lightning-combobox>
+
+					</div>
+
+					<div class="slds-col slds-size_12-of-12 slds-m-top_large ">
+						<lightning-input type="text"
+							label="Your Woolworths Category / Assistant Category Manager email " class="sldsInput" required>
+						</lightning-input>
+
+					</div>
+
+					<div class="slds-col slds-size_12-of-12 slds-m-top_large ">
+					
+						<lightning-textarea name="input1"
+							label="Your Woolworths Category / Assistant Category Manager email " value="abc@gmail.com" required>
+						</lightning-textarea>
+					</div>
+
+					<div class="slds-col slds-size_12-of-12 slds-m-top_large mand">
+						<span class="astrik"> *</span>
+						<lightning-file-upload label="Upload Creative For Review " name="fileUploader"
+							accept={acceptedFormats} record-id={myRecordId} onuploadfinished={handleUploadFinished}
+							multiple>
+						</lightning-file-upload>
+					</div>
+
+                    <div class="slds-m-top_large slds-col slds-size_12-of-12">
+                        By checking this you acknowledge you have reviewed the Partner Marketing Guidelines and the content submitted for review complies with Woolworths brand and regularity content standards.    
+                    </div>    
+
+                    <div class="slds-m-top_large slds-col slds-size_12-of-12">
+                           <lightning-checkbox-group name="Checkbox Group"
+                              label=""
+                              options={options}
+                              value={value}
+                              ></lightning-checkbox-group>  
+                    </div>   
+				</div>
+			</div>
+
+             <div class="slds-m-top_large slds-col slds-size_12-of-12 slds-text-align_right ">
+                <lightning-button
+                    variant="base"
+                    label="Clear Form"
+                    title="Clear Form"
+                    class="secondaryBtn slds-m-right_medium"
+                    onclick={handleClick}
+                > </lightning-button>
+
+                
+
+                  <lightning-button
+                    variant="brand"
+                    label="Submit"
+                    title="Submit"
+                    class="primaryBtn"
+                    onclick={handleClick}
+                >
+    </lightning-button>
+            </div>    
+		</div>
+</template>

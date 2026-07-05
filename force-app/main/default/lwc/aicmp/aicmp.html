@@ -1,0 +1,44 @@
+<template>
+    <div class="slds-box custom-box">
+        <!-- Header with accordion icon and View All -->
+        <div class="slds-grid slds-grid_align-spread slds-m-bottom_medium">
+            <div class="slds-grid slds-grid_vertical-align-center">
+                <lightning-icon icon-name="utility:switch" size="x-small" class="slds-m-right_small"></lightning-icon>
+                <span class="slds-text-heading_small">My Task</span>
+            </div>
+            <a href="#" class="slds-text-link">View All</a>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+            <template for:each={steps} for:item="step" for:index="index">
+                <div class="step-wrapper" key={step.id}>
+                    <div class={step.circleClass}>
+                        <template if:true={step.isCompleted}>
+                            <lightning-icon icon-name="utility:check" size="xx-small" variant="success"></lightning-icon>
+                        </template>
+                    </div>
+                    <template if:false={step.isLast}>
+                        <div class="progress-line"></div>
+                    </template>
+                </div>
+            </template>
+        </div>
+
+        <!-- Step Cards -->
+        <div class="slds-grid slds-wrap slds-m-top_medium">
+            <template for:each={taskSteps} for:item="task">
+                <div key={task.id} class="custom-task-box slds-box slds-m-around_x-small">
+                    <div class="arrow-up"></div>
+                    <div class="task-title">{task.title}</div>
+                    <div class="task-date">{task.date}</div>
+                    <div class="slds-grid slds-wrap slds-m-top_small">
+                        <template for:each={task.tags} for:item="tag">
+                            <div key={tag} class="tag">{tag}</div>
+                        </template>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

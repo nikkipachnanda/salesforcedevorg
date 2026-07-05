@@ -1,0 +1,39 @@
+.dummy{
+	color : black;
+}
+
+.cols1  {
+	border:1px red solid;
+}
+
+.cols2  {
+	border:1px green solid;
+}
+
+.w100 {
+	width:100%!important;
+}
+
+.redColor {
+    color: red;
+}
+
+.greenBorder {
+    border: 1px solid green;
+}
+
+.slds-size_6-of-12 {
+	border:1px blue solid!important;
+}
+
+.colsSCS {
+	border:1px blue solid!important;
+
+}
+
+.colsSCSShow {
+	display: block;
+}
+
+.dsblk { display: block;}
+.dsnone {display: none;}

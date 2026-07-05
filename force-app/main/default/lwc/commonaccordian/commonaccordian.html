@@ -1,0 +1,26 @@
+<template>
+    <div class="accordion slds-p-around_medium slds-border_bottom">
+        <div class="slds-grid">
+            <!-- Icon button (clickable) -->
+            <button class="slds-button slds-button_icon slds-m-right_small"
+                    onclick={toggleSection}
+                    aria-expanded={isOpen}
+                    title="Toggle section">
+                <lightning-icon icon-name={iconName}
+                                size="x-small"
+                                alternative-text="Toggle section">
+                </lightning-icon>
+            </button>
+
+            <!-- Title (non-clickable) -->
+            <span class="slds-text-heading_small">{title}</span>
+        </div>
+
+        <!-- Content -->
+        <template if:true={isOpen}>
+            <div class="slds-m-top_small">
+                <slot></slot>
+            </div>
+        </template>
+    </div>
+</template>

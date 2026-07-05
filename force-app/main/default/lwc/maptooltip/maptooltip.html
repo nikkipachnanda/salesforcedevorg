@@ -1,0 +1,107 @@
+<!-- <template>
+ <div class="map-container" >
+        <img src={map} alt="Australia Map" class="map-image" />
+        <img src={location} width="30" class="locationOne" />
+        <img src={location} width="30" class="locationSnd" />
+    </div> 
+
+
+</template>  -->
+
+
+
+     <template>
+    <div class="map-container">
+        <img src={map} alt="Australia Map" class="map-image" />
+
+        <!-- Location Markers -->
+        <div
+            class="location-marker locationOne"
+            onmouseover={handleMouseOverOne}
+            onmouseout={handleMouseOut}
+        >
+            <img src={location} width="30" />
+            <!-- Tooltip -->
+            <div if:true={isLocationOne} class="tooltip">
+                Tooltip for Location One
+            </div>
+        </div>
+
+        <div
+            class="location-marker locationSnd"
+            onmouseover={handleMouseOverTwo}
+            onmouseout={handleMouseOut}
+        >
+            <img src={location} width="30" />
+            <!-- Tooltip -->
+            <div if:true={isLocationTwo} class="tooltip">
+                Tooltip for Location Two
+            </div>
+        </div>
+
+
+
+
+         <div
+            class="location-marker locationSth"
+            onmouseover={handleMouseOverTh}
+            onmouseout={handleMouseOut}
+        >
+            <img src={location} width="30" />
+            <!-- Tooltip -->
+            <div if:true={isLocationThree} class="tooltip">
+                Tooltip for Location Three
+            </div>
+        </div>
+
+        
+         <div
+            class="location-marker locationFrth"
+            onmouseover={handleMouseOverFourth}
+            onmouseout={handleMouseOut}
+        >
+            <img src={location} width="30" />
+            <!-- Tooltip -->
+            <div if:true={isLocationFourth} class="tooltip">
+                Tooltip for Location Fourth
+            </div>
+        </div>
+
+         <div
+            class="location-marker locationSFifth"
+            onmouseover={handleMouseOverFifth}
+            onmouseout={handleMouseOut}
+        >
+            <img src={location} width="30" />
+            <!-- Tooltip -->
+            <div if:true={isLocationFifth} class="tooltip">
+                Tooltip for Location Fifth
+            </div>
+        </div>
+
+         <div
+            class="location-marker locationSSix"
+            onmouseover={handleMouseOverSix}
+            onmouseout={handleMouseOut}
+        >
+            <img src={location} width="30" />
+            <!-- Tooltip -->
+            <div if:true={isLocationSix} class="tooltip">
+                Tooltip for Location Six
+            </div>
+        </div>
+
+
+          <div
+            class="location-marker locationSeven"
+            onmouseover={handleMouseOverSeven}
+            onmouseout={handleMouseOut}
+        >
+            <img src={location} width="30" />
+            <!-- Tooltip -->
+            <div if:true={isLocationSeven} class="tooltip">
+                Tooltip for Location Seven
+            </div>
+        </div>
+    </div>
+</template>

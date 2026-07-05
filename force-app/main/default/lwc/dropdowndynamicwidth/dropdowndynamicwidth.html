@@ -1,0 +1,45 @@
+<template>
+  <div class="tableCont">
+    <table  class="slds-table slds-table_cell-buffer slds-table_bordered" aria-label="Example default base table of Opportunities">
+
+  <tbody>
+    <tr class="slds-hint-parent">
+      <td data-label="Opportunity Name" scope="row" class="tabTddata1 td"  width="10%">
+        <div  title="Cloudhub">
+          <a href="#" tabindex="-1">Cloudhub</a>
+        </div>
+      </td>
+      <td data-label="Account Name" class="tabTddata2 td dropdownW" width="20%">
+        <div  title="Cloudhub"   class="dropdown"> <lightning-combobox
+            name="progress"
+            label="Status"
+            value={value}
+            placeholder="Select Progress"
+            options={options}
+          
+            onchange={handleChange} ></lightning-combobox></div>
+      </td>
+      <td data-label="Close Date" class="tabTddata3 td"  width="20%">
+        <div  title="4/14/2015">4/14/2015</div>
+      </td>
+      <td data-label="Prospecting" class="tabTddata4 td"  width="20%">
+        <div  title="Prospecting">Prospecting</div>
+      </td>
+      <td data-label="Confidence" class="tabTddata5 td"  width="20%">
+        <div  title="20%">20%</div>
+      </td>
+    
+    </tr>
+
+     
+   
+
+       
+
+    
+   
+  </tbody>
+</table>
+
+    </div>
+</template>

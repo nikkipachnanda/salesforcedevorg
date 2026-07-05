@@ -1,0 +1,19 @@
+<!-- carouselComponent.html -->
+<template>
+    <div class="carousel">
+        <div class="slide-container" style={transformStyle}>
+            <template for:each={visibleImages} for:item="image">
+                <div key={image.id} class="slide">
+                    <img src={image.url} alt={image.alt} />
+                </div>
+            </template>
+        </div>
+        <div class="dots">
+            <template for:each={visibleDots} for:item="dot">
+                                <!-- <div key={dot.id} class={dotClass(dot)} onclick={selectDot} data-index={dot.index}></div> -->
+
+                <div key={dot.id}  onclick={selectDot} data-index={dot.index}></div>
+            </template>
+        </div>
+    </div>
+</template>

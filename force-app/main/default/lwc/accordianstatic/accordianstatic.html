@@ -1,0 +1,33 @@
+<template>
+  <!-- Accordion Article Identity and Classification -->
+  <div class="accordion boxCont slds-p-around_large slds-m-bottom_x-large">
+    <div class="accHead alignH alignLR" onclick={sectionFSAccordion}>
+      <h2>Article Identity and Classification</h2>
+      <lightning-icon icon-name={sectionFSIconName} size="x-small"></lightning-icon>
+    </div>
+
+    <template if:true={isSectionFSAccordionOpen}>
+      <div class="accBody slds-m-top_large">
+        <!-- Your existing content for Article Identity and Classification goes here -->
+        Content aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      </div>
+    </template>
+  </div>
+  <!-- Accordion Article Identity and Classification END -->
+
+  <!-- Accordion Use of Third Party Data Sources -->
+  <div class="accordion boxCont slds-p-around_large slds-m-bottom_x-large">
+    <div class="accHead alignH alignLR" onclick={sectionSSAccordion}>
+      <h2>Product and Image Source</h2>
+      <lightning-icon icon-name={sectionSSIconName} size="x-small"></lightning-icon>
+    </div>
+
+    <template if:true={isSectionSSAccordionOpen}>
+      <div class="accBody slds-m-top_large">
+        <!-- Your existing content for Product and Image Source goes here -->
+                Content bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      </div>
+    </template>
+  </div>
+  <!-- Accordion Use of Third Party Data Sources END -->
+</template>

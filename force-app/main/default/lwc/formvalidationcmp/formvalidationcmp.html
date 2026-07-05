@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Form Validation">
+        <div class="slds-m-around_medium">
+            <!-- Dropdown -->
+            <div class="slds-form-element">
+                <lightning-combobox
+                    name="dropdown"
+                    label="Select an Option"
+                    value={selectedValue}
+                    options={options}
+                    onchange={handleChange}
+                ></lightning-combobox>
+            </div>
+
+            <!-- First Input Field -->
+            <div class="slds-form-element">
+                <lightning-input
+                    name="firstName"
+                    label="First Name"
+                    value={firstName}
+                    onchange={handleInputChange}
+                ></lightning-input>
+            </div>
+
+            <!-- Second Input Field -->
+            <div class="slds-form-element">
+                <lightning-input
+                    name="lastName"
+                    label="Last Name"
+                    value={lastName}
+                    onchange={handleInputChange}
+                ></lightning-input>
+            </div>
+
+            <!-- Save Button -->
+            <lightning-button label="Save" variant="brand" onclick={handleSave}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

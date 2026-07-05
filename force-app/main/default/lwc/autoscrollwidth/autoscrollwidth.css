@@ -1,0 +1,6 @@
+.outerCont{
+	color : black;
+}
+
+.outerCont > div { overflow: auto;}
+.innerCont { overflow: auto;}

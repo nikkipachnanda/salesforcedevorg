@@ -1,0 +1,26 @@
+<template>
+<!--<lightning-button label="add class in child" onclick={addClassHandler}></lightning-button>    -->
+<!--<c-childcont>
+    <div slot="parentInfoCont">
+        <div class="childtxt">This is parent container info.</div>
+        <div class="childtxt">This is parent container info.</div>
+        <div class="childtxt">This is parent container info.</div>
+        <div class="childtxt">This is parent container info.</div>
+        <div class="newcss">new css loaded</div>
+    </div>
+</c-childcont>    !-->
+
+ <div class="infoCont">This is About us parent  container info.</div>
+
+<c-childcont my-name={parentVal} header-label={headerLabel}  ></c-childcont>
+
+
+   <button onclick={onChange}>Change Value</button>
+
+
+
+   <button onclick={callChildMethod}>Call Child Method</button>
+
+   <h1>Child to parent event </h1>
+   <c-childtoparent onbuttonclick={handleEvent}> </c-childtoparent>
+</template>

@@ -1,0 +1,7 @@
+.wrapper .slds-input {
+	--slds-c-input-color-border:red!important;
+}
+
+.custom-container{
+	color : black;
+}

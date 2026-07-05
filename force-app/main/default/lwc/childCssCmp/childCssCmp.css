@@ -1,0 +1,9 @@
+.dummy{
+	color : black;
+}
+
+:host {
+	display: block;
+	background-color: red;
+	color: #fff;
+}

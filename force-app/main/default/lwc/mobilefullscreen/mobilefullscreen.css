@@ -1,0 +1,32 @@
+.fullscreen-overlay {
+  position: fixed; /* Stay in place during scrolling */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Cover the entire viewport width */
+  height: 100vh; /* Cover the entire viewport height */
+  background-color: rgba(0, 0, 0, 0.5); /* Example semi-transparent background */
+  z-index: 1000; /* Ensure it's on top of other content */
+  display: block; /* Initially hidden */
+  /* Add transitions for smooth appearance */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  /* Optional: Center content within the overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* If you have multiple items inside */
+}
+
+.fullscreen-overlay.open {
+  display: flex; /* Make it visible */
+  opacity: 1;
+}
+
+/* Styling for the content inside the overlay */
+.overlay-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  /* Add more styling as needed */
+}

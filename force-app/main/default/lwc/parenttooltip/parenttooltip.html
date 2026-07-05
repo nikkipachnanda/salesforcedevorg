@@ -1,0 +1,15 @@
+<template>
+    <ul>
+        <template for:each={links} for:item="link">
+            <li key={link.id}>
+                <c-childtooltip 
+                    text={link.tooltipText} 
+                    label={link.label} 
+                    is-visible={link.isVisible}
+                    tooltip-id={link.id} 
+                    onlinkclick={handleLinkClick}>
+                </c-childtooltip>
+            </li>
+        </template>
+    </ul>
+</template>

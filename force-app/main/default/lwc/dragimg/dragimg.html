@@ -1,0 +1,25 @@
+<!-- draggableThumbnail.html -->
+<template>
+    <div class="slideContainer"
+        draggable="true"
+        ondragstart={handleDragStart}
+        ondrag={handleDrag}
+        ondragend={handleDragEnd}
+        onmousemove={handleMouseMove}>
+        <img src={imageUrl} style={imageStyle} class="img"></img>
+    </div>
+    
+
+      <div class="zoom-controls">
+            <lightning-button-icon
+                icon-name="utility:add"
+                alternative-text="Zoom In"
+                onclick={handleZoomIn}>
+            </lightning-button-icon>
+            <lightning-button-icon
+                icon-name="utility:subtract"
+                alternative-text="Zoom Out"
+                onclick={handleZoomOut}>
+            </lightning-button-icon>
+        </div>
+</template>

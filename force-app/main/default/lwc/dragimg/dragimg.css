@@ -1,0 +1,34 @@
+.dummy{
+	color : black;
+}
+
+
+
+ .slideContainer {   
+      
+   transform-origin: 0px 0px;
+  transform: scale(1) translate(0px, 0px);
+  cursor: arrow;
+   width:600px; height:100%; margin:0px auto; background:#fff; text-align:center; overflow:hidden;  position:relative;
+ }   
+
+ .img {
+   /* height:380px;
+   object-fit: contain;
+   width: 100%;*/
+ /* max-width: 100%;
+  min-width: 100%;
+  position: absolute;
+  left:50%;
+  top:50%;*/
+  cursor: arrow;
+   height:400px;
+   object-fit: contain;
+   width: 100%; 
+   margin-top:30px;
+
+
+    
+
+
+}

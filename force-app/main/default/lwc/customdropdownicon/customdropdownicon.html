@@ -1,0 +1,26 @@
+<template>
+    <div class="customcont-dropdown">
+        <div class="custom-dropdown" onclick={toggleMenuDropdown}>
+            <div class="selected-option">
+                <span class={selectedOptionFirstChar}>{selectedOptionFirstChar}</span>
+                <span class="arrow">
+                    <lightning-icon icon-name="utility:chevrondown" alternative-text="chevrondown" title="chevrondown" size="x-small"></lightning-icon>
+                </span>
+            </div>
+        </div>
+        <div class="list">
+            <ul if:true={isMenuOpen}>
+                <template for:each={optionsWithClass} for:item="option">
+                    <li key={option.value} onclick={handleMenuOptionClick} data-value={option.value} class={option.class}>
+                        <!-- Static character before label -->
+                        <span class="static-char">{option.staticChar}</span>
+                        {option.label}
+                        <template if:true={option.isSelected}>
+                            <lightning-icon icon-name="utility:check" alternative-text="Selected" size="x-small"></lightning-icon>
+                        </template>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+
+
+
+.cls-2:hover { fill: red; }

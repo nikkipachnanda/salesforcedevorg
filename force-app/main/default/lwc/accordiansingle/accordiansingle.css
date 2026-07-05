@@ -1,0 +1,7 @@
+.accordion-section { border: 1px solid #ddd; margin-bottom: 10px; }
+.accordion-header { cursor: pointer; padding: 10px; background-color: #f4f6f9; }
+.accordion-content { padding: 10px; }
+.button-menu-container { position: relative; }
+.menu-open { display: block; }
+.menu-closed { display: none; }
+.button-menu-container .slds-button { margin-left: 10px; }

@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Parent Component">
+        <p>This is Parent with multiple tooltips.</p>
+
+        <c-tooltipcomponentctop
+            dropdown-id="dropdownA" 
+            options={dropdownOptionsA}
+            ontoggledropdown={handleToggleDropdown}>
+        </c-tooltipcomponentctop>
+
+        <c-tooltipcomponentctop
+            dropdown-id="dropdownB" 
+            options={dropdownOptionsB}
+            ontoggledropdown={handleToggleDropdown}>
+        </c-tooltipcomponentctop>
+    </lightning-card>
+</template>

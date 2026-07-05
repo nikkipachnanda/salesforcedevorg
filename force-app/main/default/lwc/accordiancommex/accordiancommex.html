@@ -1,0 +1,81 @@
+<template>
+    This is 
+    <div class="topSpace"> 
+        <template if:true={hasSections}> 
+            <template for:each={enrichedSections} for:item="section">
+                <div key={section.id} class="addDetailAccordion slds-m-bottom_medium slds-is-relative">
+                    <div class="alignHorizontal alignMiddle alignRight accordionHeader" data-id={section.id} onclick={handleToggle}>
+                        <div>
+                            <lightning-icon icon-name={section.iconName} alternative-text="Accordion" title="Accordion" size="x-small" class="accArrow"></lightning-icon>
+                            <span class="accordionTitle">{section.title}</span>
+                        </div>
+                        <div class="slds-is-relative">
+                            <lightning-button variant="base" label="Add details" class="tertiaryBtn" title="Add details" aria-label="Add details" onclick={handleClick}></lightning-button>
+                            <span class="accMoreAction slds-m-left_large" onclick={toggleMenu} data-id={section.id}>
+                                <img src={moreaction} title="More actions"/>
+                            </span>
+                            <template if:true={section.isMenuOpen}>
+                                <div class="moreActionDD accPosMoreAct slds-p-around_small">
+                                    <ul>
+                                        <li>
+                                            <img src={copy} class="slds-m-right_medium" title="Make a copy"/>
+                                            <span>Make a copy</span>
+                                        </li>
+                                        <li>
+                                            <img src={preview} class="slds-m-right_medium" title="Preview letter"/>
+                                            <span>Preview letter</span>
+                                        </li>
+                                        <li>
+                                            <img src={addDetail} class="slds-m-right_medium" title="Add details"/>
+                                            <span>Add details</span>
+                                        </li>
+                                        <li>
+                                            <img src={remove} class="slds-m-right_medium" title="Remove and don’t send"/>
+                                            <span class="removeTxt" onclick={showModalBox}>Remove and don’t send</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+
+                    <template if:true={section.isOpen}>
+                        <div class="accordionExpandedSec slds-show">
+                            <div class="letterNameField inputPdbottom">
+                                <lightning-input type="text" variant="standard" name="letter name" label="Letter name" aria-label="Letter name" placeholder=""></lightning-input>
+                            </div>
+
+                            <div class="setDefault slds-hide">
+                                <div class="alignHorizontal">
+                                    <lightning-input type="checkbox" variant="standard" name="name" class="diabledCheckbox" disabled="" checked=""></lightning-input>
+                                    <span>Set as default</span>
+                                </div>
+                                <div>
+                                    <img src={info} class="slds-m-right_small" width="15"/>
+                                    <span class="disChkInfo">Please return to the previous screen to change the default template</span>
+                                </div>
+                            </div>
+
+                            <!-- Rich text editor -->
+                            <div class="richTextEditor slds-m-bottom_xx-large">
+                                <label>What is the purpose of this range review?</label>
+                            </div>
+
+                            <div class="richTextEditor slds-m-bottom_xx-large">
+                                <label>What is the key criteria governing this range review?</label>
+                            </div>
+                            <!-- Rich text editor End-->
+
+                            <div class="slds-m-bottom_medium" >
+                                <lightning-button  variant="neutral" label="Save & collapse" aria-label="Save & collapse" title="Save & collapse" class="secondaryBtn" onclick={handleCollapseSection} data-id={section.id}></lightning-button>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </template>
+        <template if:false={hasSections}>
+            <p>No sections available.</p>
+        </template>
+    </div>
+</template>

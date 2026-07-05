@@ -1,0 +1,76 @@
+.color-box {
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 150px;
+    overflow: visible; /* allow arrow to extend outside */
+}
+
+/* Base triangle (border) */
+.color-box::before,
+.color-box::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.color-box::before {
+    top: -12px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    z-index: 1;
+}
+
+.color-box::after {
+    top: -10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    z-index: 2;
+}
+
+/* ---------- Light Green Box ---------- */
+.green-box {
+    background-color: #ccf5cc; /* light green fill */
+    color: black;
+    border: 2px solid #4CAF50; /* dark green border */
+}
+
+.green-box::before {
+    border-bottom: 12px solid #4CAF50; /* border color */
+}
+
+.green-box::after {
+    border-bottom: 10px solid #ccf5cc; /* fill color */
+}
+
+/* ---------- Light Pink Box ---------- */
+.pink-box {
+    background-color: #ffe0e6; /* light pink fill */
+    color: black;
+    border: 2px solid #e75480; /* dark pink border */
+}
+
+.pink-box::before {
+    border-bottom: 12px solid #e75480;
+}
+
+.pink-box::after {
+    border-bottom: 10px solid #ffe0e6;
+}
+
+/* ---------- White Box ---------- */
+.white-box {
+    background-color: white;
+    color: black;
+    border: 2px solid #999999; /* dark gray border */
+}
+
+.white-box::before {
+    border-bottom: 12px solid #999999;
+}
+
+.white-box::after {
+    border-bottom: 10px solid white;
+}

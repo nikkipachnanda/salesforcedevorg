@@ -1,0 +1,30 @@
+<template>
+
+  <!-- <template if:true={isDesktop}>   -->
+  <div class=""> 
+  <!-- <h2> Desktop Value </h2>  -->
+ 
+ <!-- <lightning-button label="labelName" title="titleName" onclick={handleClick}>Show Hide data</lightning-button> -->
+   
+   <template if:true={isDesktop}>
+   <div style="background:red;">Dekstoip Data  Toggle Text descrition data </div>
+
+   </template>
+
+     <template if:true={isTablet}>
+   <div style="background:red;">Dekstoip Data  Toggle Text descrition data </div>
+   
+   </template>
+
+  </div>
+  <!-- </template> -->
+
+
+ <template if:true={isMobile}>  
+    <div class="" style="background:blue;"> 
+        <h2> Mobile Value </h2>
+      
+    </div>
+</template>
+
+</template>

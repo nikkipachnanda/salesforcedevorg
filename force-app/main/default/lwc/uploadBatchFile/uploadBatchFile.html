@@ -1,0 +1,58 @@
+<template>
+		<div class="boxWrapperCont">
+			
+			<nav role="navigation" aria-label="Breadcrumbs">
+         <ol class="slds-breadcrumb slds-list_horizontal slds-wrap bredcum">
+            <li class="slds-breadcrumb__item">
+               <a href="#" class="bredcumInact">Home</a>
+            </li>
+            <li class="slds-breadcrumb__item" >
+               <a href="#" class="bredcumInact">Batch Product Submission</a>
+            </li>
+						 <li class="slds-breadcrumb__item" >
+               <a href="#" class="bredcumAct">Upload</a>
+            </li>
+         </ol>
+      </nav>
+				
+			<div class="slds-m-top_large">
+         <lightning-button variant="success" label="Back" title="Back" icon-name="utility:back" icon-position="left" class=" btnIcnBack"></lightning-button>
+      </div>
+				
+			<h2 class="headingXlarge">
+         Upload your batch file
+      </h2>	
+				
+			
+			<h3 class="subheading slds-m-top_large">Upload your document for review</h3>	
+			<p class="slds-m-top_small">
+					You can only upload 50 products at a time per document.
+				</p>
+				
+				
+			<div class="slds-grid slds-gutters slds-wrap slds-m-top_large">
+         <div class="slds-col slds-size_1-of-2 align-vertical">
+						 Upload Seaction will go here
+						 
+				 </div>
+					<div class="slds-col slds-size_1-of-2 slds-p-around_medium align-vertical">
+							
+							<div class="align-horizontal ">
+								<img src={icnques} class="slds-m-right_small"/>
+								<h3 class="subheading">Guide and Insights</h3>
+							</div>
+							
+							<p class="slds-p-vertical_medium">
+									Wait while the system uploads and then reviews the data within your spreadsheet.
+							</p>
+							<p class="slds-p-bottom_medium">
+									The system will determine if there are any errors that need be addressed, before the data can be synced with PartnerHub.  You unfortunately cannot have any errors in the document before submission.
+							</p>
+							<p class="slds-p-bottom_medium">
+                  If you need to address any errors, you can download the file with marked errors, which you can amend and use to re-upload.							
+							</p>
+							
+				 </div>
+			</div>
+		</div>
+</template>

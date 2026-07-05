@@ -1,0 +1,73 @@
+/* CSS File: showactivebtnonviewmore.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Button Grid */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    text-align: center;
+}
+
+button.active {
+    background-color: #0070d2;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between; /* Align left and right */
+    align-items: center;
+	position: relative;
+}
+
+.active-count {
+    font-size: 14px;
+    color: #333;
+}
+
+.view-all-btn {
+    background-color: #0070d2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    top: -100%;
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+.progressIndicatorMStage { display: flex; flex-wrap: wrap;}
+.progressIndicatorWrapMS { padding-top:0px!important;}
+.progressIndicatorMStage .indicatorSize { width: 25%!important; margin-bottom: 5px;}
+.boxContMS { padding: 15px!important;}
+.completedMS { border:#e7e7e7; color:#6D6D6D; border-radius: 15px; padding: 5px; font-size:12px;}
+.completedMS .comCount { color:#0FDB7E; font-weight: bold;}
+.completedMS .totalCount { color:#000; font-weight: bold;}
+.completedMS .ofCount { color:#000; }
+.disFAH { display: flex; justify-content: space-between;}

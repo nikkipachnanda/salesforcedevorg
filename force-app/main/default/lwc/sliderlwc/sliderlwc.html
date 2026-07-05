@@ -1,0 +1,53 @@
+<template>
+    <div>
+    <div class="slds-is-relative container slideContainer"   >
+          <template for:each={slidesData} for:item="slide">
+            <div style="" key={slide.index} class={slide.slideClass} 
+                >
+
+              <img src={slide.image} alt={slide.description}  class="img" 
+                   onmousewheel={handleWheel} 
+        onmousedown={handleMouseDown} onmouseup={handleMouseUp} onmousemove={handleMouseMove} 
+                style={imageContainerStyle}
+               
+               
+                 draggable="true"
+        ondragstart={handleDragStart}
+        ondrag={handleDrag}
+        ondragend={handleDragEnd}
+               
+               
+                   /> 
+
+                 <!--   <img src={slide.image} alt={slide.description}  class="img" 
+                     onclick={handleMouseOut}
+        
+                   /> -->
+                <div if:false={hideSlideText} class="text-section slds-p-around_medium">
+                    <h3 class="slds-text-heading_large">{slide.heading}</h3>
+                    <div class="slds-text-heading_small">{slide.description}</div>
+                </div>
+            </div>
+        </template>
+        <!-- <a if:false={hideNavigationButtons} class="prev" onclick={slideBackward}>&#10094;</a>
+        <a if:false={hideNavigationButtons} class="next" onclick={slideForward}>&#10095;</a> -->
+    </div>
+    </div>
+    <div class="zoom-controls">
+            <lightning-button-icon
+                icon-name="utility:add"
+                alternative-text="Zoom In"
+                onclick={handleZoomIn}>
+            </lightning-button-icon>
+            <lightning-button-icon
+                icon-name="utility:subtract"
+                alternative-text="Zoom Out"
+                onclick={handleZoomOut}>
+            </lightning-button-icon>
+        </div>
+    <div if:false={hideNavigationDots} class="slds-text-align_center slds-p-around_medium">
+        <template for:each={slidesData} for:item="slide">
+            <span key={slide.index} class={slide.dotClass} data-id={slide.index} onclick={showSlide}></span>
+        </template>
+    </div>
+</template>

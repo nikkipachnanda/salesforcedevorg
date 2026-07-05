@@ -1,0 +1,87 @@
+<template>
+    <template for:each={computedAccordionData} for:item="acc">
+        <div key={acc.id} class="initialAcc slds-is-relative sendHisList rrBorder">
+            <div class="alignHorizontal alignMiddle alignRight accordionHeader" data-accordion="header" >
+                <div class="alignHorizontal">
+                    <lightning-icon 
+                        icon-name={acc.iconName}
+                        alternative-text="Accordion" 
+                        title="Accordion" 
+                        size="x-small" 
+                        class="accArrow"
+                        data-id={acc.id} onclick={handleToggle}
+                        >
+                    </lightning-icon>
+                    <div class="slds-m-horizontal_medium slds-p-left_small">
+                        <img src={acc.icon} />
+                    </div>
+                    <div class="txtInfo">
+                        <p class="headTxt">{acc.title}</p>
+                        <p class="dateInfo">{acc.dateInfo}</p>
+                        <p class="txt">{acc.description}</p>
+                    </div>
+                </div>
+                <div class="slds-is-relative">
+                    <template if:true={acc.showButton}>
+                        <lightning-button 
+                            variant="neutral" 
+                            label="View sent letter" 
+                            aria-label="View sent letter" 
+                            title="View sent letter"
+                            class="secondaryBtn">
+                        </lightning-button>
+                    </template>
+                </div>
+            </div>
+
+            <div class={acc.accordionClass}>
+                <template if:true={acc.hasTable}>
+                    <h5 class="headingSmall">Letter recipients</h5>
+                    <div class="tableInfo slds-m-top_small">
+                        <table class="slds-table slds-table_cell-buffer slds-no-row-hover"
+                            aria-label="Example table of Opportunities with no row hovers">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Name">Name</div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Role">Role</div>
+                                    </th>
+                                    <template if:true={acc.showError}>
+                                        <th scope="col">
+                                            <div class="slds-truncate" title="Error detected">Error detected</div>
+                                        </th>
+                                    </template>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={acc.recipients} for:item="recipient">
+                                    <tr key={recipient.email} class="slds-hint-parent">
+                                        <td>
+                                            <div class="slds-truncate" title="Name">
+                                                <div class="nameTxt">{recipient.name}</div>
+                                                <div class="emailTxt">{recipient.email}</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="slds-truncate" title="Role">{recipient.role}</div>
+                                        </td>
+                                        <template if:true={recipient.hasError}>
+                                            <td>
+                                                <div class="slds-truncate txtErr" title="Error detected">
+                                                    <img src={alert} width="15" class="slds-m-right_x-small" />
+                                                    {recipient.errorMsg}
+                                                </div>
+                                            </td>
+                                        </template>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </template>
+</template>

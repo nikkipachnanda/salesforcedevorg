@@ -1,0 +1,29 @@
+<template>
+    <div class="customcont-dropdown" data-id={dropdownId}>
+        <div class="custom-dropdown" onclick={toggleDropdown}>
+            <div class="selected-option">
+                <span class="staticval">Select Option</span>
+                <span class="optval">{selectedOption}</span>
+                <span class="arrow">
+                    <lightning-icon 
+                        icon-name={toggleIcon}
+                        alternative-text="Toggle Dropdown"
+                        title="Toggle Dropdown"
+                        size="x-small">
+                    </lightning-icon>
+                </span>
+            </div>
+        </div>
+        <div class="list">
+            <ul if:true={isOpen}>
+                <template for:each={options} for:item="option">
+                    <li key={option.value} 
+                        onclick={handleOptionClick} 
+                        data-value={option.value}>
+                        {option.label}
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </div>
+</template>

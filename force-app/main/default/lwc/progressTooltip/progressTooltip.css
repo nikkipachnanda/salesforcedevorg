@@ -1,0 +1,99 @@
+/* Styling for the reusable tooltip */
+.tooltip-container {
+    position: relative;
+}
+
+.tooltip-box {
+    visibility: hidden;
+    position: absolute;
+    z-index: 100;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -120px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    width: 240px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-box {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-box.green {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.tooltip-box.red {
+    background-color: #F44336;
+    color: #fff;
+}
+
+.tooltip-box.purple {
+    background-color: #9C27B0;
+    color: #fff;
+}
+
+.tooltip-box.grey {
+    background-color: #BDBDBD;
+    color: #555;
+}
+
+.tooltip-box::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.tooltip-box.green::after {
+    border-color: #4CAF50 transparent transparent transparent;
+}
+
+.tooltip-box.red::after {
+    border-color: #F44336 transparent transparent transparent;
+}
+
+.tooltip-box.purple::after {
+    border-color: #9C27B0 transparent transparent transparent;
+}
+
+.tooltip-box.grey::after {
+    border-color: #BDBDBD transparent transparent transparent;
+}
+
+.status-pill {
+    background-color: red;
+    color: white;
+    border-radius: 12px;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    position: absolute;
+    top: -15px;
+    right: 0;
+}
+
+.flexEvenSpace {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.semiBold {
+    font-weight: 600;
+}
+
+.roleTxt {
+    font-size: 0.8rem;
+    color: #ccc;
+}

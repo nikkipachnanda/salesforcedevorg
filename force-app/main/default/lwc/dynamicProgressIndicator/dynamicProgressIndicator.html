@@ -1,0 +1,30 @@
+<template>
+    <div class="boxCont slds-m-top_large fitHeight">
+        <div class="alignHorizontal alignMiddle alignRight">
+            <div class="alignHorizontal alignMiddle">
+                <lightning-icon icon-name="utility:chevronright" alternative-text="Accordion" title="Accordion"
+                    size="x-small" class="accArrow"></lightning-icon>
+                <h2 class="textSubHeading slds-m-left_small"> My tasks </h2>
+            </div>
+            <lightning-button variant="base" label="View all" class="tertiaryBtn" title="View all" aria-label="View all"
+                onclick={handleClick}>
+            </lightning-button>
+        </div>
+        <div class="myTaskSec slds-m-top_x-large">
+            <lightning-progress-indicator current-step={currentStep} type="base" variant="base">
+                <template for:each={progressSteps} for:item="step">
+                    <div key={step.value} class={step.boxClass}>
+                        <lightning-progress-step class={step.stepClass} value={step.value}></lightning-progress-step>
+                        <c-progress-tooltip
+                            title={step.tooltipTitle}
+                            date={step.tooltipDate}
+                            badges={step.badges}
+                            status={step.status}
+                            dynamic-class={step.tooltipClass}>
+                        </c-progress-tooltip>
+                    </div>
+                </template>
+            </lightning-progress-indicator>
+        </div>
+    </div>
+</template>

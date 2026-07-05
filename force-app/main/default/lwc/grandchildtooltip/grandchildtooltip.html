@@ -1,0 +1,7 @@
+<!-- grandchildComponent.html -->
+<template>
+    <lightning-button label="Toggle Tooltip" onclick={handleToggleTooltip}></lightning-button>
+    <div class="tooltip" if:true={isTooltipOpen}>
+        <!-- Tooltip Content -->
+    </div>
+</template>

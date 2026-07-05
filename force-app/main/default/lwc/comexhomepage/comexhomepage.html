@@ -1,0 +1,230 @@
+<template>
+    <div class="wrapperMidCont">
+ 
+        <!-- Welcome Message Section -->
+        <div class="welcomeMsg slds-m-top_medium">
+            <h1 class="textHeading">
+                Hello Nick
+            </h1>
+            <p class="textSubCont slds-m-bottom_large">
+                Here’s your priorities for today
+            </p>
+        </div>
+        <!-- Welcome Message Section End-->
+ 
+        <!-- Corusel Tasks Tiles Section -->
+        <div class="carousel-container">
+            <ul class="alignHorizontal slds-m-bottom_xx-large">
+ 
+                <li class="taskCard slds-p-around_medium alignHorizontal slds-m-right_small">
+                    <div class="categoryTint tintColorFruit alignHorizontal centerAlign">
+                        <img src={fruit} alt=""/>
+                        <div class="categoryName slds-m-top_medium">
+                            Fruit
+                        </div>
+                    </div>
+                    <div class="rangeTileCol slds-p-left_medium">
+                        <div class="rangeSec alignHorizontal alignRight">
+                            <div class="rangeHeading">Range review:<div>Tropical Fruit</div>
+                            </div>
+                            <div class="status">Overdue</div>
+                        </div>
+                        <p class="rangeSubTxt slds-p-bottom_xx-small">Send initial letter</p>
+                        <div class="taskDueSec alignHorizontal alignRight alignMiddle">
+                            <div class="alignHorizontal alignMiddle">
+                                <img src={calendar} class="slds-m-right_x-small"/>
+                                <span>Task Due 22 April 2024</span>
+                            </div>
+            
+                            <img src={continueCta}/>
+                                </div>
+                        </div>
+            
+                </li>
+            
+                <li class="taskCard slds-p-around_medium alignHorizontal slds-m-right_small">
+                    <div class="categoryTint tintColorFruit alignHorizontal centerAlign">
+                        <img src={be} alt="" />
+                        <div class="categoryName slds-m-top_medium">
+                            Beef
+                        </div>
+                    </div>
+                    <div class="rangeTileCol slds-p-left_medium">
+                        <div class="rangeSec alignHorizontal alignRight">
+                            <div class="rangeHeading">Range review:<div>Sausage Pre-pack</div>
+                            </div>
+                            <div class="status">Overdue</div>
+                        </div>
+                        <p class="rangeSubTxt slds-p-bottom_xx-small">Send initial letter</p>
+                        <div class="taskDueSec alignHorizontal alignRight alignMiddle">
+                            <div class="alignHorizontal alignMiddle">
+                                <img src={calendar} class="slds-m-right_x-small"/>
+                                <span>Task Due 22 April 2024</span>
+                            </div>
+            
+                            <img src={continueCta}/>
+                                </div>
+                        </div>
+            
+                </li>
+            
+                <li class="taskCard slds-p-around_medium alignHorizontal slds-m-right_small">
+                    <div class="categoryTint tintColorVeg alignHorizontal centerAlign">
+                        <img src={veg} alt=""/>
+                        <div class="categoryName slds-m-top_medium">
+                            Vegetables
+                        </div>
+                    </div>
+                    <div class="rangeTileCol slds-p-left_medium">
+                        <div class="rangeSec alignHorizontal alignRight">
+                            <div class="rangeHeading">Range review:<div>Salad/Vegetablest</div>
+                            </div>
+                            <div class="status">Overdue</div>
+                        </div>
+                        <p class="rangeSubTxt slds-p-bottom_xx-small">Send initial letter</p>
+                        <div class="taskDueSec alignHorizontal alignRight alignMiddle">
+                            <div class="alignHorizontal alignMiddle">
+                                <img src={calendar} class="slds-m-right_x-small"/>
+                                <span>Task Due 22 April 2024</span>
+                            </div>
+            
+                            <img src={continueCta}/>
+                                </div>
+                        </div>
+            
+                </li>
+ 
+                <li class="taskCard slds-p-around_medium alignHorizontal slds-m-right_small">
+                    <div class="categoryTint tintColorVeg alignHorizontal centerAlign">
+                        <img src={veg} alt=""/>
+                        <div class="categoryName slds-m-top_medium">
+                            Vegetables
+                        </div>
+                    </div>
+                    <div class="rangeTileCol slds-p-left_medium">
+                        <div class="rangeSec alignHorizontal alignRight">
+                            <div class="rangeHeading">Range review:<div>Salad/Vegetablest</div>
+                            </div>
+                            <div class="status">Overdue</div>
+                        </div>
+                        <p class="rangeSubTxt slds-p-bottom_xx-small">Send initial letter</p>
+                        <div class="taskDueSec alignHorizontal alignRight alignMiddle">
+                            <div class="alignHorizontal alignMiddle">
+                                <img src={calendar} class="slds-m-right_x-small"/>
+                                <span>Task Due 22 April 2024</span>
+                            </div>
+            
+                            <img src={continueCta}/>
+                                </div>
+                        </div>
+            
+                </li>
+            
+            </ul>
+        </div>
+        
+        <!-- Corusel Tasks Tiles Section -->
+ 
+        <!-- All Tasks Section -->
+        <h2 class="textSubHeading slds-m-bottom_large">All tasks</h2>
+ 
+        <div>
+            <div class="allTaskCardHeader slds-m-bottom_small alignHorizontal alignRight alignMiddle">
+                <div class="">
+                    <span class="overdueDot slds-m-right_small"></span>
+                    <span class="overdueText">Overdue (2)</span>
+                </div>
+ 
+                <!-- Custom Dropdown -->
+                <div class="customcont-dropdown">
+                    <div class="custom-dropdown" onclick={toggleDropdown}>
+                        <div class="selected-option">
+                            <span class="staticval">Milestone</span>
+                            <span class="optval">{selectedOption}</span>
+                
+                            <span class="arrow">      <lightning-icon icon-name="utility:chevrondown" alternative-text="chevrondown" title="chevrondown" size="x-small"></lightning-icon>
+                    
+                     </span>
+                        </div>
+                
+                    </div>
+                    <div class="list">
+                        <ul if:true={isOpen}>
+                            <template for:each={options} for:item="option">
+                                <li key={option.value} onclick={handleOptionClick} data-value={option.value}>{option.label}</li>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Custom Dropdown End-->
+ 
+            </div>
+            
+ 
+            
+        </div>
+ 
+ 
+        <ul class="">
+            <li class="taskCard slds-p-around_medium alignHorizontal slds-m-bottom_small">
+                <div class="rangeTileCol">
+                    <div class="rangeSec alignHorizontal alignRight slds-m-bottom_x-small">
+                        <div class="rangeHeading">Range review: Fruit</div>
+                        <div class="status">Overdue</div>
+                    </div>
+                    <div class="categoryPill slds-m-bottom_small">
+                        <img src={fruit} width="16" />
+                        <span class="slds-m-left_xx-small">Fruit</span>
+                    </div>
+                    
+                    <div class="taskDueSec alignHorizontal alignRight alignMiddle">
+                        <div class="alignHorizontal alignMiddle">
+                            <img src={calendar} class="slds-m-right_x-small"/>
+                            <span>Task Due 22 April 2024</span>
+                        </div>
+                        <div>
+                            <a class="rangeSubTxt slds-m-right_small">Send initial letter</a>
+                            <img src={continueCta}/>
+                        </div>
+                        
+                    </div>
+                </div>  
+            </li>
+ 
+            <li class="taskCard slds-p-around_medium alignHorizontal slds-m-bottom_small">
+                <div class="rangeTileCol">
+                    <div class="rangeSec alignHorizontal alignRight slds-m-bottom_x-small">
+                        <div class="rangeHeading">Range review: Fruit</div>
+                        <div class="status">Overdue</div>
+                    </div>
+                    <div class="categoryPill slds-m-bottom_small">
+                        <img src={fruit} width="16" />
+                        <span class="slds-m-left_xx-small">Fruit</span>
+                    </div>
+                    
+                    <div class="taskDueSec alignHorizontal alignRight alignMiddle">
+                        <div class="alignHorizontal alignMiddle">
+                            <img src={calendar} class="slds-m-right_x-small"/>
+                            <span>Task Due 22 April 2024</span>
+                        </div>
+                        <div>
+                            <a class="rangeSubTxt slds-m-right_small">Send initial letter</a>
+                            <img src={continueCta}/>
+                        </div>
+                        
+                    </div>
+                </div>
+            </li>
+ 
+ 
+        </ul>
+
+
+        <c-globalcss> </c-globalcss>
+ 
+        <!-- All Tasks Section End-->
+ 
+       
+        
+    </div>
+</template>

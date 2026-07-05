@@ -1,0 +1,51 @@
+<template>
+  <div class="slds-card slds-p-around_medium"> 
+    <div class="slds-text-align_right slds-m-bottom_small">
+      <lightning-input
+        type="toggle"
+        name="expandAll"
+        onchange={toggleCollapse}
+        message-toggle-active="Collapse All"
+        message-toggle-inactive="Expand All">
+      </lightning-input>
+    </div>
+
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered cstm_table">
+      <tbody>
+        <template for:each={records} for:item="rec">
+          <!-- HEADER ROW -->
+          <tr key={rec.id}
+              class="RecordRow"
+              data-id={rec.id}
+              data-open={rec.isOpen}
+              onclick={toggleRow}>
+            <td class="rowCellIcon">
+              <lightning-icon icon-name="utility:chevrondown" size="xx-small"></lightning-icon>
+
+              <!-- Your radio group per row -->
+              <lightning-radio-group
+                class="rowRadio"
+                name={rec.id}
+                label="Radio Group"
+                options={rec.options}
+                value={rec.value}
+                type="radio"
+                onclick={stopToggle}
+                onchange={onRadioChange}>
+              </lightning-radio-group>
+            </td>
+            <td>{rec.label}</td>
+          </tr>
+
+          <!-- DETAIL ROW (visible only when open) -->
+          <template if:true={rec.isOpen}>
+            <tr key={rec.detailKey}>
+              <td></td>
+              <td>{rec.detail}</td>
+            </tr>
+          </template>
+        </template>
+      </tbody>
+    </table>
+  </div>
+</template>

@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Helloforeach" icon-name="standard:account">
+        <ul class="slds-m-around-medium"> 
+           <!-- <template for:each={contacts} for:item="contact">
+                <li key={contact.id} >{contact.id} {contact.name} </li>
+            </template>-->
+
+            <template  iterator:it={contacts}>
+                <li key={it.value.id}>
+                    <div if:true={it.first} class="list-first"></div>
+                        <!--{iteratorName.index} || {iteratorName.value.propertyName}-->
+                        {it.value.name}, {it.value.title}
+                    <div if:true={it.last} class="list-last"></div>
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+
+    <div> {headerLabel}</div>
+</template>

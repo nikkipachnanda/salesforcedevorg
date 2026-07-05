@@ -1,0 +1,14 @@
+<template>
+    <div class="otp-container">
+        <lightning-input class="otp-input" maxlength="1" value={otp1} data-id="0" onchange={handleInputChange}></lightning-input>
+        <lightning-input class="otp-input" maxlength="1" value={otp2} data-id="1" onchange={handleInputChange}></lightning-input>
+        <lightning-input class="otp-input" maxlength="1" value={otp3} data-id="2" onchange={handleInputChange}></lightning-input>
+        <lightning-input class="otp-input" maxlength="1" value={otp4} data-id="3" onchange={handleInputChange}></lightning-input>
+        <lightning-input class="otp-input" maxlength="1" value={otp5} data-id="4" onchange={handleInputChange}></lightning-input>
+        <lightning-input class="otp-input" maxlength="1" value={otp6} data-id="5" onchange={handleInputChange}></lightning-input>
+    </div>
+
+    <template if:true={isCopied}>
+        <p class="success-message">OTP copied to clipboard!</p>
+    </template>
+</template>

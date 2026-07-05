@@ -1,0 +1,23 @@
+/* zoomDetectorLwc.css */
+.zoom-indicator {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.zoom-level-90 {
+    background-color: lightcoral;
+}
+
+.zoom-level-100 {
+    background-color: lightgreen;
+}
+
+.zoom-level-80 {
+    background-color: lightskyblue;
+}
+
+.zoom-level-70 {
+    background-color: red;
+}

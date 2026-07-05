@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="Account Details" icon-name="standard:account">
+        <section class="account-container">
+            <template lwc:if={hasAccountFields}>
+                <header class="account-header">
+                    <span class="account-eyebrow">ACCOUNT</span>
+                    <h1 class="account-name">{accountName}</h1>
+                    <span class="account-id">Record ID: {accountRecord.id}</span>
+                </header>
+
+                <dl class="field-grid">
+                    <template for:each={accountFields} for:item="field">
+                        <div class="field-item" key={field.apiName}>
+                            <dt class="field-label">{field.label}</dt>
+                            <dd class="field-value" title={field.value}>
+                                {field.value}
+                            </dd>
+                        </div>
+                    </template>
+                </dl>
+            </template>
+
+            <template lwc:elseif={accountError}>
+                <div class="state-message error-state" role="alert">
+                    <lightning-icon
+                        icon-name="utility:error"
+                        size="small"
+                        variant="error"
+                    ></lightning-icon>
+                    <div>
+                        <h2>Account could not be loaded</h2>
+                        <p>Check your record access and try again.</p>
+                    </div>
+                </div>
+            </template>
+
+            <template lwc:elseif={isLoading}>
+                <div class="loading-state">
+                    <lightning-spinner
+                        alternative-text="Loading Account"
+                        size="medium"
+                    ></lightning-spinner>
+                </div>
+            </template>
+        </section>
+    </lightning-card>
+</template>

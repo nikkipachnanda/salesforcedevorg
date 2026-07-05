@@ -1,0 +1,130 @@
+<template>
+ <div class="slds-grid slds-wrap midBannerBrownLight slds-text-align_left slds-p-around_xx-large cowSecHeight">
+         <div class="slds-col slds-large-size_1-of-2 slds-small-size_2-of-2 slds-is-relative">
+            <div class="headingBl26 headingBlwdth">Each cut of ARLO tastes distinctly of the land where the animal
+               roamed</div>
+
+
+
+
+            <div class="image-wrapper">
+               <img src={cow} width="" class="animalImg"/>
+               <!-- Hotspot areas with data-image attribute -->
+               <div class={shotPlateClass}>
+                  SHORT PLATE
+               </div>
+               <div class={brriskClass} data-name="Beef Brisket" data-content="Beef brisket is a flavourful and tender cut of meat that comes from the lower
+chest or breast of the animal. It is known for its rich, beefy flavour and its
+versatility in various culinary preparations. With its abundant marbling and
+connective tissues, beef brisket is ideal for slow cooking methods such as
+smoking, braising, or roasting, which help break down the tough fibres and
+result in a tender and succulent meat." data-image={brisket} onmouseover={handleMouseOver}
+                  onmouseleave={handleMouseLeave}>
+                  BRISKET
+               </div>
+               <div class={flankClass}>
+                  FLANK
+               </div>
+
+               <div class={shankClass}>
+                  SHANK
+               </div>
+
+               <div class={roundClass}>
+                  SILVER SIDE
+               </div>
+
+               <div class={topsideClass} data-name="Beef topSide" data-content="The topside is a lean and economical cut from the hind leg.
+It's best used for roasting, braising, or slow-cooking. It can be
+thinly sliced for sandwiches or used as a roast for a flavourful meal." data-image={topside}
+                  onmouseover={handleMouseOver} onmouseleave={handleMouseLeave}>
+                  TOPSIDE
+               </div>
+
+               <div class={rumpClass} data-name="Beef Rump" data-content="The beef rump comes from the hindquarter and is a versatile cut.
+It's well-suited for roasting, grilling, or slow-cooking. It can be sliced
+into steaks or used as a whole roast for a flavourful and tender
+main dish." data-image={rump} onmouseover={handleMouseOver} onmouseleave={handleMouseLeave}>
+                  RUMP
+               </div>
+
+               <div class={sirlionClass} data-name="Beef sirLoin" data-content="Also known as New York strip or sirloin strip, this cut is located in
+the loin area and offers a balance of tenderness and flavour. It's
+excellent for grilling, pan-searing, or broiling. It can be served as
+steaks or sliced for sandwiches." data-image={striplon} onmouseover={handleMouseOver} onmouseleave={handleMouseLeave}>
+                  SIRLOIN
+               </div>
+
+               <div class={shortloinClass}>
+                  SHORT <br/>
+                  LOIN
+               </div>
+
+               <div class={tenderloinClass} data-name="Beef Tenderloin" data-content="The tenderloin is one of the most tender and prized cuts.
+It's located in the loin area and is best for quick cooking methods
+like grilling or pan-searing. It's often served as filet mignon or
+used in dishes that showcase its tenderness and mild flavour." data-image={tenderlon} onmouseover={handleMouseOver}
+                  onmouseleave={handleMouseLeave}>
+                  TENDERLOIN
+               </div>
+
+               <div class={cuberollClass} data-name="Beef Cube roll" data-content="This cut is part of the rib section and is commonly used to make
+ribeye steaks. It's tender, juicy and well-marbled, making it perfect
+for grilling or pan-searing to bring out its rich flavour." data-image={cube} onmouseover={handleMouseOver}
+                  onmouseleave={handleMouseLeave}>
+                  CUBE ROLL
+               </div>
+
+               <div class={bladeClass} data-name="Beef Bolar Blade" data-content="Located in the shoulder area, the bolar blade is a flavourful
+cut that benefits from slow-cooking methods like braising or
+pot-roasting. It's often used for stews, pot roasts, or shredded
+beef dishes." data-image={blade} onmouseover={handleMouseOver} onmouseleave={handleMouseLeave}>
+                  BOLAR BLADE
+               </div>
+
+
+
+               <div class={chukClass}>
+                  CHUCK
+               </div>
+
+
+
+               <div class={neckClass}>
+                  NECK
+               </div>
+
+               <!-- Add other parts similarly... -->
+            </div>
+
+            <img src={gradedLine} width="23" class="gradedImg slds-show_large"/>
+
+
+
+         </div>
+
+         <div class="slds-col slds-large-size_1-of-2 slds-small-size_2-of-2 slds-text-align_left">
+            <!--   <div> <img src={brisket} class="meatImg" /> </div> -->
+            <div class="meatTxt slds-is-relative">
+               <!-- <h4 class="slds-m-top_medium "> BEEF BRISKET</h4>
+            <p class="">
+               Beef brisket is a flavorful and tender cut of meat that comes from the lower
+               chest or breast of the animal. It is known for its rich, beefy flavour and its
+               versatility in various culinary preparations. With its abundant marbling and
+               connective tissues, beef brisket is ideal for slow cooking methods such as
+               smoking, braising, or roasting, which help break down the tough fibres and
+               result in a tender and succulent meat.
+            </p>   -->
+               <template if:true={partImage}>
+                  <div class="slds-text-align_center slds-m-bottom_medium"> <img src={partImage} alt="Part Image" class={imageClass} />
+                  </div>
+               </template>
+               <h2 class={headingClass}>{partName}</h2>
+               <p class={paraClass}>{partContent}</p>
+
+            </div>
+
+         </div>
+
+      </div>
+</template>

@@ -1,0 +1,63 @@
+<template>
+    <div class="logoCont" style={backgroundStyle}>
+        <div class="logoInCont">
+
+            <img src={logo} width="100" height="100" />
+            <h2>
+                Welcome <br/>
+        FLEET OFFICE
+            </h2>
+            <div class="fntLight slds-m-top_medium"> Verify your identity </div>
+
+            <div>
+
+                <div class="logoInTxt" style="display:none;">
+                    <p>To make sure your salesforce account is secure, we have to verify your identity. please enter
+                        your registered email Id. </p>
+                    <p>
+                        <lightning-input type="text" variant="standard" name="name" label="Email"
+                            placeholder="type here..."></lightning-input>
+                    </p>
+                    <p class="slds-m-top_medium">
+                        <lightning-button variant="brand" label="Verify" title="titleName" onclick={handleClick}
+                            class="submitBtn"></lightning-button>
+                    </p>
+                </div>
+
+                <div class="otpCont">
+                    <p>Your email Id is authenticated. Enter the OTP we sent to your email *******@gmail.com </p>
+
+                    <div class="optInputCont ">
+                        <p class="slds-text-align_left smlTxt slds-m-top_large">
+                            Enter OTP
+                        </p>
+                        <div class="disFlexC fields">
+
+                            <lightning-input type="text" variant="standard" name="name" label="label" placeholder="">
+                            </lightning-input>
+                            <lightning-input type="text" variant="standard" name="name" label="label" placeholder="">
+                            </lightning-input>
+                            <lightning-input type="text" variant="standard" name="name" label="label" placeholder="">
+                            </lightning-input>
+                            <lightning-input type="text" variant="standard" name="name" label="label" placeholder="">
+                            </lightning-input>
+
+
+                        </div>
+                        <p class="slds-text-align_right">
+                            <a href="#"> Resend OTP</a>
+                        </p>
+                    </div>
+
+                    <p class="slds-m-top_medium">
+                        <lightning-button variant="brand" label="Submit" title="titleName" onclick={handleClick}
+                            class="submitBtn"></lightning-button>
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</template>

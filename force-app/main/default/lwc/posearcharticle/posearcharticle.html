@@ -1,0 +1,192 @@
+<template>
+   <div class="slds-card slds-p-around_medium">
+     <table class="slds-table slds-table_cell-buffer  cstm_table">
+         <tr class="RecordRow" id="test5" onclick={toggleRow}>
+            <td>
+               <div class="slds-float_left">
+                  <lightning-icon icon-name="utility:chevrondown" alternative-text="Doc image" size="xx-small" ></lightning-icon>
+                  <span class="slds-m-left_small">SSCC ID: 000123456789012334</span>
+								 </div>
+               <div class="slds-float_right">
+                  <lightning-radio-group
+                     label="Radio Button Group"
+                     options={options}
+                     value={value}
+                     onchange={handleChange}
+                     class="radioBtn"														
+                     required
+                     >
+                  </lightning-radio-group>
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <table class="slds-table slds-table_cell-buffer  slds-max-medium-table_stacked-horizontal articleTabCont">
+                  <thead>
+                     <tr class="slds-line-height_reset">
+                        <th class="" scope="col">
+                           <div class="slds-truncate" title="Article Number">Article Number</div>
+                        </th>
+                        <th class="" scope="col">
+                           <div class="slds-truncate" title="Article Description">Article Description</div>
+                        </th>
+                        <th class="" scope="col">
+                           <div class="slds-truncate" title="Supplier">Supplier</div>
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr class="slds-hint-parent">
+                        <td data-label="Article Number" scope="row">
+                           <div class="slds-truncate" title="">878378</div>
+                        </td>
+                        <td data-label="Article Description">
+                           <div class="slds-truncate" title="">Article Description will go here...</div>
+                        </td>
+                        <td data-label="Supplier">
+                           <div class="slds-truncate" title="">Chobani</div>
+                        </td>
+                     </tr>
+                     <tr class="slds-hint-parent">
+                        <td data-label="Article Number" scope="row">
+                           <div class="slds-truncate" title="">878378</div>
+                        </td>
+                        <td data-label="Article Description">
+                           <div class="slds-truncate" title="">Article Description will go here...</div>
+                        </td>
+                        <td data-label="Supplier">
+                           <div class="slds-truncate" title="">Chobani</div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+         </tr>
+         <tr class="RecordRow" onclick={toggleRow}>
+            <td>
+               <div class="slds-float_left">
+                  <lightning-icon icon-name="utility:chevrondown" alternative-text="Doc image" size="xx-small" ></lightning-icon>
+                  <span class="slds-m-left_small">SSCC ID: 00012345678901334</span>
+								 </div>
+               <div class="slds-float_right">
+                  <lightning-radio-group
+                     label="Radio Button Group"
+                     options={options}
+                     value={value}
+                     onchange={handleChange}
+                     class="radioBtn"														
+                     required
+                     >
+                  </lightning-radio-group>
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <table class="slds-table slds-table_cell-buffer  slds-max-medium-table_stacked-horizontal articleTabCont">
+                  <thead>
+                     <tr class="slds-line-height_reset">
+                        <th class="" scope="col">
+                           <div class="slds-truncate" title="Article Number">Article Number</div>
+                        </th>
+                        <th class="" scope="col">
+                           <div class="slds-truncate" title="Article Description">Article Description</div>
+                        </th>
+                        <th class="" scope="col">
+                           <div class="slds-truncate" title="Supplier">Supplier</div>
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr class="slds-hint-parent">
+                        <td data-label="Article Number" scope="row">
+                           <div class="slds-truncate" title="">878378</div>
+                        </td>
+                        <td data-label="Article Description">
+                           <div class="slds-truncate" title="">Article Description will go here...</div>
+                        </td>
+                        <td data-label="Supplier">
+                           <div class="slds-truncate" title="">Chobani</div>
+                        </td>
+                     </tr>
+                     <tr class="slds-hint-parent">
+                        <td data-label="Article Number" scope="row">
+                           <div class="slds-truncate" title="">878378</div>
+                        </td>
+                        <td data-label="Article Description">
+                           <div class="slds-truncate" title="">Article Description will go here...</div>
+                        </td>
+                        <td data-label="Supplier">
+                           <div class="slds-truncate" title="">Chobani</div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+         </tr>
+         <tr class="RecordRow" onclick={toggleRow}>
+            <td>
+                 <div class="slds-float_left">
+                  <lightning-icon icon-name="utility:chevrondown" alternative-text="Doc image" size="xx-small" ></lightning-icon>
+                   <span class="slds-m-left_small">SSCC ID: 000123456789013335 </span>
+								 </div>
+               <div class="slds-float_right">
+                  <lightning-radio-group
+                     label="Radio Button Group"
+                     options={options}
+                     value={value}
+                     onchange={handleChange}
+                     class="radioBtn"														
+                     required
+                     >
+                  </lightning-radio-group>
+               </div>
+            </td>
+         </tr>
+					<tr>
+					 <td>
+						  <table class="slds-table slds-table_cell-buffer  slds-max-medium-table_stacked-horizontal articleTabCont">
+                  <thead>
+                     <tr class="slds-line-height_reset">
+                        <th class="" scope="col">
+                           <div class="slds-truncate" title="Article Number">Article Number</div>
+                        </th>
+                        <th class="" scope="col">
+                           <div class="slds-truncate" title="Article Description">Article Description</div>
+                        </th>
+                        <th class="" scope="col">
+                           <div class="slds-truncate" title="Supplier">Supplier</div>
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr class="slds-hint-parent">
+                        <td data-label="Article Number" scope="row">
+                           <div class="slds-truncate" title="">878378</div>
+                        </td>
+                        <td data-label="Article Description">
+                           <div class="slds-truncate" title="">Article Description will go here...</div>
+                        </td>
+                        <td data-label="Supplier">
+                           <div class="slds-truncate" title="">Chobani</div>
+                        </td>
+                     </tr>
+                     <tr class="slds-hint-parent">
+                        <td data-label="Article Number" scope="row">
+                           <div class="slds-truncate" title="">878378</div>
+                        </td>
+                        <td data-label="Article Description">
+                           <div class="slds-truncate" title="">Article Description will go here...</div>
+                        </td>
+                        <td data-label="Supplier">
+                           <div class="slds-truncate" title="">Chobani</div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+					 </td>
+					</tr>
+      </table>
+   </div>
+</template>

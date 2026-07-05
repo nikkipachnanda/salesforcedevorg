@@ -1,0 +1,104 @@
+<template>
+		<!-- Error Toast Message -->
+			<div class="boxWrapperCont bgNone batchDownloadCont">
+					
+				 <nav role="navigation" aria-label="Breadcrumbs">
+						 <ol class="slds-breadcrumb slds-list_horizontal slds-wrap bredcum">
+								<li class="slds-breadcrumb__item">
+									 <a href="#" class="bredcumInact">Home</a>
+								</li>
+								 <li class="slds-breadcrumb__item">
+									 <a href="#" class="bredcumInact">Batch Product Submission</a>
+								</li>
+								<li class="slds-breadcrumb__item" >
+									 <a href="#" class="bredcumAct">Uploaded</a>
+								</li>
+						 </ol>
+					</nav>
+					<h2 class="headingXlarge">
+						 File Upload Result
+					</h2>
+
+				<div class="toast-wrapper bgwarningcolor slds-m-vertical_x-large">
+						<div class="align-horizontal">
+								<img src={errorimg} class="slds-m-right_small"/>
+								<h3 class="whitesubheading">Sorry, errors have been detected in your file.</h3>
+						</div>
+						<p class="slds-m-top_small">
+								Here is a review of spreadsheet.  We have detected a few items for you please amend before you can sync your data with Partner Hub.
+						</p>
+				</div>
+
+				<!-- Success Toast Message -->
+				<div class="toast-wrapper bgsuccesscolor slds-m-vertical_x-large">
+				<div class="align-horizontal">
+						<img src={successimg} class="slds-m-right_small"/>
+						<h3 class="whitesubheading">Great news! There are errors found in your document and it is now ready to upload to Partner Hub.</h3>
+				</div>
+				<p class="slds-m-top_small">
+						Would you like to submit the product data into you dashboard?
+				</p>
+		</div>
+
+				<!-- File Statistics -->
+						<h3 class="subheading">
+								Your file statistics:
+						</h3>
+						<!-- Correct files -->
+						<div class="align-horizontal slds-m-top_medium">
+							<div class="counts textsuccesscolor slds-m-right_small">124</div>
+							<div>items are marked as correct</div>
+						</div>
+
+						<!-- Warning files -->
+						<div class="align-horizontal slds-m-top_medium slds-m-bottom_xx-small ">
+								<div class="counts textwarningcolor slds-m-right_small">4</div>
+								<div>
+										<p>items are marked with a warning or already exist</p>
+										
+								</div>
+						</div>
+
+								<div class="gtinMargin">
+										<div>
+												<span class="slds-m-right_small textwarningcolor">GTIN Duplication</span><span>Product name - GTN123039 - is detected as duplicate and will replace existing data within Partner Hub</span>
+										</div>
+										<div>
+												<span class="slds-m-right_small textwarningcolor">GTIN Duplication</span><span>Product name - GTN123039 - is detected as duplicate and will replace existing data within Partner Hub</span>
+										</div>
+										<div>
+												<span class="slds-m-right_small textwarningcolor">GTIN Duplication</span><span>Product name - GTN123039 - is detected as duplicate and will replace existing data within Partner Hub</span>
+										</div>
+										
+								</div>
+						
+
+						<!-- Error files -->
+						<div class="align-horizontal slds-m-top_medium">
+								<div class="counts texterrorcolor slds-m-right_small">30</div>
+								<div>
+										<p>items have been marked with an error</p>
+								</div>
+						</div>
+
+						<div class="slds-m-vertical_x-large">
+						 <span class="sepLine"></span>
+						</div>
+
+						<p>
+								Please download the speadsheet below, which documents and hightlights the errors to fix.  You can re-upload this document with corrections, once they have been completed.
+						</p>
+
+						<div class="slds-m-vertical_xx-large">
+							<lightning-button variant="" label="Back" title="Primary action"  class="secondaryBtn slds-m-right_small"></lightning-button>			
+							<lightning-button variant="" label="Submit with warnings" title="Primary action"  class="primaryBtn slds-m-right_small"></lightning-button>
+							<lightning-button variant="" label="Submit" title="Primary action"  class="primaryBtn slds-m-right_small"></lightning-button>	
+							<lightning-button variant="brand" label="Download with error log" title="Download action" icon-name="utility:download" icon-position="right" class="primaryBtn slds-m-right_small"></lightning-button>	
+						</div>
+						
+						
+						
+					</div>	
+
+				
+</template>

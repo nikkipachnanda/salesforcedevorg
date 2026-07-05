@@ -1,0 +1,51 @@
+/*
+.toast-wrapper {
+		width: 100%;
+		padding: 20px;
+		color: #ffffff;
+		border-radius: 8px;
+}
+
+.bgwarningcolor {
+		background-color: #ff6f1e;
+}
+.bgsuccesscolor {
+		background-color: #14c330;
+}
+.warningcolor {
+		color: #ff6f1e;
+}
+.successcolor {a
+		color: #14c330;
+}
+.errorcolor {
+		color: #ff0000;
+}
+
+.align-horizontal {
+		display:flex;
+		align-items: center;
+}
+.heading {
+		font-size: 20px;
+		font-weight: 700;
+}
+.subheading {
+		font-size:16px;
+		font-weight:700;
+}
+
+.counts {
+		font-size: 24px;
+		font-weight:bold;
+		width:60px;
+}
+.marginLeft60 {
+		margin-left:60px;
+}
+.duplication p::before { 
+  content: "GTIN Duplication";
+  color: #ff6f1e;
+	margin-right: 10px;
+}
+*/

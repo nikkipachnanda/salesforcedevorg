@@ -1,0 +1,14 @@
+<template>
+   <div class="slider">
+        <ul class="slides" style={slideStyle} >
+            <template for:each={displayedItems} for:item="item" for:index="index">
+                <li key={item.id}>{item.label}</li>
+            </template>
+        </ul>
+        <div class="dots">
+            <template for:each={dots} for:item="dot" for:index="index">
+                <button key={dot.id} data-index={index} onclick={handleDotClick} ></button>
+            </template>
+        </div>
+    </div>
+</template>

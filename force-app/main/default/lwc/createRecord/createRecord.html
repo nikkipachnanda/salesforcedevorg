@@ -1,0 +1,19 @@
+<template>
+    <div class="formData">
+        <lightning-input type="text" name="Name" label="Name" onchange={nameHandler} required ></lightning-input>
+        <lightning-input type="text" name="desingation" label="designation" onchange={phoneHandler} required ></lightning-input>
+        <lightning-input type="number" name="age" label="age" onchange={ageHandler} required></lightning-input>
+         
+        <lightning-button variant="brand" label="Create Account" onclick={createAccount}  ></lightning-button>
+    </div>
+
+    <div >
+        <template for:each={emplist} for:item="list">
+            <ul  key={emplist.Id}>
+            <li>{list.Name}</li>
+            <li>{list.designation__c}</li>
+            <li>{list.age__c}</li>
+            </ul>
+        </template>
+    </div>
+</template>

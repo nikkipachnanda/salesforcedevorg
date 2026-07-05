@@ -1,0 +1,20 @@
+<template>
+    <div class="tab-container">
+        <div class="tab-headers">
+            <div class={tabFClass} data-tab="tabF" onclick={handleTabClick}>Tab 1</div>
+            <div class={tabSClass} data-tab="tabS" onclick={handleTabClick}>Tab 2</div>
+            <div class={tabTClass} data-tab="tabT" onclick={handleTabClick}>Tab 3</div>
+        </div>
+        <div class="tab-content">
+            <template if:true={isTabFActive}>
+                <div class="tab-pane">Content of Tab 1</div>
+            </template>
+            <template if:true={isTabSActive}>
+                <div class="tab-pane">Content of Tab 2</div>
+            </template>
+            <template if:true={isTabTActive}>
+                <div class="tab-pane">Content of Tab 3</div>
+            </template>
+        </div>
+    </div>
+</template>

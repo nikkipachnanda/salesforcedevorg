@@ -1,0 +1,16 @@
+<template>
+    <div>
+        <!-- The icon stays outside the tooltip content to ensure it doesn't disappear -->
+        <lightning-icon
+            icon-name={toggleIcon}
+            size="small"
+            alternative-text="Toggle Tooltip"
+            onclick={toggleTooltip}>
+        </lightning-icon>
+        
+        <div class="tooltip" if:true={showTooltip}>
+            <!-- Tooltip content goes here -->
+            <slot></slot>
+        </div>
+    </div>
+</template>

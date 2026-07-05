@@ -1,0 +1,16 @@
+<template>
+    <div class="tooltip-container">
+        <div class="tooltip-box slds-p-around_small slds-text-align_center {dynamicClass}">
+            <p class="semiBold slds-m-bottom_xx-small">{title}</p>
+            <p class="roleTxt">{date}</p>
+            <div class="flexEvenSpace slds-m-top_x-small">
+                <template for:each={badges} for:item="badge">
+                    <lightning-badge key={badge.id} label={badge.label} class="slds-badge_lightest"></lightning-badge>
+                </template>
+            </div>
+            <template if:true={status}>
+                <div class="status-pill">{status}</div>
+            </template>
+        </div>
+    </div>
+</template>

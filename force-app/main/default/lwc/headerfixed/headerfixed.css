@@ -1,0 +1,17 @@
+.header{
+	height :150px;
+	background: green;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+}
+
+.midCont{
+	border:1px red solid;
+	height: 900px;
+	margin-top: 150px;;
+}
+
+.tableHeaderFixCont { position: fixed;   margin:0px!important; width:100%; }
+.tableHeader {background: yellow; margin-top: 100px; margin-left: 100px; margin-right: 100px;} 
+.menuCont .slds-dropdown { border:1px red solid!important;}

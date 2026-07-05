@@ -1,0 +1,28 @@
+<template>
+   <div class="addTaskCont"> 
+    <div class="slds-clearfix mrgOuter" >
+    <lightning-input type="text" name="input1"  class="slds-float_left" placeholder="Enter Your To Dos"   variant="base" ></lightning-input>
+     <lightning-button-icon icon-name="utility:add"   variant="bare" alternative-text="Add user" class="slds-float_left" title="Add user" onclick={addToHandler}></lightning-button-icon>
+    </div>
+
+    <div class="mrgOuter">  
+    <h2> Upcoming Task 1111 </h2> 
+    <div>
+    <template for:each={upcomingTasks} for:item="todo"> 
+        
+       <c-todoitem key={todo.todoId} todo-id={todo.todoId} todo-name={todo.todoName} onupdate={updateHandler} ondelete={deleteHandler}> </c-todoitem>
+    </template> 
+    </div>   
+    </div> 
+
+     <div class="mrgOuter slds-m-top_large">
+    <h2> Completed Task </h2>
+    <div>
+    <template for:each={completedTasks} for:item="todo"> 
+       <c-todoitem key={todo.todoId} todo-id={todo.todoId} todo-name={todo.todoName} onupdate={updateHandler} ondelete={deleteHandler} done> </c-todoitem>
+    </template> 
+    </div>   
+    </div> 
+
+     </div>   
+</template>

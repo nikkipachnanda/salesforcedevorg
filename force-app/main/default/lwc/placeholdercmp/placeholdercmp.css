@@ -1,0 +1,8 @@
+.custom-container{
+	color : black;
+}
+
+:host > div {
+	text-align: center;
+	color:#c23335;
+}

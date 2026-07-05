@@ -1,0 +1,27 @@
+<template>
+    <div class="accordion">
+        <template for:each={sectionMenuStates} for:item="section">
+            <div key={section.id} class="accordion-section">
+                <div class="dspFlex">
+                    <div class="accordion-header" data-id={section.id} onclick={handleToggle}>
+                        <lightning-icon icon-name={section.iconName} alternative-text="Toggle Section" class="accordion-icon"></lightning-icon>
+                        <span class="accordion-title">{section.title}</span>
+                    </div>
+                    <div>
+                        <!-- Button menu directly in the same template -->
+                        <div class="button-menu">
+                            <button onclick={toggleMenu} data-id={section.id}>Toggle Menu</button>
+                            <div class="subMenu" if:true={section.isMenuOpen}>
+                                <div>This is submenu for {section.title}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-content" if:true={section.isOpen}>
+                    {section.content}
+                    <button> Collapse Section </button>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>
